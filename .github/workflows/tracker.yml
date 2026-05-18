@@ -1,0 +1,51 @@
+name: Brillare OOS Tracker
+
+on:
+  schedule:
+    - cron: '30 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          pip install -r scraper/requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Run daily scrape
+        working-directory: scraper
+        env:
+          GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
+          GOOGLE_SHEETS_CREDS: ${{ secrets.GOOGLE_SHEETS_CREDS }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        run: python main.py
+
+      - name: Build monthly report
+        working-directory: scraper
+        run: python report.py
+
+      - name: Sync data to dashboard
+        run: |
+          mkdir -p dashboard/public/data
+          cp scraper/data/latest.json dashboard/public/data/ 2>/dev/null || true
+          cp scraper/data/report_*.json dashboard/public/data/ 2>/dev/null || true
+
+      - name: Commit history + data
+        run: |
+          git config user.name "brillare-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add scraper/data dashboard/public/data
+          git diff --staged --quiet || git commit -m "Tracker run $(date -u +%Y-%m-%d)"
+          git push
