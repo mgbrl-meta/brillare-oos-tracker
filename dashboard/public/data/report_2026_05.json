@@ -1,0 +1,24 @@
+{
+  "month": "2026-05",
+  "generated": "2026-05-18T00:35:00+00:00",
+  "rows": [
+    {
+      "sku": "HSC70",
+      "platform": "flipkart",
+      "days_tracked": 18,
+      "days_oos": 5,
+      "longest_oos_streak": 3,
+      "max_discount": null,
+      "avg_discount": null
+    },
+    {
+      "sku": "SHM300",
+      "platform": "amazon",
+      "days_tracked": 18,
+      "days_oos": 12,
+      "longest_oos_streak": 9,
+      "max_discount": 22.0,
+      "avg_discount": 18.5
+    }
+  ]
+}
