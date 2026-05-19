@@ -1,14 +1,10 @@
 """
-Brillare OOS Tracker - daily scraper (concurrent, efficient version).
-
-Reads product URLs from a Google Sheet, visits each platform URL, and
-captures (a) stock status and (b) MRP + selling price -> discount %.
-Appends one record per product/platform/day to data/history.jsonl
-and writes data/latest.json for the dashboard.
-
-Concurrency: per-domain capped pool so ~300 URLs finish in ~5-8 min.
+Brillare OOS Tracker - daily scraper (stable optimized-serial).
+One page at a time (no concurrency race), but assets blocked and
+short timeouts so it's still fast. Reads Google Sheet, scrapes
+stock + price, writes data/latest.json + history.jsonl.
 """
-import asyncio, json, os, re, random
+import asyncio, json, os, re
 from datetime import datetime, timezone
 from pathlib import Path
 from playwright.async_api import async_playwright
@@ -20,9 +16,7 @@ LATEST = DATA / "latest.json"
 DISCOUNT_AMBER = 30
 DISCOUNT_RED = 50
 
-PLATFORM_COLS = {  # 0-based column index in the Tracker tab
-    # A SKU, B Type, C Name, D Amazon, E Flipkart, F Nykaa,
-    # G Myntra, H Smytten, I Shopify
+PLATFORM_COLS = {  # 0-based col index in Tracker tab
     "amazon": 3, "flipkart": 4, "nykaa": 5, "myntra": 6,
     "smytten": 7, "shopify": 8,
 }
@@ -53,13 +47,13 @@ RULES = {
         "mrp_sel": ".pdp-mrp s, span.pdp-mrp s",
         "sell_sel": ".pdp-price strong, span.pdp-price",
     },
-    "smytten": {  # Smytten web store runs on Shopify (web.smytten.com)
+    "smytten": {
         "oos": ["sold out", "out of stock", "notify me", "currently unavailable"],
         "instock_sel": "button[name='add'], form[action*='/cart/add'] button:not([disabled])",
         "mrp_sel": "s.price__sale, .price__regular del, [data-compare-price], .compare-at-price",
         "sell_sel": ".price__current, .price-item--regular, [data-product-price], .price--sale",
     },
-    "shopify": {  # Brillare own site
+    "shopify": {
         "oos": ["sold out", "out of stock", "notify me when available"],
         "instock_sel": "button[name='add'], form[action*='/cart/add'] button:not([disabled])",
         "mrp_sel": "s.price__sale, .price__regular del, [data-compare-price]",
@@ -74,13 +68,11 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 def read_sheet():
     import gspread
     from google.oauth2.service_account import Credentials
-    creds_json = os.environ["GOOGLE_SHEETS_CREDS"]
-    sheet_id = os.environ["GOOGLE_SHEET_ID"]
     creds = Credentials.from_service_account_info(
-        json.loads(creds_json),
+        json.loads(os.environ["GOOGLE_SHEETS_CREDS"]),
         scopes=["https://www.googleapis.com/auth/spreadsheets.readonly"])
     gc = gspread.authorize(creds)
-    ws = gc.open_by_key(sheet_id).worksheet("Tracker")
+    ws = gc.open_by_key(os.environ["GOOGLE_SHEET_ID"]).worksheet("Tracker")
     rows = ws.get_all_values()[1:]
     products = []
     for r in rows:
@@ -112,29 +104,37 @@ _BLOCK = {"image", "media", "font", "stylesheet"}
 
 
 async def _route(route):
-    if route.request.resource_type in _BLOCK:
-        await route.abort()
-    else:
-        await route.continue_()
+    try:
+        if route.request.resource_type in _BLOCK:
+            await route.abort()
+        else:
+            await route.continue_()
+    except Exception:
+        pass
 
 
-async def scrape_one(ctx, url, platform, page_timeout=12000):
+async def scrape_one(page, url, platform):
     rules = RULES[platform]
     rec = {"status": "unknown", "mrp": None, "selling": None,
            "discount_pct": None}
-    page = await ctx.new_page()
     try:
-        await page.route("**/*", _route)
         try:
-            await page.goto(url, timeout=page_timeout,
+            await page.goto(url, timeout=20000,
                             wait_until="domcontentloaded")
         except Exception:
             pass
-        await page.wait_for_timeout(700)
-        body = (await page.inner_text("body")).lower()
+        await page.wait_for_timeout(800)
+        try:
+            body = (await page.inner_text("body")).lower()
+        except Exception:
+            body = ""
 
-        instock_el = await page.query_selector(rules["instock_sel"])
-        if any(s in body for s in rules["oos"]) and not instock_el:
+        instock_el = None
+        try:
+            instock_el = await page.query_selector(rules["instock_sel"])
+        except Exception:
+            pass
+        if body and any(s in body for s in rules["oos"]) and not instock_el:
             rec["status"] = "out_of_stock"
         elif instock_el:
             rec["status"] = "in_stock"
@@ -156,64 +156,45 @@ async def scrape_one(ctx, url, platform, page_timeout=12000):
     except Exception as e:
         rec["status"] = f"error:{type(e).__name__}"
         return rec
-    finally:
-        try:
-            await page.close()
-        except Exception:
-            pass
 
 
 async def run():
     products = read_sheet()
     ts = datetime.now(timezone.utc).isoformat(timespec="seconds")
     day = ts[:10]
-
-    prow_by_sku = {}
     snapshot = {"checked_at": ts, "products": []}
-    tasks = []
-    for prod in products:
-        prow = {"sku": prod["sku"], "name": prod["name"],
-                "type": prod["type"], "platforms": {}}
-        for platform, url in prod["urls"].items():
-            if url.lower() in SKIP or not url.startswith("http"):
-                prow["platforms"][platform] = {"status": "no_link"}
-            else:
-                tasks.append((prod["sku"], platform, url))
-        prow_by_sku[prod["sku"]] = prow
-        snapshot["products"].append(prow)
-
-    PER_DOMAIN = 3
-    GLOBAL = 10
-    domain_sem = {p: asyncio.Semaphore(PER_DOMAIN) for p in RULES}
-    global_sem = asyncio.Semaphore(GLOBAL)
     history_lines = []
 
     async with async_playwright() as pw:
         browser = await pw.chromium.launch(headless=True)
         ctx = await browser.new_context(user_agent=UA, locale="en-IN")
+        await ctx.route("**/*", _route)
 
-        async def worker(sku, platform, url):
-            async with global_sem, domain_sem[platform]:
-                await asyncio.sleep(random.uniform(0.2, 1.2))
-                rec = await asyncio.wait_for(
-                    scrape_one(ctx, url, platform), timeout=20)
-                prow_by_sku[sku]["platforms"][platform] = rec
+        for prod in products:
+            prow = {"sku": prod["sku"], "name": prod["name"],
+                    "type": prod["type"], "platforms": {}}
+            for platform, url in prod["urls"].items():
+                if url.lower() in SKIP or not url.startswith("http"):
+                    prow["platforms"][platform] = {"status": "no_link"}
+                    continue
+                page = await ctx.new_page()
+                try:
+                    rec = await asyncio.wait_for(
+                        scrape_one(page, url, platform), timeout=30)
+                except Exception as e:
+                    rec = {"status": f"error:{type(e).__name__}",
+                           "mrp": None, "selling": None,
+                           "discount_pct": None}
+                finally:
+                    try:
+                        await page.close()
+                    except Exception:
+                        pass
+                prow["platforms"][platform] = rec
                 history_lines.append(json.dumps({
-                    "day": day, "ts": ts, "sku": sku,
+                    "day": day, "ts": ts, "sku": prod["sku"],
                     "platform": platform, **rec}))
-
-        async def safe_worker(s, p, u):
-            try:
-                await worker(s, p, u)
-            except Exception as e:
-                rec = {"status": f"error:{type(e).__name__}",
-                       "mrp": None, "selling": None, "discount_pct": None}
-                prow_by_sku[s]["platforms"][p] = rec
-                history_lines.append(json.dumps({
-                    "day": day, "ts": ts, "sku": s,
-                    "platform": p, **rec}))
-
-        await asyncio.gather(*(safe_worker(s, p, u) for s, p, u in tasks))
+            snapshot["products"].append(prow)
         await browser.close()
 
     LATEST.write_text(json.dumps(snapshot, indent=2))
@@ -228,7 +209,7 @@ async def run():
             for p in snapshot["products"]
             for pl, v in p["platforms"].items()
             if v.get("discount_pct") and v["discount_pct"] >= DISCOUNT_RED]
-    print(f"{day}: {len(tasks)} urls scraped, {len(oos)} OOS, "
+    print(f"{day}: scraped done, {len(oos)} OOS, "
           f"{len(deep)} deep-discount (>= {DISCOUNT_RED}%)")
     notify(oos, deep, ts)
 
