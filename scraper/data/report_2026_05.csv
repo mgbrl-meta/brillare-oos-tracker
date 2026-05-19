@@ -16,7 +16,7 @@ ARISSS50,flipkart,1,0,0,,
 ARISSS50,myntra,1,0,0,,
 ARISSS50,shopify,1,0,0,0.0,0.0
 ARISSS50,smytten,1,0,0,,
-ARO100,amazon,1,0,0,100.0,100.0
+ARO100,amazon,1,0,0,100.0,91.0
 ARO100,flipkart,1,0,0,,
 ARO100,myntra,1,0,0,,
 ARO100,nykaa,1,0,0,,
@@ -146,7 +146,7 @@ MDC125,flipkart,1,0,0,,
 MDC125,myntra,1,0,0,,
 MDC125,nykaa,1,0,0,,
 MDC125,shopify,1,0,0,0.0,0.0
-MFGK,amazon,1,0,0,100.0,100.0
+MFGK,amazon,1,0,0,100.0,84.0
 MFGK,flipkart,1,0,0,,
 MFGK,myntra,1,0,0,,
 MFGK,nykaa,1,0,0,,
@@ -208,7 +208,7 @@ OBOS8,myntra,1,0,0,,
 OBOS8,nykaa,1,0,0,,
 OBOS8,shopify,1,0,0,0.0,0.0
 OBOS8,smytten,1,0,0,,
-ONO100,amazon,1,0,0,100.0,100.0
+ONO100,amazon,1,0,0,100.0,90.6
 ONO100,flipkart,1,0,0,,
 ONO100,myntra,1,0,0,,
 ONO100,nykaa,1,0,0,,
@@ -266,7 +266,7 @@ RMSH200,myntra,1,0,0,,
 RMSH200,nykaa,1,0,0,,
 RMSH200,shopify,1,0,0,0.0,0.0
 RMSH200,smytten,1,0,0,,
-RPFW30,amazon,1,0,0,100.0,100.0
+RPFW30,amazon,1,0,0,100.0,88.8
 RPFW30,flipkart,1,0,0,,
 RPFW30,myntra,1,0,0,,
 RPFW30,nykaa,1,0,0,,
@@ -341,7 +341,7 @@ TBSH200,myntra,1,0,0,,
 TBSH200,nykaa,1,0,0,,
 TBSH200,shopify,1,0,0,0.0,0.0
 TBSH200,smytten,1,0,0,,
-TTO100,amazon,1,0,0,99.9,99.9
+TTO100,amazon,1,0,0,99.9,84.5
 TTO100,flipkart,1,0,0,,
 TTO100,myntra,1,0,0,,
 TTO100,nykaa,1,0,0,,
