@@ -120,10 +120,10 @@ function downloadCSV(products: Product[], platforms: string[]) {
     const cells = platforms.flatMap((pl) => {
       const rec = product.platforms?.[pl] || {};
       return [
-        rec.status || "unknown",
-        rec.mrp || "",
-        rec.selling || "",
-        rec.discount_pct || ""
+        String(rec.status || "unknown"),
+        rec.mrp ? String(rec.mrp) : "",
+        rec.selling ? String(rec.selling) : "",
+        rec.discount_pct ? String(rec.discount_pct) : ""
       ];
     });
 
