@@ -53,6 +53,7 @@ jobs:
         run: |
           mkdir -p dashboard/public/data
           cp scraper/data/latest.json dashboard/public/data/ 2>/dev/null || true
+          cp scraper/data/history.jsonl dashboard/public/data/ 2>/dev/null || true
           cp scraper/data/report_*.json dashboard/public/data/ 2>/dev/null || true
           cp scraper/data/history_compact.json dashboard/public/data/ 2>/dev/null || true
 
