@@ -1,20 +1,12 @@
 """
-Brillare OOS Tracker - daily scraper.
+Brillare OOS Tracker - daily scraper (concurrent, efficient version).
 
 Reads product URLs from a Google Sheet, visits each platform URL, and
 captures (a) stock status and (b) MRP + selling price -> discount %.
 Appends one record per product/platform/day to data/history.jsonl
 and writes data/latest.json for the dashboard.
 
-Env vars:
-  GOOGLE_SHEET_ID        - the spreadsheet id from its URL
-  GOOGLE_SHEETS_CREDS    - service-account JSON (as a string), read-only
-  SLACK_WEBHOOK          - optional, for alerts
-
-Sheet must have a tab named "Tracker" with columns:
-  ERP SKU | Type | Product Name | Amazon URL | Flipkart URL |
-  Nykaa URL | Myntra URL | Shopify URL
-(NA or blank = not sold there, skipped)
+Concurrency: per-domain capped pool so ~300 URLs finish in ~5-8 min.
 """
 import asyncio, json, os, re, random
 from datetime import datetime, timezone
@@ -25,13 +17,12 @@ DATA = Path("data"); DATA.mkdir(exist_ok=True)
 HISTORY = DATA / "history.jsonl"
 LATEST = DATA / "latest.json"
 
-# ---- discount highlight thresholds (edit here) ----
-DISCOUNT_AMBER = 30   # >=30% -> amber on dashboard
-DISCOUNT_RED = 50     # >=50% -> red on dashboard
+DISCOUNT_AMBER = 30
+DISCOUNT_RED = 50
 
 PLATFORM_COLS = {  # 0-based column index in the Tracker tab
-    # Sheet cols: A SKU, B Type, C Name, D Amazon, E Flipkart, F Nykaa,
-    #             G Myntra, H Smytten, I Shopify
+    # A SKU, B Type, C Name, D Amazon, E Flipkart, F Nykaa,
+    # G Myntra, H Smytten, I Shopify
     "amazon": 3, "flipkart": 4, "nykaa": 5, "myntra": 6,
     "smytten": 7, "shopify": 8,
 }
@@ -81,7 +72,6 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 
 
 def read_sheet():
-    """Read the Tracker tab via Google Sheets API (read-only)."""
     import gspread
     from google.oauth2.service_account import Credentials
     creds_json = os.environ["GOOGLE_SHEETS_CREDS"]
@@ -91,7 +81,7 @@ def read_sheet():
         scopes=["https://www.googleapis.com/auth/spreadsheets.readonly"])
     gc = gspread.authorize(creds)
     ws = gc.open_by_key(sheet_id).worksheet("Tracker")
-    rows = ws.get_all_values()[1:]  # skip header
+    rows = ws.get_all_values()[1:]
     products = []
     for r in rows:
         if not r or not r[0].strip():
@@ -107,7 +97,6 @@ def read_sheet():
 
 
 def parse_price(text):
-    """Extract a number from a price string like 'Rs. 1,299' -> 1299.0"""
     if not text:
         return None
     m = re.search(r"[\d,]+(?:\.\d+)?", text.replace("\u20b9", ""))
@@ -119,23 +108,37 @@ def parse_price(text):
         return None
 
 
-async def scrape_one(page, url, platform):
+_BLOCK = {"image", "media", "font", "stylesheet"}
+
+
+async def _route(route):
+    if route.request.resource_type in _BLOCK:
+        await route.abort()
+    else:
+        await route.continue_()
+
+
+async def scrape_one(ctx, url, platform, page_timeout=12000):
     rules = RULES[platform]
     rec = {"status": "unknown", "mrp": None, "selling": None,
            "discount_pct": None}
+    page = await ctx.new_page()
     try:
-        await page.goto(url, timeout=35000, wait_until="domcontentloaded")
-        await page.wait_for_timeout(2500)
+        await page.route("**/*", _route)
+        try:
+            await page.goto(url, timeout=page_timeout,
+                            wait_until="domcontentloaded")
+        except Exception:
+            pass
+        await page.wait_for_timeout(700)
         body = (await page.inner_text("body")).lower()
 
-        # stock
-        if any(s in body for s in rules["oos"]) and \
-           not await page.query_selector(rules["instock_sel"]):
+        instock_el = await page.query_selector(rules["instock_sel"])
+        if any(s in body for s in rules["oos"]) and not instock_el:
             rec["status"] = "out_of_stock"
-        elif await page.query_selector(rules["instock_sel"]):
+        elif instock_el:
             rec["status"] = "in_stock"
 
-        # price
         async def grab(sel):
             try:
                 el = await page.query_selector(sel)
@@ -145,7 +148,7 @@ async def scrape_one(page, url, platform):
         mrp = await grab(rules["mrp_sel"])
         sell = await grab(rules["sell_sel"])
         if sell and not mrp:
-            mrp = sell  # no discount shown
+            mrp = sell
         rec["mrp"], rec["selling"] = mrp, sell
         if mrp and sell and mrp > 0 and sell <= mrp:
             rec["discount_pct"] = round((mrp - sell) / mrp * 100, 1)
@@ -153,34 +156,64 @@ async def scrape_one(page, url, platform):
     except Exception as e:
         rec["status"] = f"error:{type(e).__name__}"
         return rec
+    finally:
+        try:
+            await page.close()
+        except Exception:
+            pass
 
 
 async def run():
     products = read_sheet()
     ts = datetime.now(timezone.utc).isoformat(timespec="seconds")
     day = ts[:10]
+
+    prow_by_sku = {}
     snapshot = {"checked_at": ts, "products": []}
+    tasks = []
+    for prod in products:
+        prow = {"sku": prod["sku"], "name": prod["name"],
+                "type": prod["type"], "platforms": {}}
+        for platform, url in prod["urls"].items():
+            if url.lower() in SKIP or not url.startswith("http"):
+                prow["platforms"][platform] = {"status": "no_link"}
+            else:
+                tasks.append((prod["sku"], platform, url))
+        prow_by_sku[prod["sku"]] = prow
+        snapshot["products"].append(prow)
+
+    PER_DOMAIN = 3
+    GLOBAL = 10
+    domain_sem = {p: asyncio.Semaphore(PER_DOMAIN) for p in RULES}
+    global_sem = asyncio.Semaphore(GLOBAL)
     history_lines = []
 
     async with async_playwright() as pw:
         browser = await pw.chromium.launch(headless=True)
         ctx = await browser.new_context(user_agent=UA, locale="en-IN")
-        for prod in products:
-            prow = {"sku": prod["sku"], "name": prod["name"],
-                    "type": prod["type"], "platforms": {}}
-            for platform, url in prod["urls"].items():
-                if url.lower() in SKIP or not url.startswith("http"):
-                    prow["platforms"][platform] = {"status": "no_link"}
-                    continue
-                page = await ctx.new_page()
-                rec = await scrape_one(page, url, platform)
-                await page.close()
-                prow["platforms"][platform] = rec
+
+        async def worker(sku, platform, url):
+            async with global_sem, domain_sem[platform]:
+                await asyncio.sleep(random.uniform(0.2, 1.2))
+                rec = await asyncio.wait_for(
+                    scrape_one(ctx, url, platform), timeout=20)
+                prow_by_sku[sku]["platforms"][platform] = rec
                 history_lines.append(json.dumps({
-                    "day": day, "ts": ts, "sku": prod["sku"],
+                    "day": day, "ts": ts, "sku": sku,
                     "platform": platform, **rec}))
-                await asyncio.sleep(random.uniform(3, 6))
-            snapshot["products"].append(prow)
+
+        async def safe_worker(s, p, u):
+            try:
+                await worker(s, p, u)
+            except Exception as e:
+                rec = {"status": f"error:{type(e).__name__}",
+                       "mrp": None, "selling": None, "discount_pct": None}
+                prow_by_sku[s]["platforms"][p] = rec
+                history_lines.append(json.dumps({
+                    "day": day, "ts": ts, "sku": s,
+                    "platform": p, **rec}))
+
+        await asyncio.gather(*(safe_worker(s, p, u) for s, p, u in tasks))
         await browser.close()
 
     LATEST.write_text(json.dumps(snapshot, indent=2))
@@ -188,7 +221,6 @@ async def run():
         for line in history_lines:
             f.write(line + "\n")
 
-    # alerts
     oos = [(p["sku"], pl) for p in snapshot["products"]
            for pl, v in p["platforms"].items()
            if v.get("status") == "out_of_stock"]
@@ -196,7 +228,8 @@ async def run():
             for p in snapshot["products"]
             for pl, v in p["platforms"].items()
             if v.get("discount_pct") and v["discount_pct"] >= DISCOUNT_RED]
-    print(f"{day}: {len(oos)} OOS, {len(deep)} deep-discount (>= {DISCOUNT_RED}%)")
+    print(f"{day}: {len(tasks)} urls scraped, {len(oos)} OOS, "
+          f"{len(deep)} deep-discount (>= {DISCOUNT_RED}%)")
     notify(oos, deep, ts)
 
 
@@ -210,7 +243,7 @@ def notify(oos, deep, ts):
         parts.append(f"OOS ({len(oos)}): " +
                       ", ".join(f"{s}/{p}" for s, p in oos[:30]))
     if deep:
-        parts.append(f"Deep discounts: " +
+        parts.append("Deep discounts: " +
                       ", ".join(f"{s}/{p} {d}%" for s, p, d in deep[:20]))
     try:
         req = urllib.request.Request(
