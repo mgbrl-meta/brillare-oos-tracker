@@ -12,19 +12,22 @@ jobs:
   track:
     runs-on: ubuntu-latest
     timeout-minutes: 50
-    steps:
-      - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install deps
+      - name: Install dependencies
         run: |
           pip install -r scraper/requirements.txt
           python -m playwright install --with-deps chromium
 
-      - name: Run daily scrape
+      - name: Run daily scraper
         working-directory: scraper
         env:
           GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
@@ -43,17 +46,11 @@ jobs:
           cp scraper/data/report_*.json dashboard/public/data/ 2>/dev/null || true
           cp scraper/data/history_compact.json dashboard/public/data/ 2>/dev/null || true
 
-     - name: Commit history + data
+      - name: Commit history and data
         run: |
           git config user.name "brillare-bot"
           git config user.email "bot@users.noreply.github.com"
           git add -A
           git diff --staged --quiet || git commit -m "Tracker run $(date -u +%Y-%m-%d)"
-<<<<<<< Updated upstream
-          git fetch origin main
-          git rebase origin/main || git rebase --abort
-          git push origin main --force-with-lease
-=======
           git pull --rebase --autostash origin main || true
           git push origin main
->>>>>>> Stashed changes
