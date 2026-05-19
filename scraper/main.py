@@ -8,7 +8,7 @@ DATA = Path("data"); DATA.mkdir(exist_ok=True)
 HISTORY = DATA / "history.jsonl"
 LATEST = DATA / "latest.json"
 DISCOUNT_AMBER, DISCOUNT_RED = 30, 50
-CONCURRENCY = 6  # workers in parallel; safe, ~4-5x faster than serial
+CONCURRENCY = 3  # workers in parallel; safe, ~4-5x faster than serial
 
 PLATFORM_COLS = {"amazon":3,"flipkart":4,"nykaa":5,"myntra":6,"smytten":7,"shopify":8}
 SKIP = {"", "na", "n/a", "none"}
@@ -23,7 +23,7 @@ RULES = {
 }
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
-_BLOCK = {"image","media","font","stylesheet"}
+_BLOCK = {"image","media","font"}
 
 def read_sheet():
     import gspread
@@ -60,9 +60,9 @@ async def scrape_one(ctx, url, platform):
     page = await ctx.new_page()
     try:
         await page.route("**/*", _route)
-        try: await page.goto(url, timeout=20000, wait_until="domcontentloaded")
+        try: await page.goto(url, timeout=45000, wait_until="domcontentloaded")
         except Exception: pass
-        await page.wait_for_timeout(800)
+        await page.wait_for_timeout(2500)
         try: body = (await page.inner_text("body")).lower()
         except Exception: body = ""
         ins = None
@@ -114,7 +114,7 @@ async def run():
         async def work(sku, platform, url):
             async with sem:
                 try:
-                    rec = await asyncio.wait_for(scrape_one(ctx, url, platform), timeout=35)
+                    rec = await asyncio.wait_for(scrape_one(ctx, url, platform), timeout=75)
                 except Exception as e:
                     rec = {"status":f"error:{type(e).__name__}","mrp":None,"selling":None,"discount_pct":None}
                 bySku[sku]["platforms"][platform] = rec
