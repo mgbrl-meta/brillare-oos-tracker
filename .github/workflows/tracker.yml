@@ -11,7 +11,7 @@ permissions:
 jobs:
   track:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
 
@@ -41,6 +41,7 @@ jobs:
           mkdir -p dashboard/public/data
           cp scraper/data/latest.json dashboard/public/data/ 2>/dev/null || true
           cp scraper/data/report_*.json dashboard/public/data/ 2>/dev/null || true
+          cp scraper/data/history_compact.json dashboard/public/data/ 2>/dev/null || true
 
       - name: Commit history + data
         run: |
@@ -48,4 +49,5 @@ jobs:
           git config user.email "bot@users.noreply.github.com"
           git add scraper/data dashboard/public/data
           git diff --staged --quiet || git commit -m "Tracker run $(date -u +%Y-%m-%d)"
-          git push
+          git pull --rebase --autostash origin main || true
+          git push origin main
