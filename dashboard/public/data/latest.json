@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-05-20T11:33:23+00:00",
+  "checked_at": "2026-05-20T19:39:06+00:00",
   "products": [
     {
       "sku": "HSC70",
@@ -12,29 +12,29 @@
         "smytten": {
           "status": "no_link"
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "amazon": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "shopify": {
           "status": "in_stock",
           "mrp": 395.0,
           "selling": 395.0,
           "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 316.0,
+          "discount_pct": 20.0
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 395.0,
+          "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 316.0,
+          "discount_pct": 20.0
         }
       }
     },
@@ -46,35 +46,35 @@
         "smytten": {
           "status": "no_link"
         },
-        "amazon": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 575.0,
+          "selling": 575.0,
+          "discount_pct": 0.0
         },
         "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 575.0,
+          "selling": 575.0,
+          "discount_pct": 0.0
         },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 575.0,
+          "selling": 517.0,
+          "discount_pct": 10.1
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 575.0,
           "selling": 575.0,
           "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -86,28 +86,28 @@
         "smytten": {
           "status": "no_link"
         },
-        "amazon": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 575.0,
+          "selling": 517.0,
+          "discount_pct": 10.1
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
+          "status": "in_stock",
+          "mrp": 575.0,
+          "selling": 373.0,
+          "discount_pct": 35.1
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 575.0,
+          "selling": 575.0,
+          "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 191.67,
+          "selling": 575.0,
           "discount_pct": null
         },
         "shopify": {
@@ -126,28 +126,28 @@
         "smytten": {
           "status": "no_link"
         },
-        "amazon": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 575.0,
+          "selling": 517.0,
+          "discount_pct": 10.1
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
+          "status": "in_stock",
+          "mrp": 575.0,
+          "selling": 575.0,
+          "discount_pct": 0.0
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 575.0,
+          "selling": 575.0,
+          "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 191.67,
+          "selling": 575.0,
           "discount_pct": null
         },
         "shopify": {
@@ -166,28 +166,28 @@
         "smytten": {
           "status": "no_link"
         },
-        "amazon": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 395.0,
+          "selling": 355.0,
+          "discount_pct": 10.1
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
+          "status": "in_stock",
+          "mrp": 445.0,
+          "selling": 445.0,
+          "discount_pct": 0.0
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 445.0,
+          "selling": 445.0,
+          "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 316.0,
+          "selling": 395.0,
           "discount_pct": null
         },
         "shopify": {
@@ -206,29 +206,29 @@
         "smytten": {
           "status": "no_link"
         },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 445.0,
+          "selling": 445.0,
+          "discount_pct": 0.0
+        },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": 395.0,
+          "selling": 293.0,
+          "discount_pct": 25.8
+        },
         "amazon": {
           "status": "in_stock",
           "mrp": 316.0,
           "selling": 395.0,
           "discount_pct": null
         },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 445.0,
+          "selling": 445.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
@@ -246,28 +246,28 @@
         "smytten": {
           "status": "no_link"
         },
-        "amazon": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 395.0,
+          "selling": 329.0,
+          "discount_pct": 16.7
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 445.0,
+          "selling": 445.0,
+          "discount_pct": 0.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
+          "status": "in_stock",
+          "mrp": 445.0,
+          "selling": 395.0,
+          "discount_pct": 11.2
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 316.0,
+          "selling": 395.0,
           "discount_pct": null
         },
         "shopify": {
@@ -286,29 +286,29 @@
         "smytten": {
           "status": "no_link"
         },
-        "amazon": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 495.0,
+          "selling": 409.0,
+          "discount_pct": 17.4
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 495.0,
+          "discount_pct": 0.0
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 495.0,
+          "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 395.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
@@ -326,34 +326,34 @@
         "smytten": {
           "status": "no_link"
         },
-        "amazon": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 323.0,
+          "discount_pct": 18.2
         },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 395.0,
+          "selling": 355.0,
+          "discount_pct": 10.1
         },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 395.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 395.0,
           "selling": 395.0,
+          "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 323.0,
+          "selling": 323.0,
           "discount_pct": 0.0
         }
       }
@@ -366,29 +366,29 @@
         "smytten": {
           "status": "no_link"
         },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 476.0,
+          "discount_pct": 20.0
+        },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": 595.0,
+          "selling": 491.0,
+          "discount_pct": 17.5
+        },
         "amazon": {
           "status": "in_stock",
           "mrp": 476.0,
           "selling": 476.0,
           "discount_pct": 0.0
         },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 595.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
@@ -406,28 +406,28 @@
         "flipkart": {
           "status": "no_link"
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "amazon": {
+        "myntra": {
           "status": "in_stock",
-          "mrp": 634.0,
-          "selling": 634.0,
+          "mrp": 695.0,
+          "selling": 695.0,
           "discount_pct": 0.0
         },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 695.0,
+          "selling": 695.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 695.0,
           "selling": 695.0,
+          "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 595.0,
           "discount_pct": 0.0
         },
         "smytten": {
@@ -449,29 +449,29 @@
         "smytten": {
           "status": "no_link"
         },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 487.0,
+          "discount_pct": 18.2
+        },
         "amazon": {
           "status": "in_stock",
           "mrp": 974.0,
           "selling": 487.0,
           "discount_pct": 50.0
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "shopify": {
           "status": "in_stock",
           "mrp": 595.0,
           "selling": 595.0,
           "discount_pct": 0.0
+        },
+        "nykaa": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -483,29 +483,29 @@
         "smytten": {
           "status": "no_link"
         },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": 895.0,
+          "selling": 805.0,
+          "discount_pct": 10.1
+        },
         "amazon": {
           "status": "in_stock",
           "mrp": 1396.0,
           "selling": 698.0,
           "discount_pct": 50.0
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 895.0,
+          "selling": 698.0,
+          "discount_pct": 22.0
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 895.0,
+          "selling": 895.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
@@ -523,35 +523,35 @@
         "smytten": {
           "status": "no_link"
         },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": 595.0,
+          "selling": 535.0,
+          "discount_pct": 10.1
+        },
         "amazon": {
           "status": "in_stock",
           "mrp": 952.0,
           "selling": 476.0,
           "discount_pct": 50.0
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 476.0,
+          "discount_pct": 20.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 595.0,
           "selling": 595.0,
           "discount_pct": 0.0
+        },
+        "nykaa": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -568,33 +568,33 @@
         },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 495.0,
+          "selling": 314.0,
+          "discount_pct": 36.6
         },
         "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 495.0,
+          "discount_pct": 0.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 361.0,
+          "discount_pct": 27.1
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 495.0,
           "selling": 495.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -603,6 +603,12 @@
       "name": "Brillare Pure Coconut Oil",
       "type": "Natural",
       "platforms": {
+        "flipkart": {
+          "status": "unknown",
+          "mrp": 395.0,
+          "selling": 269.0,
+          "discount_pct": 31.9
+        },
         "amazon": {
           "status": "in_stock",
           "mrp": 429.0,
@@ -610,22 +616,16 @@
           "discount_pct": 0.0
         },
         "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 395.0,
+          "discount_pct": 0.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 244.0,
+          "discount_pct": 38.2
         },
         "shopify": {
           "status": "in_stock",
@@ -655,13 +655,19 @@
           "selling": 695.0,
           "discount_pct": 50.0
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "myntra": {
+          "status": "in_stock",
+          "mrp": 695.0,
+          "selling": 472.0,
+          "discount_pct": 32.1
+        },
+        "shopify": {
+          "status": "in_stock",
+          "mrp": 695.0,
+          "selling": 695.0,
+          "discount_pct": 0.0
+        },
+        "nykaa": {
           "status": "unknown",
           "mrp": null,
           "selling": null,
@@ -672,12 +678,6 @@
           "mrp": null,
           "selling": null,
           "discount_pct": null
-        },
-        "shopify": {
-          "status": "in_stock",
-          "mrp": 695.0,
-          "selling": 695.0,
-          "discount_pct": 0.0
         }
       }
     },
@@ -695,29 +695,29 @@
           "selling": 995.0,
           "discount_pct": 20.0
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 995.0,
+          "selling": 790.0,
+          "discount_pct": 20.6
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 995.0,
+          "selling": 746.0,
+          "discount_pct": 25.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 995.0,
           "selling": 995.0,
           "discount_pct": 0.0
+        },
+        "nykaa": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -728,23 +728,29 @@
       "platforms": {
         "amazon": {
           "status": "in_stock",
-          "mrp": 900.0,
+          "mrp": 355.0,
           "selling": 695.0,
-          "discount_pct": 22.8
+          "discount_pct": null
         },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 695.0,
+          "selling": 572.0,
+          "discount_pct": 17.7
         },
         "myntra": {
+          "status": "in_stock",
+          "mrp": 695.0,
+          "selling": 472.0,
+          "discount_pct": 32.1
+        },
+        "shopify": {
+          "status": "in_stock",
+          "mrp": 695.0,
+          "selling": 695.0,
+          "discount_pct": 0.0
+        },
+        "nykaa": {
           "status": "unknown",
           "mrp": null,
           "selling": null,
@@ -755,12 +761,6 @@
           "mrp": null,
           "selling": null,
           "discount_pct": null
-        },
-        "shopify": {
-          "status": "in_stock",
-          "mrp": 695.0,
-          "selling": 695.0,
-          "discount_pct": 0.0
         }
       }
     },
@@ -775,35 +775,35 @@
           "selling": 213.0,
           "discount_pct": 38.3
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 345.0,
+          "selling": 269.0,
+          "discount_pct": 22.0
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 595.0,
+          "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 345.0,
+          "selling": 213.0,
+          "discount_pct": 38.3
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 345.0,
           "selling": 345.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -818,35 +818,35 @@
           "selling": 224.0,
           "discount_pct": 35.1
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 345.0,
+          "selling": 269.0,
+          "discount_pct": 22.0
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 345.0,
+          "selling": 282.0,
+          "discount_pct": 18.3
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 345.0,
+          "selling": 345.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 345.0,
           "selling": 345.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -855,41 +855,41 @@
       "name": "Brillare Tea Tree Oil For Itchy, Flaky, Dandruff Prone Scalp",
       "type": "Natural",
       "platforms": {
+        "flipkart": {
+          "status": "unknown",
+          "mrp": 345.0,
+          "selling": 269.0,
+          "discount_pct": 22.0
+        },
         "amazon": {
           "status": "in_stock",
           "mrp": 345.0,
-          "selling": 207.0,
-          "discount_pct": 40.0
-        },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "selling": 213.0,
+          "discount_pct": 38.3
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 345.0,
+          "selling": 213.0,
+          "discount_pct": 38.3
         },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 345.0,
+          "selling": 345.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 345.0,
           "selling": 345.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -904,35 +904,35 @@
           "selling": 715.0,
           "discount_pct": 52.0
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 795.0,
+          "selling": 715.0,
+          "discount_pct": 10.1
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 715.0,
+          "discount_pct": 10.1
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 895.0,
+          "selling": 895.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 795.0,
           "selling": 795.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -947,35 +947,35 @@
           "selling": 556.0,
           "discount_pct": 52.0
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 795.0,
+          "selling": 715.0,
+          "discount_pct": 10.1
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 795.0,
+          "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 556.0,
+          "discount_pct": 30.1
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 795.0,
           "selling": 795.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -993,29 +993,29 @@
           "selling": 715.0,
           "discount_pct": 52.0
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 715.0,
+          "discount_pct": 10.1
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 795.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 795.0,
           "selling": 795.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1029,33 +1029,33 @@
         },
         "amazon": {
           "status": "in_stock",
-          "mrp": 1790.0,
-          "selling": 537.0,
+          "mrp": 2386.67,
+          "selling": 716.0,
           "discount_pct": 70.0
         },
         "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 895.0,
+          "selling": 895.0,
+          "discount_pct": 0.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 895.0,
+          "selling": 402.0,
+          "discount_pct": 55.1
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 895.0,
           "selling": 895.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1070,35 +1070,35 @@
           "selling": 477.0,
           "discount_pct": null
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 795.0,
+          "selling": 715.0,
+          "discount_pct": 10.1
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 795.0,
+          "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 357.0,
+          "discount_pct": 55.1
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 795.0,
           "selling": 795.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1113,23 +1113,23 @@
           "selling": 477.0,
           "discount_pct": null
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 795.0,
+          "selling": 715.0,
+          "discount_pct": 10.1
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 795.0,
+          "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 318.0,
+          "discount_pct": 60.0
         },
         "shopify": {
           "status": "in_stock",
@@ -1159,17 +1159,17 @@
           "selling": 322.0,
           "discount_pct": 70.0
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 222.0,
+          "discount_pct": 55.2
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 495.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
@@ -1198,21 +1198,21 @@
         },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 495.0,
+          "selling": 314.0,
+          "discount_pct": 36.6
         },
         "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 495.0,
+          "discount_pct": 0.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 222.0,
+          "discount_pct": 55.2
         },
         "shopify": {
           "status": "in_stock",
@@ -1241,21 +1241,21 @@
         },
         "amazon": {
           "status": "out_of_stock",
-          "mrp": 499.0,
+          "mrp": 848.0,
           "selling": 222.0,
-          "discount_pct": 55.5
+          "discount_pct": 73.8
         },
         "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 495.0,
+          "discount_pct": 0.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 321.0,
+          "discount_pct": 35.2
         },
         "shopify": {
           "status": "in_stock",
@@ -1278,21 +1278,21 @@
         },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 795.0,
+          "selling": 629.0,
+          "discount_pct": 20.9
         },
         "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "out_of_stock",
+          "mrp": 795.0,
+          "selling": 795.0,
+          "discount_pct": 0.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 596.0,
+          "discount_pct": 25.0
         },
         "shopify": {
           "status": "in_stock",
@@ -1313,29 +1313,29 @@
       "name": "Brillare Salicylic & Lactic Acid Face Wash For Clear, Purified, Acne Prone Skin",
       "type": "Natural",
       "platforms": {
+        "flipkart": {
+          "status": "unknown",
+          "mrp": 595.0,
+          "selling": 269.0,
+          "discount_pct": 54.8
+        },
         "amazon": {
           "status": "in_stock",
           "mrp": 309.0,
           "selling": 309.0,
           "discount_pct": 0.0
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 374.0,
+          "discount_pct": 37.1
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 595.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
@@ -1364,21 +1364,21 @@
         },
         "amazon": {
           "status": "out_of_stock",
-          "mrp": 549.0,
+          "mrp": 96.0,
           "selling": 415.0,
-          "discount_pct": 24.4
+          "discount_pct": null
         },
         "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 595.0,
+          "discount_pct": 0.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 208.0,
+          "discount_pct": 65.0
         },
         "shopify": {
           "status": "in_stock",
@@ -1393,41 +1393,41 @@
       "name": "Brillare Rosemary Oil 100 Ml",
       "type": "Natural",
       "platforms": {
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 207.0,
-          "selling": 207.0,
-          "discount_pct": 0.0
-        },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 345.0,
+          "selling": 269.0,
+          "discount_pct": 22.0
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 224.0,
+          "selling": 224.0,
+          "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 345.0,
+          "selling": 282.0,
+          "discount_pct": 18.3
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 345.0,
+          "selling": 345.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 345.0,
           "selling": 345.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1438,39 +1438,39 @@
       "platforms": {
         "amazon": {
           "status": "in_stock",
-          "mrp": 1300.0,
-          "selling": 195.0,
+          "mrp": 1240.0,
+          "selling": 186.0,
           "discount_pct": 85.0
-        },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
         },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 445.0,
+          "selling": 314.0,
+          "discount_pct": 29.4
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 445.0,
+          "selling": 445.0,
+          "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 445.0,
+          "selling": 218.0,
+          "discount_pct": 51.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 445.0,
           "selling": 445.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1485,35 +1485,35 @@
           "selling": 429.0,
           "discount_pct": 0.0
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 695.0,
+          "selling": 535.0,
+          "discount_pct": 23.0
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 695.0,
+          "selling": 465.0,
+          "discount_pct": 33.1
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 795.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 695.0,
           "selling": 695.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1528,35 +1528,35 @@
           "selling": 417.0,
           "discount_pct": null
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 695.0,
+          "selling": 449.0,
+          "discount_pct": 35.4
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 695.0,
+          "selling": 695.0,
+          "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 695.0,
+          "selling": 278.0,
+          "discount_pct": 60.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 695.0,
           "selling": 695.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1581,10 +1581,10 @@
           "discount_pct": null
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 1795.0,
+          "selling": 1795.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
@@ -1603,10 +1603,10 @@
           "status": "no_link"
         },
         "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 895.0,
+          "selling": 895.0,
+          "discount_pct": 0.0
         },
         "amazon": {
           "status": "in_stock",
@@ -1615,10 +1615,10 @@
           "discount_pct": null
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 895.0,
+          "selling": 733.0,
+          "discount_pct": 18.1
         },
         "shopify": {
           "status": "in_stock",
@@ -1639,6 +1639,12 @@
       "name": "Brillare Caffiene Shampoo 200 Ml",
       "type": "Natural",
       "platforms": {
+        "flipkart": {
+          "status": "unknown",
+          "mrp": 495.0,
+          "selling": 404.0,
+          "discount_pct": 18.4
+        },
         "amazon": {
           "status": "in_stock",
           "mrp": 173.0,
@@ -1646,34 +1652,28 @@
           "discount_pct": null
         },
         "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 495.0,
+          "discount_pct": 0.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 346.0,
+          "discount_pct": 30.1
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 495.0,
           "selling": 495.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1688,35 +1688,35 @@
           "selling": 421.0,
           "discount_pct": null
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 295.0,
+          "selling": 247.0,
+          "discount_pct": 16.3
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 495.0,
+          "discount_pct": 0.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 595.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 495.0,
           "selling": 495.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1731,35 +1731,35 @@
           "selling": 506.0,
           "discount_pct": null
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 595.0,
+          "selling": 503.0,
+          "discount_pct": 15.5
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 695.0,
+          "selling": 625.0,
+          "discount_pct": 10.1
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 595.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 595.0,
           "selling": 595.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1774,35 +1774,35 @@
           "selling": 297.0,
           "discount_pct": 70.0
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 495.0,
+          "selling": 359.0,
+          "discount_pct": 27.5
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 495.0,
+          "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 297.0,
+          "discount_pct": 40.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 495.0,
           "selling": 495.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1817,35 +1817,35 @@
           "selling": 200.0,
           "discount_pct": null
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 295.0,
+          "selling": 224.0,
+          "discount_pct": 24.1
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 295.0,
+          "selling": 295.0,
+          "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 295.0,
+          "selling": 200.0,
+          "discount_pct": 32.2
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 295.0,
           "selling": 295.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1860,35 +1860,35 @@
           "selling": 422.0,
           "discount_pct": null
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 595.0,
+          "selling": 359.0,
+          "discount_pct": 39.7
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 493.0,
+          "discount_pct": 17.1
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 595.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 595.0,
           "selling": 595.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1902,33 +1902,33 @@
         },
         "amazon": {
           "status": "out_of_stock",
-          "mrp": 1699.0,
+          "mrp": 900.0,
           "selling": 971.0,
-          "discount_pct": 42.8
-        },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
           "discount_pct": null
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 1495.0,
+          "selling": 1270.0,
+          "discount_pct": 15.1
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 1495.0,
+          "selling": 1495.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 1095.0,
           "selling": 1095.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1943,35 +1943,35 @@
           "selling": 1495.0,
           "discount_pct": 0.0
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 1495.0,
+          "selling": 1395.0,
+          "discount_pct": 6.7
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 1495.0,
+          "selling": 1495.0,
+          "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 1495.0,
+          "selling": 1270.0,
+          "discount_pct": 15.1
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 1495.0,
           "selling": 1495.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1986,23 +1986,23 @@
           "selling": 959.0,
           "discount_pct": 35.9
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 1295.0,
+          "selling": 1095.0,
+          "discount_pct": 15.4
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 1295.0,
+          "selling": 1295.0,
+          "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 1295.0,
+          "selling": 1100.0,
+          "discount_pct": 15.1
         },
         "shopify": {
           "status": "in_stock",
@@ -2033,28 +2033,28 @@
           "discount_pct": 0.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 755.0,
+          "discount_pct": 5.0
         },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 795.0,
+          "selling": 715.0,
+          "discount_pct": 10.1
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 795.0,
           "selling": 795.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2069,35 +2069,35 @@
           "selling": 971.0,
           "discount_pct": 0.0
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 1495.0,
+          "selling": 1295.0,
+          "discount_pct": 13.4
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 1495.0,
+          "selling": 1495.0,
+          "discount_pct": 0.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 1495.0,
+          "selling": 971.0,
+          "discount_pct": 35.1
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 1295.0,
           "selling": 1295.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2115,29 +2115,29 @@
           "selling": 1271.0,
           "discount_pct": 0.0
         },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 1495.0,
+          "selling": 1395.0,
+          "discount_pct": 6.7
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 1495.0,
+          "selling": 971.0,
+          "discount_pct": 35.1
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 1495.0,
           "selling": 1495.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2155,17 +2155,17 @@
         "smytten": {
           "status": "no_link"
         },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "amazon": {
           "status": "in_stock",
           "mrp": 203.0,
           "selling": 406.0,
           "discount_pct": null
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 247.0,
+          "discount_pct": 50.1
         },
         "shopify": {
           "status": "in_stock",
@@ -2183,35 +2183,35 @@
         "nykaa": {
           "status": "no_link"
         },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": 395.0,
+          "selling": 337.0,
+          "discount_pct": 14.7
+        },
         "amazon": {
           "status": "in_stock",
           "mrp": 122.0,
           "selling": 244.0,
           "discount_pct": null
         },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 244.0,
+          "discount_pct": 38.2
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 395.0,
           "selling": 395.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2229,29 +2229,29 @@
           "selling": 244.0,
           "discount_pct": null
         },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 395.0,
+          "selling": 337.0,
+          "discount_pct": 14.7
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 244.0,
+          "discount_pct": 38.2
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 395.0,
           "selling": 395.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2263,12 +2263,6 @@
         "flipkart": {
           "status": "no_link"
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "amazon": {
           "status": "in_stock",
           "mrp": 806.67,
@@ -2276,22 +2270,28 @@
           "discount_pct": 70.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 295.0,
+          "selling": 295.0,
+          "discount_pct": 0.0
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 295.0,
+          "selling": 295.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 295.0,
           "selling": 295.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2309,17 +2309,17 @@
           "selling": 796.0,
           "discount_pct": 50.0
         },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 995.0,
+          "selling": 805.0,
+          "discount_pct": 19.1
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 995.0,
+          "selling": 796.0,
+          "discount_pct": 20.0
         },
         "shopify": {
           "status": "in_stock",
@@ -2353,10 +2353,10 @@
           "discount_pct": 50.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 895.0,
+          "selling": 716.0,
+          "discount_pct": 20.0
         },
         "shopify": {
           "status": "in_stock",
@@ -2379,27 +2379,27 @@
       "platforms": {
         "amazon": {
           "status": "in_stock",
-          "mrp": 1408.33,
-          "selling": 676.0,
+          "mrp": 1489.58,
+          "selling": 715.0,
           "discount_pct": 52.0
         },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 795.0,
+          "selling": 715.0,
+          "discount_pct": 10.1
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 715.0,
+          "discount_pct": 10.1
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 795.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
@@ -2426,23 +2426,23 @@
           "selling": 244.0,
           "discount_pct": null
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 395.0,
+          "selling": 337.0,
+          "discount_pct": 14.7
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 395.0,
+          "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 244.0,
+          "discount_pct": 38.2
         },
         "shopify": {
           "status": "in_stock",
@@ -2469,16 +2469,16 @@
         "nykaa": {
           "status": "no_link"
         },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 244.0,
+          "discount_pct": 38.2
+        },
         "amazon": {
           "status": "in_stock",
           "mrp": 122.0,
           "selling": 244.0,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
           "discount_pct": null
         },
         "shopify": {
@@ -2511,27 +2511,27 @@
         },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 395.0,
+          "selling": 314.0,
+          "discount_pct": 20.5
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 323.0,
+          "discount_pct": 18.2
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 395.0,
           "selling": 395.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2546,35 +2546,35 @@
           "selling": 244.0,
           "discount_pct": null
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 395.0,
+          "selling": 269.0,
+          "discount_pct": 31.9
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 395.0,
+          "discount_pct": 0.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 244.0,
+          "discount_pct": 38.2
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 395.0,
           "selling": 395.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2588,33 +2588,33 @@
         },
         "amazon": {
           "status": "out_of_stock",
-          "mrp": 920.0,
+          "mrp": 174.75,
           "selling": 277.0,
-          "discount_pct": 69.9
-        },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
           "discount_pct": null
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 244.0,
+          "discount_pct": 38.2
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 395.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 395.0,
           "selling": 395.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2625,39 +2625,39 @@
       "platforms": {
         "amazon": {
           "status": "in_stock",
-          "mrp": 138.5,
-          "selling": 277.0,
-          "discount_pct": null
-        },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
+          "mrp": 138.0,
+          "selling": 276.0,
           "discount_pct": null
         },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 395.0,
+          "selling": 337.0,
+          "discount_pct": 14.7
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 395.0,
+          "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 323.0,
+          "discount_pct": 18.2
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 395.0,
           "selling": 395.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2672,35 +2672,35 @@
           "selling": 277.0,
           "discount_pct": null
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 395.0,
+          "selling": 314.0,
+          "discount_pct": 20.5
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 323.0,
+          "discount_pct": 18.2
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 395.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 395.0,
           "selling": 395.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2715,35 +2715,35 @@
           "selling": 535.0,
           "discount_pct": null
         },
-        "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 295.0,
+          "selling": 224.0,
+          "discount_pct": 24.1
         },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "out_of_stock",
+          "mrp": 595.0,
+          "selling": 595.0,
+          "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 535.0,
+          "discount_pct": 10.1
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 595.0,
           "selling": 595.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2757,33 +2757,33 @@
         },
         "amazon": {
           "status": "in_stock",
-          "mrp": 373.0,
-          "selling": 746.0,
+          "mrp": 422.5,
+          "selling": 845.0,
           "discount_pct": null
         },
         "nykaa": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 995.0,
+          "selling": 995.0,
+          "discount_pct": 0.0
         },
         "myntra": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "smytten": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "status": "in_stock",
+          "mrp": 995.0,
+          "selling": 845.0,
+          "discount_pct": 15.1
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 995.0,
           "selling": 995.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     }

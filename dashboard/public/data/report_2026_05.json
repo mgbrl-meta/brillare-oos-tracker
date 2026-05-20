@@ -1,11 +1,11 @@
 {
   "month": "2026-05",
-  "generated": "2026-05-20T11:43:13+00:00",
+  "generated": "2026-05-19T13:57:24+00:00",
   "rows": [
     {
       "sku": "ABFP30",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -14,7 +14,7 @@
     {
       "sku": "ABFP30",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -23,7 +23,7 @@
     {
       "sku": "ABFP30",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -32,7 +32,7 @@
     {
       "sku": "ABFP30",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -41,7 +41,7 @@
     {
       "sku": "ABFP30",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -50,7 +50,7 @@
     {
       "sku": "ABFP30",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -59,7 +59,7 @@
     {
       "sku": "APOS8",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 52.0,
@@ -68,7 +68,7 @@
     {
       "sku": "APOS8",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -77,7 +77,7 @@
     {
       "sku": "APOS8",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -86,7 +86,7 @@
     {
       "sku": "APOS8",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -95,7 +95,7 @@
     {
       "sku": "APOS8",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -104,7 +104,7 @@
     {
       "sku": "APOS8",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -113,7 +113,7 @@
     {
       "sku": "ARISSS50",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 50.0,
@@ -122,7 +122,7 @@
     {
       "sku": "ARISSS50",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -131,7 +131,7 @@
     {
       "sku": "ARISSS50",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -140,7 +140,7 @@
     {
       "sku": "ARISSS50",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -149,7 +149,7 @@
     {
       "sku": "ARISSS50",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -158,16 +158,16 @@
     {
       "sku": "ARO100",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 100.0,
-      "avg_discount": 80.5
+      "avg_discount": 100.0
     },
     {
       "sku": "ARO100",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -176,7 +176,7 @@
     {
       "sku": "ARO100",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -185,7 +185,7 @@
     {
       "sku": "ARO100",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -194,7 +194,7 @@
     {
       "sku": "ARO100",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -203,7 +203,7 @@
     {
       "sku": "ARO100",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -212,7 +212,7 @@
     {
       "sku": "ARSM50",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 20.0,
@@ -221,7 +221,7 @@
     {
       "sku": "ARSM50",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -230,7 +230,7 @@
     {
       "sku": "ARSM50",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -239,7 +239,7 @@
     {
       "sku": "ARSM50",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -248,7 +248,7 @@
     {
       "sku": "ARSM50",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -257,7 +257,7 @@
     {
       "sku": "AVG200",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -266,7 +266,7 @@
     {
       "sku": "AVG200",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -275,7 +275,7 @@
     {
       "sku": "AVG200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -284,7 +284,7 @@
     {
       "sku": "AVG200",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -293,7 +293,7 @@
     {
       "sku": "AVG200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -302,7 +302,7 @@
     {
       "sku": "AVG200",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -311,7 +311,7 @@
     {
       "sku": "CCBL200",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -320,7 +320,7 @@
     {
       "sku": "CCBL200",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -329,7 +329,7 @@
     {
       "sku": "CCBL200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -338,7 +338,7 @@
     {
       "sku": "CCBL200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -347,7 +347,7 @@
     {
       "sku": "CCBL200",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -356,7 +356,7 @@
     {
       "sku": "CCBS200",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -365,7 +365,7 @@
     {
       "sku": "CCBS200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -374,7 +374,7 @@
     {
       "sku": "CCBS200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -383,7 +383,7 @@
     {
       "sku": "CCBW200",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -392,7 +392,7 @@
     {
       "sku": "CCBW200",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -401,7 +401,7 @@
     {
       "sku": "CCBW200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -410,7 +410,7 @@
     {
       "sku": "CCBW200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -419,7 +419,7 @@
     {
       "sku": "CCBW200",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -428,16 +428,16 @@
     {
       "sku": "CCGK",
       "platform": "amazon",
-      "days_tracked": 2,
-      "days_oos": 2,
-      "longest_oos_streak": 2,
+      "days_tracked": 1,
+      "days_oos": 1,
+      "longest_oos_streak": 1,
       "max_discount": 42.8,
       "avg_discount": 42.8
     },
     {
       "sku": "CCGK",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -446,7 +446,7 @@
     {
       "sku": "CCGK",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -455,7 +455,7 @@
     {
       "sku": "CCGK",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -464,7 +464,7 @@
     {
       "sku": "CCGK",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -473,7 +473,7 @@
     {
       "sku": "CCHC30",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 70.0,
@@ -482,7 +482,7 @@
     {
       "sku": "CCHC30",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -491,7 +491,7 @@
     {
       "sku": "CCHC30",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -500,7 +500,7 @@
     {
       "sku": "CCHC30",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -509,7 +509,7 @@
     {
       "sku": "CCHC30",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -518,7 +518,7 @@
     {
       "sku": "CDM125",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -527,7 +527,7 @@
     {
       "sku": "CDM125",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -536,7 +536,7 @@
     {
       "sku": "CDM125",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -545,7 +545,7 @@
     {
       "sku": "CDM125",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -554,7 +554,7 @@
     {
       "sku": "CDM125",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -563,7 +563,7 @@
     {
       "sku": "CDSH300",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -572,7 +572,7 @@
     {
       "sku": "CDSH300",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -581,7 +581,7 @@
     {
       "sku": "CDSH300",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -590,7 +590,7 @@
     {
       "sku": "CFSH200",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -599,7 +599,7 @@
     {
       "sku": "CFSH200",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -608,7 +608,7 @@
     {
       "sku": "CFSH200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -617,7 +617,7 @@
     {
       "sku": "CFSH200",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -626,7 +626,7 @@
     {
       "sku": "CFSH200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -635,7 +635,7 @@
     {
       "sku": "CFSH200",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -644,7 +644,7 @@
     {
       "sku": "FWAR100",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -653,7 +653,7 @@
     {
       "sku": "FWAR100",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -662,7 +662,7 @@
     {
       "sku": "FWAR100",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -671,7 +671,7 @@
     {
       "sku": "FWAR100",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -680,7 +680,7 @@
     {
       "sku": "FWAR100",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -689,7 +689,7 @@
     {
       "sku": "FWOA100",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -698,7 +698,7 @@
     {
       "sku": "FWOA100",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -707,7 +707,7 @@
     {
       "sku": "FWOA100",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -716,7 +716,7 @@
     {
       "sku": "FWOA100",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -725,7 +725,7 @@
     {
       "sku": "FWOA100",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -734,7 +734,7 @@
     {
       "sku": "FWSB100",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -743,7 +743,7 @@
     {
       "sku": "FWSB100",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -752,7 +752,7 @@
     {
       "sku": "FWSB100",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -761,7 +761,7 @@
     {
       "sku": "FWSB100",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -770,7 +770,7 @@
     {
       "sku": "FWSB100",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -779,7 +779,7 @@
     {
       "sku": "HAFS30",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -788,7 +788,7 @@
     {
       "sku": "HAFS30",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -797,7 +797,7 @@
     {
       "sku": "HAFS30",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -806,7 +806,7 @@
     {
       "sku": "HAFS30",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -815,7 +815,7 @@
     {
       "sku": "HAFS30",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -824,7 +824,7 @@
     {
       "sku": "HAFS30",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -833,7 +833,7 @@
     {
       "sku": "HSC70",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -842,7 +842,7 @@
     {
       "sku": "HSC70",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -851,7 +851,7 @@
     {
       "sku": "HSC70",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -860,7 +860,7 @@
     {
       "sku": "HSC70",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -869,7 +869,7 @@
     {
       "sku": "LCBL200",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -878,7 +878,7 @@
     {
       "sku": "LCBL200",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -887,7 +887,7 @@
     {
       "sku": "LCBL200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -896,7 +896,7 @@
     {
       "sku": "LCBL200",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -905,7 +905,7 @@
     {
       "sku": "LCBL200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -914,7 +914,7 @@
     {
       "sku": "LCBL200",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -923,7 +923,7 @@
     {
       "sku": "LCBW200",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -932,7 +932,7 @@
     {
       "sku": "LCBW200",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -941,7 +941,7 @@
     {
       "sku": "LCBW200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -950,7 +950,7 @@
     {
       "sku": "LCBW200",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -959,7 +959,7 @@
     {
       "sku": "LCBW200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -968,7 +968,7 @@
     {
       "sku": "LCBW200",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -977,7 +977,7 @@
     {
       "sku": "LLGK",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -986,7 +986,7 @@
     {
       "sku": "LLGK",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -995,7 +995,7 @@
     {
       "sku": "LLGK",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1004,7 +1004,7 @@
     {
       "sku": "LLGK",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1013,7 +1013,7 @@
     {
       "sku": "LLGK",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1022,7 +1022,7 @@
     {
       "sku": "LLGK",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1031,7 +1031,7 @@
     {
       "sku": "LLSH200",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1040,7 +1040,7 @@
     {
       "sku": "LLSH200",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1049,7 +1049,7 @@
     {
       "sku": "LLSH200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1058,7 +1058,7 @@
     {
       "sku": "LLSH200",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1067,7 +1067,7 @@
     {
       "sku": "LLSH200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1076,7 +1076,7 @@
     {
       "sku": "LLSH200",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1085,7 +1085,7 @@
     {
       "sku": "LLSS30",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 70.0,
@@ -1094,7 +1094,7 @@
     {
       "sku": "LLSS30",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1103,7 +1103,7 @@
     {
       "sku": "LLSS30",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1112,7 +1112,7 @@
     {
       "sku": "LLSS30",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1121,7 +1121,7 @@
     {
       "sku": "LLSS30",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1130,7 +1130,7 @@
     {
       "sku": "LLSS30",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1139,7 +1139,7 @@
     {
       "sku": "MAR50",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 50.0,
@@ -1148,7 +1148,7 @@
     {
       "sku": "MAR50",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1157,7 +1157,7 @@
     {
       "sku": "MAR50",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1166,7 +1166,7 @@
     {
       "sku": "MAR50",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1175,7 +1175,7 @@
     {
       "sku": "MAR50",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1184,7 +1184,7 @@
     {
       "sku": "MCBL200",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1193,7 +1193,7 @@
     {
       "sku": "MCBL200",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1202,7 +1202,7 @@
     {
       "sku": "MCBL200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1211,7 +1211,7 @@
     {
       "sku": "MCBL200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1220,7 +1220,7 @@
     {
       "sku": "MCBL200",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1229,7 +1229,7 @@
     {
       "sku": "MCBW200",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1238,7 +1238,7 @@
     {
       "sku": "MCBW200",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1247,7 +1247,7 @@
     {
       "sku": "MCBW200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1256,7 +1256,7 @@
     {
       "sku": "MCBW200",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1265,7 +1265,7 @@
     {
       "sku": "MCBW200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1274,7 +1274,7 @@
     {
       "sku": "MCBW200",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1283,7 +1283,7 @@
     {
       "sku": "MDC125",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1292,7 +1292,7 @@
     {
       "sku": "MDC125",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1301,7 +1301,7 @@
     {
       "sku": "MDC125",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1310,7 +1310,7 @@
     {
       "sku": "MDC125",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1319,7 +1319,7 @@
     {
       "sku": "MDC125",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1328,16 +1328,16 @@
     {
       "sku": "MFGK",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 100.0,
-      "avg_discount": 67.9
+      "avg_discount": 100.0
     },
     {
       "sku": "MFGK",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1346,7 +1346,7 @@
     {
       "sku": "MFGK",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1355,7 +1355,7 @@
     {
       "sku": "MFGK",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1364,7 +1364,7 @@
     {
       "sku": "MFGK",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1373,7 +1373,7 @@
     {
       "sku": "MFGK",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1382,7 +1382,7 @@
     {
       "sku": "MHFC125",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1391,7 +1391,7 @@
     {
       "sku": "MHFC125",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1400,7 +1400,7 @@
     {
       "sku": "MHFC125",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1409,7 +1409,7 @@
     {
       "sku": "MHFC125",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1418,7 +1418,7 @@
     {
       "sku": "MHFC125",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1427,7 +1427,7 @@
     {
       "sku": "MHM125",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1436,7 +1436,7 @@
     {
       "sku": "MHM125",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1445,7 +1445,7 @@
     {
       "sku": "MHM125",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1454,7 +1454,7 @@
     {
       "sku": "MHM125",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1463,7 +1463,7 @@
     {
       "sku": "MHM125",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1472,7 +1472,7 @@
     {
       "sku": "MOA50",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 50.0,
@@ -1481,7 +1481,7 @@
     {
       "sku": "MOA50",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1490,7 +1490,7 @@
     {
       "sku": "MOA50",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1499,7 +1499,7 @@
     {
       "sku": "MOA50",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1508,7 +1508,7 @@
     {
       "sku": "MPSS50",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 50.0,
@@ -1517,7 +1517,7 @@
     {
       "sku": "MPSS50",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1526,7 +1526,7 @@
     {
       "sku": "MPSS50",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1535,7 +1535,7 @@
     {
       "sku": "MPSS50",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1544,7 +1544,7 @@
     {
       "sku": "MPSS50",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1553,7 +1553,7 @@
     {
       "sku": "MSB50",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1562,7 +1562,7 @@
     {
       "sku": "MSB50",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1571,7 +1571,7 @@
     {
       "sku": "MSB50",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1580,7 +1580,7 @@
     {
       "sku": "MSB50",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1589,7 +1589,7 @@
     {
       "sku": "MSB50",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1598,7 +1598,7 @@
     {
       "sku": "NCFS30",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1607,7 +1607,7 @@
     {
       "sku": "NCFS30",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1616,7 +1616,7 @@
     {
       "sku": "NCFS30",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1625,7 +1625,7 @@
     {
       "sku": "NCFS30",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1634,7 +1634,7 @@
     {
       "sku": "NCFS30",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1643,7 +1643,7 @@
     {
       "sku": "NCFS30",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1652,7 +1652,7 @@
     {
       "sku": "NPFW30",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 70.0,
@@ -1661,7 +1661,7 @@
     {
       "sku": "NPFW30",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1670,7 +1670,7 @@
     {
       "sku": "NPFW30",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1679,7 +1679,7 @@
     {
       "sku": "NPFW30",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1688,7 +1688,7 @@
     {
       "sku": "NPFW30",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1697,7 +1697,7 @@
     {
       "sku": "NSLBBS",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1706,7 +1706,7 @@
     {
       "sku": "NSLBBS",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1715,7 +1715,7 @@
     {
       "sku": "NSLBBS",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1724,7 +1724,7 @@
     {
       "sku": "NSLBBS",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1733,7 +1733,7 @@
     {
       "sku": "NSLBBS",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1742,7 +1742,7 @@
     {
       "sku": "OAISSS50",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 50.0,
@@ -1751,7 +1751,7 @@
     {
       "sku": "OAISSS50",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1760,7 +1760,7 @@
     {
       "sku": "OAISSS50",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1769,7 +1769,7 @@
     {
       "sku": "OAISSS50",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1778,7 +1778,7 @@
     {
       "sku": "OASM50",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 22.8,
@@ -1787,7 +1787,7 @@
     {
       "sku": "OASM50",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1796,7 +1796,7 @@
     {
       "sku": "OASM50",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1805,7 +1805,7 @@
     {
       "sku": "OASM50",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1814,7 +1814,7 @@
     {
       "sku": "OASM50",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1823,7 +1823,7 @@
     {
       "sku": "OASM50",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1832,7 +1832,7 @@
     {
       "sku": "OBOS8",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 52.0,
@@ -1841,7 +1841,7 @@
     {
       "sku": "OBOS8",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1850,7 +1850,7 @@
     {
       "sku": "OBOS8",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1859,7 +1859,7 @@
     {
       "sku": "OBOS8",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1868,7 +1868,7 @@
     {
       "sku": "OBOS8",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1877,7 +1877,7 @@
     {
       "sku": "OBOS8",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1886,16 +1886,16 @@
     {
       "sku": "ONO100",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 100.0,
-      "avg_discount": 79.5
+      "avg_discount": 100.0
     },
     {
       "sku": "ONO100",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1904,7 +1904,7 @@
     {
       "sku": "ONO100",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1913,7 +1913,7 @@
     {
       "sku": "ONO100",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1922,7 +1922,7 @@
     {
       "sku": "ONO100",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1931,7 +1931,7 @@
     {
       "sku": "ONO100",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1940,7 +1940,7 @@
     {
       "sku": "PAO100A",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1949,7 +1949,7 @@
     {
       "sku": "PAO100A",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1958,7 +1958,7 @@
     {
       "sku": "PAO100A",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1967,7 +1967,7 @@
     {
       "sku": "PAO100A",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1976,7 +1976,7 @@
     {
       "sku": "PAO100A",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -1985,7 +1985,7 @@
     {
       "sku": "PAO100A",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -1994,7 +1994,7 @@
     {
       "sku": "PCAO200A",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2003,7 +2003,7 @@
     {
       "sku": "PCAO200A",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2012,7 +2012,7 @@
     {
       "sku": "PCAO200A",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2021,7 +2021,7 @@
     {
       "sku": "PCAO200A",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2030,7 +2030,7 @@
     {
       "sku": "PCAO200A",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2039,7 +2039,7 @@
     {
       "sku": "PCAO200A",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2048,7 +2048,7 @@
     {
       "sku": "PCO200A",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2057,7 +2057,7 @@
     {
       "sku": "PCO200A",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2066,7 +2066,7 @@
     {
       "sku": "PCO200A",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2075,7 +2075,7 @@
     {
       "sku": "PCO200A",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2084,7 +2084,7 @@
     {
       "sku": "PCO200A",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2093,7 +2093,7 @@
     {
       "sku": "PCO200A",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2102,7 +2102,7 @@
     {
       "sku": "PRMEO15A",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 85.0,
@@ -2111,7 +2111,7 @@
     {
       "sku": "PRMEO15A",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2120,7 +2120,7 @@
     {
       "sku": "PRMEO15A",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2129,7 +2129,7 @@
     {
       "sku": "PRMEO15A",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2138,7 +2138,7 @@
     {
       "sku": "PRMEO15A",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2147,7 +2147,7 @@
     {
       "sku": "PRMEO15A",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2156,7 +2156,7 @@
     {
       "sku": "RCBL200",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2165,7 +2165,7 @@
     {
       "sku": "RCBL200",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2174,7 +2174,7 @@
     {
       "sku": "RCBL200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2183,7 +2183,7 @@
     {
       "sku": "RCBL200",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2192,7 +2192,7 @@
     {
       "sku": "RCBL200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2201,7 +2201,7 @@
     {
       "sku": "RCBL200",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2210,7 +2210,7 @@
     {
       "sku": "RCBW200",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2219,7 +2219,7 @@
     {
       "sku": "RCBW200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2228,7 +2228,7 @@
     {
       "sku": "RCBW200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2237,7 +2237,7 @@
     {
       "sku": "RCBW200",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2246,7 +2246,7 @@
     {
       "sku": "RMO100",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2255,7 +2255,7 @@
     {
       "sku": "RMO100",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2264,7 +2264,7 @@
     {
       "sku": "RMO100",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2273,7 +2273,7 @@
     {
       "sku": "RMO100",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2282,7 +2282,7 @@
     {
       "sku": "RMO100",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2291,7 +2291,7 @@
     {
       "sku": "RMO100",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2300,7 +2300,7 @@
     {
       "sku": "RMOS8",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 52.0,
@@ -2309,7 +2309,7 @@
     {
       "sku": "RMOS8",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2318,7 +2318,7 @@
     {
       "sku": "RMOS8",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2327,7 +2327,7 @@
     {
       "sku": "RMOS8",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2336,7 +2336,7 @@
     {
       "sku": "RMOS8",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2345,7 +2345,7 @@
     {
       "sku": "RMOS8",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2354,7 +2354,7 @@
     {
       "sku": "RMSH200",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2363,7 +2363,7 @@
     {
       "sku": "RMSH200",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2372,7 +2372,7 @@
     {
       "sku": "RMSH200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2381,7 +2381,7 @@
     {
       "sku": "RMSH200",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2390,7 +2390,7 @@
     {
       "sku": "RMSH200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2399,7 +2399,7 @@
     {
       "sku": "RMSH200",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2408,16 +2408,16 @@
     {
       "sku": "RPFW30",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 100.0,
-      "avg_discount": 77.6
+      "avg_discount": 100.0
     },
     {
       "sku": "RPFW30",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2426,7 +2426,7 @@
     {
       "sku": "RPFW30",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2435,7 +2435,7 @@
     {
       "sku": "RPFW30",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2444,7 +2444,7 @@
     {
       "sku": "RPFW30",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2453,7 +2453,7 @@
     {
       "sku": "RPFW30",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2462,7 +2462,7 @@
     {
       "sku": "RRGK",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2471,7 +2471,7 @@
     {
       "sku": "RRGK",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2480,7 +2480,7 @@
     {
       "sku": "RRGK",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2489,7 +2489,7 @@
     {
       "sku": "RRGK",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2498,7 +2498,7 @@
     {
       "sku": "RRGK",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2507,7 +2507,7 @@
     {
       "sku": "RRGK",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2516,7 +2516,7 @@
     {
       "sku": "RRSS30",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2525,7 +2525,7 @@
     {
       "sku": "RRSS30",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2534,7 +2534,7 @@
     {
       "sku": "RRSS30",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2543,7 +2543,7 @@
     {
       "sku": "RRSS30",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2552,7 +2552,7 @@
     {
       "sku": "RRSS30",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2561,7 +2561,7 @@
     {
       "sku": "SAFS30",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2570,7 +2570,7 @@
     {
       "sku": "SAFS30",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2579,7 +2579,7 @@
     {
       "sku": "SAFS30",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2588,7 +2588,7 @@
     {
       "sku": "SAFS30",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2597,7 +2597,7 @@
     {
       "sku": "SAFS30",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2606,7 +2606,7 @@
     {
       "sku": "SAFS30",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2615,7 +2615,7 @@
     {
       "sku": "SBSM50",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 50.0,
@@ -2624,7 +2624,7 @@
     {
       "sku": "SBSM50",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2633,7 +2633,7 @@
     {
       "sku": "SBSM50",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2642,7 +2642,7 @@
     {
       "sku": "SBSM50",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2651,7 +2651,7 @@
     {
       "sku": "SBSM50",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2660,16 +2660,16 @@
     {
       "sku": "SCBW200",
       "platform": "amazon",
-      "days_tracked": 2,
-      "days_oos": 2,
-      "longest_oos_streak": 2,
-      "max_discount": 69.9,
-      "avg_discount": 69.6
+      "days_tracked": 1,
+      "days_oos": 1,
+      "longest_oos_streak": 1,
+      "max_discount": 69.2,
+      "avg_discount": 69.2
     },
     {
       "sku": "SCBW200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2678,7 +2678,7 @@
     {
       "sku": "SCBW200",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2687,7 +2687,7 @@
     {
       "sku": "SCBW200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2696,7 +2696,7 @@
     {
       "sku": "SCBW200",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2705,7 +2705,7 @@
     {
       "sku": "SDC300",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2714,7 +2714,7 @@
     {
       "sku": "SDC300",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2723,7 +2723,7 @@
     {
       "sku": "SDC300",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2732,7 +2732,7 @@
     {
       "sku": "SDC300",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2741,7 +2741,7 @@
     {
       "sku": "SDC300",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2750,7 +2750,7 @@
     {
       "sku": "SHFC300",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2759,7 +2759,7 @@
     {
       "sku": "SHFC300",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2768,7 +2768,7 @@
     {
       "sku": "SHFC300",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2777,7 +2777,7 @@
     {
       "sku": "SHFC300",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2786,7 +2786,7 @@
     {
       "sku": "SHFC300",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2795,7 +2795,7 @@
     {
       "sku": "SHM300",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2804,7 +2804,7 @@
     {
       "sku": "SHM300",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2813,7 +2813,7 @@
     {
       "sku": "SHM300",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2822,7 +2822,7 @@
     {
       "sku": "SHM300",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2831,7 +2831,7 @@
     {
       "sku": "SHM300",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2840,16 +2840,16 @@
     {
       "sku": "SLBW200",
       "platform": "amazon",
-      "days_tracked": 2,
-      "days_oos": 2,
-      "longest_oos_streak": 2,
+      "days_tracked": 1,
+      "days_oos": 1,
+      "longest_oos_streak": 1,
       "max_discount": 24.4,
       "avg_discount": 24.4
     },
     {
       "sku": "SLBW200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2858,7 +2858,7 @@
     {
       "sku": "SLBW200",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2867,7 +2867,7 @@
     {
       "sku": "SLBW200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2876,7 +2876,7 @@
     {
       "sku": "SLFW100",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2885,7 +2885,7 @@
     {
       "sku": "SLFW100",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2894,7 +2894,7 @@
     {
       "sku": "SLFW100",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2903,7 +2903,7 @@
     {
       "sku": "SLFW100",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2912,7 +2912,7 @@
     {
       "sku": "SLFW100",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2921,7 +2921,7 @@
     {
       "sku": "SLFW100",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2930,7 +2930,7 @@
     {
       "sku": "SSGK",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2939,7 +2939,7 @@
     {
       "sku": "SSGK",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2948,7 +2948,7 @@
     {
       "sku": "SSGK",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2957,7 +2957,7 @@
     {
       "sku": "SSGK",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -2966,7 +2966,7 @@
     {
       "sku": "SSGK",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2975,7 +2975,7 @@
     {
       "sku": "TBM125",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2984,7 +2984,7 @@
     {
       "sku": "TBM125",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -2993,7 +2993,7 @@
     {
       "sku": "TBM125",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3002,7 +3002,7 @@
     {
       "sku": "TBM125",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3011,7 +3011,7 @@
     {
       "sku": "TBM125",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -3020,7 +3020,7 @@
     {
       "sku": "TBM125",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3029,7 +3029,7 @@
     {
       "sku": "TBSH200",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3038,7 +3038,7 @@
     {
       "sku": "TBSH200",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3047,7 +3047,7 @@
     {
       "sku": "TBSH200",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3056,7 +3056,7 @@
     {
       "sku": "TBSH200",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3065,7 +3065,7 @@
     {
       "sku": "TBSH200",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -3074,7 +3074,7 @@
     {
       "sku": "TBSH200",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3083,16 +3083,16 @@
     {
       "sku": "TTO100",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 99.9,
-      "avg_discount": 75.6
+      "avg_discount": 99.9
     },
     {
       "sku": "TTO100",
       "platform": "flipkart",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3101,7 +3101,7 @@
     {
       "sku": "TTO100",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3110,7 +3110,7 @@
     {
       "sku": "TTO100",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3119,7 +3119,7 @@
     {
       "sku": "TTO100",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -3128,7 +3128,7 @@
     {
       "sku": "TTO100",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3137,7 +3137,7 @@
     {
       "sku": "TTSOS8",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 52.0,
@@ -3146,7 +3146,7 @@
     {
       "sku": "TTSOS8",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3155,7 +3155,7 @@
     {
       "sku": "TTSOS8",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3164,7 +3164,7 @@
     {
       "sku": "TTSOS8",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -3173,7 +3173,7 @@
     {
       "sku": "TTSOS8",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3182,7 +3182,7 @@
     {
       "sku": "VCFS30",
       "platform": "amazon",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 70.0,
@@ -3191,7 +3191,7 @@
     {
       "sku": "VCFS30",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3200,7 +3200,7 @@
     {
       "sku": "VCFS30",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3209,7 +3209,7 @@
     {
       "sku": "VCFS30",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
@@ -3218,7 +3218,7 @@
     {
       "sku": "VCFS30",
       "platform": "smytten",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3227,16 +3227,16 @@
     {
       "sku": "VCPFW30",
       "platform": "amazon",
-      "days_tracked": 2,
-      "days_oos": 2,
-      "longest_oos_streak": 2,
+      "days_tracked": 1,
+      "days_oos": 1,
+      "longest_oos_streak": 1,
       "max_discount": 55.5,
       "avg_discount": 55.5
     },
     {
       "sku": "VCPFW30",
       "platform": "myntra",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3245,7 +3245,7 @@
     {
       "sku": "VCPFW30",
       "platform": "nykaa",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": null,
@@ -3254,7 +3254,7 @@
     {
       "sku": "VCPFW30",
       "platform": "shopify",
-      "days_tracked": 2,
+      "days_tracked": 1,
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 0.0,
