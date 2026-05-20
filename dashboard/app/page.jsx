@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState, useMemo } from "react";
 
-const D_AMBER = 30, D_RED = 50;
+const D_AMBER = 10, D_RED = 10;
 const PLATFORMS = ["shopify", "amazon", "flipkart", "nykaa", "myntra", "smytten"];
 const PLF = { shopify: "Own Site", amazon: "Amazon", flipkart: "Flipkart", nykaa: "Nykaa", myntra: "Myntra", smytten: "Smytten" };
 
