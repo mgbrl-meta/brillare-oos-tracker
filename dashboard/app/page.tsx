@@ -383,6 +383,21 @@ export default function Dashboard() {
         </div>
       </section>
 
+      <section className="executiveStrip">
+        <div>
+          <span>Decision view</span>
+          <strong>{stats.availability}% availability</strong>
+        </div>
+        <div>
+          <span>Risk</span>
+          <strong className={stats.oos > 0 ? "badText" : "goodText"}>{stats.oos} OOS</strong>
+        </div>
+        <div>
+          <span>Discount leak</span>
+          <strong className={stats.discountAlerts.length > 0 ? "badText" : "goodText"}>{stats.discountAlerts.length} alerts</strong>
+        </div>
+      </section>
+
       <section className="kpiGrid">
         <div className="card">
           <div className="kpiLabel">Products tracked</div>
