@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import {
   Archive,
   BarChart3,
+  Clock,
   Download,
   Globe,
   Package,
@@ -46,8 +47,6 @@ type HistoryRow = {
   discount_pct?: number | null;
 };
 
-const DISCOUNT_ALERT = 10;
-
 const platformLabels: Record<string, string> = {
   shopify: "Own site",
   amazon: "Amazon",
@@ -57,7 +56,7 @@ const platformLabels: Record<string, string> = {
   smytten: "Smytten"
 };
 
-const preferredPlatforms = ["shopify", "amazon", "flipkart", "nykaa", "myntra", "smytten"];
+const preferredPlatforms = ["shopify", "amazon", "flipkart", "nykaa", "myntra"];
 
 function formatDate(value?: string) {
   if (!value) return "Not available";
@@ -99,39 +98,6 @@ function statusLabel(status?: string) {
   return status;
 }
 
-function productOosCount(product: Product, platforms: string[]) {
-  return platforms.filter((pl) => isOOS(product.platforms?.[pl]?.status)).length;
-}
-
-function productInStockCount(product: Product, platforms: string[]) {
-  return platforms.filter((pl) => isInStock(product.platforms?.[pl]?.status)).length;
-}
-
-function productMaxDiscount(product: Product, platforms: string[]) {
-  const discounts = platforms.map((pl) => Number(product.platforms?.[pl]?.discount_pct || 0));
-  return discounts.length ? Math.max(...discounts) : 0;
-}
-
-function bestPriceForProduct(product: Product, platforms: string[]) {
-  const validPrices = platforms
-    .map((pl) => ({
-      platform: pl,
-      selling: Number(product.platforms?.[pl]?.selling || 0),
-      discount: Number(product.platforms?.[pl]?.discount_pct || 0)
-    }))
-    .filter((x) => x.selling > 0);
-
-  const bestPrice = validPrices.length
-    ? validPrices.reduce((a, b) => (b.selling < a.selling ? b : a))
-    : null;
-
-  const bestDiscount = validPrices.length
-    ? validPrices.reduce((a, b) => (b.discount > a.discount ? b : a))
-    : null;
-
-  return { bestPrice, bestDiscount };
-}
-
 function downloadCSV(products: Product[], platforms: string[]) {
   const rows = [
     [
@@ -161,7 +127,7 @@ function downloadCSV(products: Product[], platforms: string[]) {
       ];
     });
 
-    const oosCount = productOosCount(product, platforms);
+    const oosCount = platforms.filter((pl) => isOOS(product.platforms?.[pl]?.status)).length;
     const prices = platforms.map((pl) => Number(product.platforms?.[pl]?.selling || 0)).filter(Boolean);
     const discounts = platforms.map((pl) => Number(product.platforms?.[pl]?.discount_pct || 0));
 
@@ -228,7 +194,7 @@ export default function Dashboard() {
     products.forEach((p) => Object.keys(p.platforms || {}).forEach((pl) => found.add(pl)));
     const ordered = preferredPlatforms.filter((p) => found.has(p));
     const extra = Array.from(found).filter((p) => !ordered.includes(p));
-    return [...ordered, ...extra].slice(0, 6);
+    return [...ordered, ...extra].slice(0, 5);
   }, [products]);
 
   const categories = useMemo(() => {
@@ -245,16 +211,14 @@ export default function Dashboard() {
 
       const matchesCategory = category === "all" || p.type === category;
 
-      const oosCount = productOosCount(p, platforms);
-      const inStockCount = productInStockCount(p, platforms);
-      const maxDiscount = productMaxDiscount(p, platforms);
+      const oosCount = platforms.filter((pl) => isOOS(p.platforms?.[pl]?.status)).length;
+      const inStockCount = platforms.filter((pl) => isInStock(p.platforms?.[pl]?.status)).length;
 
       const matchesStatus =
         statusFilter === "all" ||
         (statusFilter === "oos" && oosCount > 0) ||
         (statusFilter === "critical" && oosCount >= 2) ||
-        (statusFilter === "healthy" && oosCount === 0 && inStockCount > 0) ||
-        (statusFilter === "discount" && maxDiscount > DISCOUNT_ALERT);
+        (statusFilter === "healthy" && oosCount === 0 && inStockCount > 0);
 
       return matchesQuery && matchesCategory && matchesStatus;
     });
@@ -295,18 +259,33 @@ export default function Dashboard() {
     const critical = products
       .map((p) => ({
         ...p,
-        oosCount: productOosCount(p, platforms)
+        oosCount: platforms.filter((pl) => isOOS(p.platforms?.[pl]?.status)).length
       }))
       .filter((p) => p.oosCount > 0)
       .sort((a, b) => b.oosCount - a.oosCount);
 
     const priceRows = products.map((p) => {
-      const { bestPrice, bestDiscount } = bestPriceForProduct(p, platforms);
-      return { ...p, bestPrice, bestDiscount };
+      const validPrices = platforms
+        .map((pl) => ({
+          platform: pl,
+          selling: Number(p.platforms?.[pl]?.selling || 0),
+          mrp: Number(p.platforms?.[pl]?.mrp || 0),
+          discount: Number(p.platforms?.[pl]?.discount_pct || 0)
+        }))
+        .filter((x) => x.selling > 0);
+
+      const bestPrice = validPrices.length ? validPrices.reduce((a, b) => (b.selling < a.selling ? b : a)) : null;
+      const bestDiscount = validPrices.length ? validPrices.reduce((a, b) => (b.discount > a.discount ? b : a)) : null;
+
+      return {
+        ...p,
+        bestPrice,
+        bestDiscount
+      };
     });
 
-    const discountAlerts = priceRows
-      .filter((p) => p.bestDiscount && Number(p.bestDiscount.discount || 0) > DISCOUNT_ALERT)
+    const deepDiscounts = priceRows
+      .filter((p) => p.bestDiscount && p.bestDiscount.discount >= 30)
       .sort((a, b) => Number(b.bestDiscount?.discount || 0) - Number(a.bestDiscount?.discount || 0));
 
     return {
@@ -319,7 +298,7 @@ export default function Dashboard() {
       platformBreakdown,
       critical,
       priceRows,
-      discountAlerts
+      deepDiscounts
     };
   }, [products, platforms]);
 
@@ -359,7 +338,7 @@ export default function Dashboard() {
           <div className="eyebrow">Brillare multi-platform inventory intelligence</div>
           <h1>OOS Tracker Dashboard</h1>
           <p className="subtitle">
-            A Notion-clean, Apple-style command center for stock visibility, price movement, discount risk, and historical scraper data across marketplaces.
+            A Notion-clean, Apple-style command center for stock visibility, price movement, discount risk, and historical scraper data across your marketplaces.
           </p>
         </div>
 
@@ -400,9 +379,9 @@ export default function Dashboard() {
           <div className="kpiSub">{stats.critical.length} products need attention</div>
         </div>
         <div className="card">
-          <div className="kpiLabel">Discount alerts</div>
-          <div className="kpiValue red">{stats.discountAlerts.length}</div>
-          <div className="kpiSub">products above {DISCOUNT_ALERT}% discount</div>
+          <div className="kpiLabel">Scrape failures</div>
+          <div className="kpiValue amber">{stats.failures}</div>
+          <div className="kpiSub">blocked, unknown, or failed pages</div>
         </div>
       </section>
 
@@ -437,7 +416,7 @@ export default function Dashboard() {
             <div className="sectionTitle">
               <div>
                 <h2>Product status</h2>
-                <p>Search, filter, and identify products with stock gaps or discount risk.</p>
+                <p>Search, filter, and identify products with stock gaps.</p>
               </div>
             </div>
 
@@ -452,7 +431,6 @@ export default function Dashboard() {
                 <option value="oos">Has OOS</option>
                 <option value="critical">Critical: 2+ OOS</option>
                 <option value="healthy">Healthy</option>
-                <option value="discount">Discount &gt; {DISCOUNT_ALERT}%</option>
               </select>
               <button className="btn" onClick={() => downloadCSV(filtered, platforms)}><Download size={15} /> Export</button>
             </div>
@@ -470,8 +448,7 @@ export default function Dashboard() {
                   </thead>
                   <tbody>
                     {filtered.map((p) => {
-                      const oosCount = productOosCount(p, platforms);
-                      const maxDiscount = productMaxDiscount(p, platforms);
+                      const oosCount = platforms.filter((pl) => isOOS(p.platforms?.[pl]?.status)).length;
 
                       return (
                         <tr key={p.sku}>
@@ -482,19 +459,14 @@ export default function Dashboard() {
                           <td>{p.type || "—"}</td>
                           {platforms.map((pl) => {
                             const rec = p.platforms?.[pl];
-                            const discount = Number(rec?.discount_pct || 0);
                             return (
-                              <td key={pl} title={`${platformLabels[pl] || pl}: ${statusLabel(rec?.status)}`} className={discount > DISCOUNT_ALERT ? "priceRiskCell" : ""}>
+                              <td key={pl} title={`${platformLabels[pl] || pl}: ${statusLabel(rec?.status)}`}>
                                 <span className={`dot ${statusColor(rec?.status)}`} />
-                                {discount > DISCOUNT_ALERT ? <div className="discountRed">{discount}% off</div> : null}
                               </td>
                             );
                           })}
                           <td>
-                            <div className="alertStack">
-                              {oosCount > 0 ? <span className="badge red">{oosCount} OOS</span> : <span className="badge green">OK</span>}
-                              {maxDiscount > DISCOUNT_ALERT ? <span className="badge red">{maxDiscount}% off</span> : null}
-                            </div>
+                            {oosCount > 0 ? <span className="badge red">{oosCount} OOS</span> : <span className="badge green">OK</span>}
                           </td>
                         </tr>
                       );
@@ -505,73 +477,10 @@ export default function Dashboard() {
               </div>
             </div>
 
-            <div className="mobileProductList">
-              {filtered.map((p) => {
-                const oosCount = productOosCount(p, platforms);
-                const inStockCount = productInStockCount(p, platforms);
-                const maxDiscount = productMaxDiscount(p, platforms);
-
-                return (
-                  <article className="mobileProductCard" key={p.sku}>
-                    <div className="mobileProductTop">
-                      <div className="mobileProductInfo">
-                        <div className="mobileProductName">{p.name || "Unnamed product"}</div>
-                        <div className="mobileProductMeta">
-                          <span>{p.sku}</span>
-                          <span>{p.type || "Uncategorised"}</span>
-                        </div>
-                      </div>
-
-                      {maxDiscount > DISCOUNT_ALERT ? (
-                        <span className="mobileStatusPill critical">{maxDiscount}% off</span>
-                      ) : oosCount > 0 ? (
-                        <span className={`mobileStatusPill ${oosCount >= 2 ? "critical" : "warning"}`}>{oosCount} OOS</span>
-                      ) : (
-                        <span className="mobileStatusPill healthy">OK</span>
-                      )}
-                    </div>
-
-                    <div className="mobileHealthRow">
-                      <div>
-                        <span className="mobileHealthValue green">{inStockCount}</span>
-                        <span className="mobileHealthLabel"> In stock</span>
-                      </div>
-                      <div>
-                        <span className="mobileHealthValue red">{oosCount}</span>
-                        <span className="mobileHealthLabel"> OOS</span>
-                      </div>
-                    </div>
-
-                    <div className="mobilePlatformGrid">
-                      {platforms.map((pl) => {
-                        const rec = p.platforms?.[pl];
-                        const discount = Number(rec?.discount_pct || 0);
-
-                        return (
-                          <div className={discount > DISCOUNT_ALERT ? "mobilePlatformCell discountRisk" : "mobilePlatformCell"} key={pl}>
-                            <div className="mobilePlatformLabel">
-                              <span className={`dot ${statusColor(rec?.status)}`} />
-                              {platformLabels[pl] || pl}
-                            </div>
-                            <div className="mobilePlatformStatus">
-                              {discount > DISCOUNT_ALERT ? <strong>{discount}% off</strong> : statusLabel(rec?.status)}
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </article>
-                );
-              })}
-
-              {!filtered.length && <div className="empty">No matching products found.</div>}
-            </div>
-
             <div className="legend">
               <span><span className="dot green" /> In stock</span>
               <span><span className="dot red" /> Out of stock</span>
               <span><span className="dot gray" /> Failed / unknown / no link</span>
-              <span><span className="badge red">10%+ off</span> Discount alert</span>
             </div>
           </section>
 
@@ -600,22 +509,16 @@ export default function Dashboard() {
             <div className="card">
               <div className="cardHeader">
                 <div>
-                  <div className="cardTitle">Discount risk summary</div>
-                  <div className="cardHint">Products discounted more than {DISCOUNT_ALERT}%.</div>
+                  <div className="cardTitle">Action insight</div>
+                  <div className="cardHint">What to check first.</div>
                 </div>
-                <TrendingDown size={18} className="red" />
+                <BarChart3 size={18} className="green" />
               </div>
-              {stats.discountAlerts.length ? (
-                <ol className="insightList">
-                  {stats.discountAlerts.slice(0, 10).map((p) => (
-                    <li key={p.sku}>
-                      <strong>{p.name}</strong> — <span className="red">{p.bestDiscount?.discount}% off</span> on {platformLabels[p.bestDiscount?.platform || ""] || p.bestDiscount?.platform}
-                    </li>
-                  ))}
-                </ol>
-              ) : (
-                <div className="empty">No discount alerts above {DISCOUNT_ALERT}%.</div>
-              )}
+              <ul className="insightList">
+                <li>Start with products showing 2+ OOS platforms.</li>
+                <li>Check scrape failures separately before assuming true OOS.</li>
+                <li>Use the price tab to detect unexpected discounting after availability checks.</li>
+              </ul>
             </div>
           </section>
         </>
@@ -643,7 +546,6 @@ export default function Dashboard() {
                 <option value="oos">Has OOS</option>
                 <option value="critical">Critical OOS</option>
                 <option value="healthy">Healthy</option>
-                <option value="discount">Discount &gt; {DISCOUNT_ALERT}%</option>
               </select>
               <button className="btn"><Search size={15} /> Filter</button>
             </div>
@@ -661,7 +563,17 @@ export default function Dashboard() {
                   </thead>
                   <tbody>
                     {filtered.map((p) => {
-                      const { bestPrice, bestDiscount } = bestPriceForProduct(p, platforms);
+                      const validPrices = platforms
+                        .map((pl) => ({
+                          platform: pl,
+                          rec: p.platforms?.[pl],
+                          selling: Number(p.platforms?.[pl]?.selling || 0),
+                          discount: Number(p.platforms?.[pl]?.discount_pct || 0)
+                        }))
+                        .filter((x) => x.selling > 0);
+
+                      const bestPrice = validPrices.length ? validPrices.reduce((a, b) => (b.selling < a.selling ? b : a)) : null;
+                      const bestDiscount = validPrices.length ? validPrices.reduce((a, b) => (b.discount > a.discount ? b : a)) : null;
 
                       return (
                         <tr key={p.sku}>
@@ -679,22 +591,21 @@ export default function Dashboard() {
                           </td>
                           <td>
                             {bestDiscount && bestDiscount.discount > 0 ? (
-                              <span className={`badge ${bestDiscount.discount > DISCOUNT_ALERT ? "red" : "amber"}`}>
+                              <span className={`badge ${bestDiscount.discount >= 50 ? "red" : "amber"}`}>
                                 {bestDiscount.discount}% off
                               </span>
                             ) : "—"}
                           </td>
                           {platforms.map((pl) => {
                             const rec = p.platforms?.[pl];
-                            const discount = Number(rec?.discount_pct || 0);
 
                             return (
-                              <td key={pl} className={discount > DISCOUNT_ALERT ? "priceRiskCell" : ""}>
+                              <td key={pl}>
                                 {rec?.selling ? (
                                   <>
                                     <div className="price">{money(rec.selling)}</div>
                                     {rec.mrp && rec.mrp !== rec.selling ? <div className="mrp">{money(rec.mrp)}</div> : null}
-                                    {rec.discount_pct ? <div className={discount > DISCOUNT_ALERT ? "discount discountRed" : "discount"}>{rec.discount_pct}% off</div> : null}
+                                    {rec.discount_pct ? <div className="discount">{rec.discount_pct}% off</div> : null}
                                   </>
                                 ) : (
                                   <span className={`badge ${statusColor(rec?.status)}`}>{statusLabel(rec?.status)}</span>
@@ -710,105 +621,27 @@ export default function Dashboard() {
                 {!filtered.length && <div className="empty">No price rows available.</div>}
               </div>
             </div>
-
-            <div className="mobileProductList">
-              {filtered.map((p) => {
-                const { bestPrice, bestDiscount } = bestPriceForProduct(p, platforms);
-
-                return (
-                  <article className="mobileProductCard" key={p.sku}>
-                    <div className="mobileProductTop">
-                      <div className="mobileProductInfo">
-                        <div className="mobileProductName">{p.name || "Unnamed product"}</div>
-                        <div className="mobileProductMeta">
-                          <span>{p.sku}</span>
-                          <span>{p.type || "Uncategorised"}</span>
-                        </div>
-                      </div>
-
-                      {bestDiscount && bestDiscount.discount > 0 ? (
-                        <span className={`mobileStatusPill ${bestDiscount.discount > DISCOUNT_ALERT ? "critical" : "warning"}`}>
-                          {bestDiscount.discount}% off
-                        </span>
-                      ) : (
-                        <span className="mobileStatusPill neutral">No deal</span>
-                      )}
-                    </div>
-
-                    <div className="mobilePriceHero">
-                      <div>
-                        <div className="mobilePriceLabel">Best price</div>
-                        <div className="mobilePriceValue">{bestPrice ? money(bestPrice.selling) : "—"}</div>
-                        <div className="mobilePriceSource">
-                          {bestPrice ? platformLabels[bestPrice.platform] || bestPrice.platform : "No live price"}
-                        </div>
-                      </div>
-
-                      <div className={bestDiscount && bestDiscount.discount > DISCOUNT_ALERT ? "mobilePriceRisk" : ""}>
-                        <div className="mobilePriceLabel">Highest discount</div>
-                        <div className="mobilePriceValue">
-                          {bestDiscount && bestDiscount.discount > 0 ? `${bestDiscount.discount}%` : "—"}
-                        </div>
-                        <div className="mobilePriceSource">
-                          {bestDiscount && bestDiscount.discount > 0
-                            ? platformLabels[bestDiscount.platform] || bestDiscount.platform
-                            : "No discount"}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="mobilePlatformGrid price">
-                      {platforms.map((pl) => {
-                        const rec = p.platforms?.[pl];
-                        const discount = Number(rec?.discount_pct || 0);
-
-                        return (
-                          <div className={discount > DISCOUNT_ALERT ? "mobilePlatformCell discountRisk" : "mobilePlatformCell"} key={pl}>
-                            <div className="mobilePlatformLabel">
-                              <span className={`dot ${statusColor(rec?.status)}`} />
-                              {platformLabels[pl] || pl}
-                            </div>
-
-                            {rec?.selling ? (
-                              <div>
-                                <div className="mobilePlatformPrice">{money(rec.selling)}</div>
-                                {rec.mrp && rec.mrp !== rec.selling ? <div className="mobilePlatformMrp">{money(rec.mrp)}</div> : null}
-                                {rec.discount_pct ? <div className={discount > DISCOUNT_ALERT ? "mobilePlatformDiscount discountRed" : "mobilePlatformDiscount"}>{rec.discount_pct}% off</div> : null}
-                              </div>
-                            ) : (
-                              <div className="mobilePlatformStatus">{statusLabel(rec?.status)}</div>
-                            )}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </article>
-                );
-              })}
-
-              {!filtered.length && <div className="empty">No price rows available.</div>}
-            </div>
           </section>
 
           <section className="insightGrid">
             <div className="card">
               <div className="cardHeader">
                 <div>
-                  <div className="cardTitle">Discount alert watchlist</div>
-                  <div className="cardHint">Products discounted more than {DISCOUNT_ALERT}% on any platform.</div>
+                  <div className="cardTitle">Deep discount watchlist</div>
+                  <div className="cardHint">Products with 30%+ discount on any platform.</div>
                 </div>
-                <TrendingDown size={18} className="red" />
+                <TrendingDown size={18} className="amber" />
               </div>
-              {stats.discountAlerts.length ? (
+              {stats.deepDiscounts.length ? (
                 <ol className="insightList">
-                  {stats.discountAlerts.slice(0, 10).map((p) => (
+                  {stats.deepDiscounts.slice(0, 8).map((p) => (
                     <li key={p.sku}>
-                      <strong>{p.name}</strong> — <span className="red">{p.bestDiscount?.discount}% off</span> on {platformLabels[p.bestDiscount?.platform || ""] || p.bestDiscount?.platform}
+                      <strong>{p.name}</strong> — {p.bestDiscount?.discount}% on {platformLabels[p.bestDiscount?.platform || ""] || p.bestDiscount?.platform}
                     </li>
                   ))}
                 </ol>
               ) : (
-                <div className="empty">No discount alerts above {DISCOUNT_ALERT}%.</div>
+                <div className="empty">No deep discount alerts above 30%.</div>
               )}
             </div>
 
@@ -822,7 +655,7 @@ export default function Dashboard() {
               </div>
               <ul className="insightList">
                 <li>Best price shows the lowest currently scraped selling price.</li>
-                <li>Discounts above {DISCOUNT_ALERT}% are treated as red risk alerts.</li>
+                <li>Highest discount highlights the biggest MRP-to-selling gap.</li>
                 <li>Unavailable prices are shown as status badges instead of blank cells.</li>
               </ul>
             </div>
@@ -853,7 +686,7 @@ export default function Dashboard() {
                       In stock: <strong className="green">{day.inStock}</strong> · OOS: <strong className="red">{day.oos}</strong> · Failures: <strong className="amber">{day.failures}</strong>
                     </div>
                     <div>
-                      {day.maxDiscount > DISCOUNT_ALERT ? <span className="badge red">Max {day.maxDiscount}% off</span> : day.maxDiscount ? <span className="badge amber">Max {day.maxDiscount}% off</span> : <span className="badge gray">No discount</span>}
+                      {day.maxDiscount ? <span className="badge amber">Max {day.maxDiscount}% off</span> : <span className="badge gray">No discount</span>}
                     </div>
                   </div>
                 ))}
@@ -889,72 +722,24 @@ export default function Dashboard() {
                     </tr>
                   </thead>
                   <tbody>
-                    {history.slice(-120).reverse().map((row, index) => {
-                      const discount = Number(row.discount_pct || 0);
-                      return (
-                        <tr key={`${row.ts}-${row.sku}-${row.platform}-${index}`}>
-                          <td>
-                            <div className="productName">{row.day || row.ts?.slice(0, 10) || "—"}</div>
-                            <div className="sku">{row.ts ? formatDate(row.ts) : ""}</div>
-                          </td>
-                          <td>{row.sku || "—"}</td>
-                          <td>{platformLabels[row.platform || ""] || row.platform || "—"}</td>
-                          <td><span className={`badge ${statusColor(row.status)}`}>{statusLabel(row.status)}</span></td>
-                          <td>{money(row.mrp)}</td>
-                          <td>{money(row.selling)}</td>
-                          <td>{discount ? <span className={discount > DISCOUNT_ALERT ? "discountRed" : ""}>{discount}%</span> : "—"}</td>
-                        </tr>
-                      );
-                    })}
+                    {history.slice(-120).reverse().map((row, index) => (
+                      <tr key={`${row.ts}-${row.sku}-${row.platform}-${index}`}>
+                        <td>
+                          <div className="productName">{row.day || row.ts?.slice(0, 10) || "—"}</div>
+                          <div className="sku">{row.ts ? formatDate(row.ts) : ""}</div>
+                        </td>
+                        <td>{row.sku || "—"}</td>
+                        <td>{platformLabels[row.platform || ""] || row.platform || "—"}</td>
+                        <td><span className={`badge ${statusColor(row.status)}`}>{statusLabel(row.status)}</span></td>
+                        <td>{money(row.mrp)}</td>
+                        <td>{money(row.selling)}</td>
+                        <td>{row.discount_pct ? `${row.discount_pct}%` : "—"}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
                 {!history.length && <div className="empty">No historical rows available.</div>}
               </div>
-            </div>
-
-            <div className="mobileProductList">
-              {history.slice(-80).reverse().map((row, index) => {
-                const discount = Number(row.discount_pct || 0);
-
-                return (
-                  <article className="mobileHistoryCard" key={`${row.ts}-${row.sku}-${row.platform}-${index}`}>
-                    <div className="mobileProductTop">
-                      <div>
-                        <div className="mobileProductName">{row.sku || "Unknown SKU"}</div>
-                        <div className="mobileProductMeta">
-                          <span>{row.day || row.ts?.slice(0, 10) || "—"}</span>
-                          <span>{platformLabels[row.platform || ""] || row.platform || "—"}</span>
-                        </div>
-                      </div>
-
-                      <span className={`mobileStatusPill ${discount > DISCOUNT_ALERT ? "critical" : statusColor(row.status)}`}>
-                        {discount > DISCOUNT_ALERT ? `${discount}% off` : statusLabel(row.status)}
-                      </span>
-                    </div>
-
-                    <div className="mobilePriceHero three">
-                      <div>
-                        <div className="mobilePriceLabel">Selling</div>
-                        <div className="mobilePriceValue">{money(row.selling)}</div>
-                      </div>
-
-                      <div>
-                        <div className="mobilePriceLabel">MRP</div>
-                        <div className="mobilePriceValue">{money(row.mrp)}</div>
-                      </div>
-
-                      <div className={discount > DISCOUNT_ALERT ? "mobilePriceRisk" : ""}>
-                        <div className="mobilePriceLabel">Discount</div>
-                        <div className="mobilePriceValue">{discount ? `${discount}%` : "—"}</div>
-                      </div>
-                    </div>
-
-                    {row.ts ? <div className="mobileTimestamp">{formatDate(row.ts)}</div> : null}
-                  </article>
-                );
-              })}
-
-              {!history.length && <div className="empty">No historical rows available.</div>}
             </div>
           </section>
         </>
