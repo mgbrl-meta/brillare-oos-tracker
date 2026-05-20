@@ -1479,3 +1479,442 @@ tr:last-child td {
     max-width: 148px;
   }
 }
+
+/* =========================================================
+   Desktop CEO x Top 1% Figma Dashboard Upgrade
+   Professional decision dashboard for 768px+.
+   ========================================================= */
+
+.desktopCommandCenter {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(360px, 0.95fr);
+  gap: 14px;
+  margin: 0 0 16px;
+}
+
+.commandPrimary,
+.commandMini,
+.tableIntelligenceBar {
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(600px 220px at 8% 0%, rgba(47, 201, 135, 0.12), transparent 62%),
+    var(--surface);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  box-shadow: var(--shadow2);
+}
+
+.commandPrimary {
+  min-height: 176px;
+  border-radius: 32px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 22px;
+}
+
+.commandLabel {
+  display: inline-flex;
+  color: var(--soft);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 900;
+}
+
+.commandPrimary h2 {
+  margin: 13px 0 0;
+  color: var(--ink);
+  font-size: clamp(36px, 4.2vw, 62px);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+  font-weight: 900;
+}
+
+.commandPrimary p {
+  max-width: 600px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.commandScore {
+  width: 116px;
+  height: 116px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 34px;
+  font-size: 30px;
+  letter-spacing: -0.055em;
+  font-weight: 950;
+}
+
+.commandScore.good {
+  color: var(--good);
+  background: rgba(31, 157, 107, 0.13);
+  box-shadow: inset 0 0 0 1px rgba(31, 157, 107, 0.16);
+}
+
+.commandScore.warn {
+  color: var(--warn);
+  background: rgba(217, 150, 42, 0.13);
+  box-shadow: inset 0 0 0 1px rgba(217, 150, 42, 0.16);
+}
+
+.commandScore.bad {
+  color: var(--bad);
+  background: rgba(224, 86, 79, 0.13);
+  box-shadow: inset 0 0 0 1px rgba(224, 86, 79, 0.16);
+}
+
+.commandMiniGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.commandMini {
+  min-height: 52px;
+  border-radius: 22px;
+  padding: 14px 16px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 14px;
+  align-items: center;
+}
+
+.commandMini span {
+  color: var(--soft);
+  font-size: 10.5px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 900;
+}
+
+.commandMini strong {
+  grid-row: span 2;
+  color: var(--ink);
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  font-weight: 950;
+}
+
+.commandMini small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.tableIntelligenceBar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.tableIntelligenceBar > div {
+  padding: 15px 16px;
+  background: var(--surface3);
+}
+
+.tableIntelligenceBar span {
+  display: block;
+  color: var(--soft);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 900;
+}
+
+.tableIntelligenceBar strong {
+  display: inline-block;
+  margin-top: 7px;
+  color: var(--ink);
+  font-size: 27px;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  font-weight: 950;
+}
+
+.tableIntelligenceBar small {
+  margin-left: 7px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    margin-bottom: 18px;
+  }
+
+  .heroCopy {
+    max-width: 780px;
+  }
+
+  .heroActions {
+    position: sticky;
+    top: 18px;
+    z-index: 25;
+  }
+
+  .tabShell {
+    top: 18px;
+  }
+
+  .tabs {
+    padding: 5px;
+    border-radius: 22px;
+  }
+
+  .tab {
+    min-height: 48px;
+    border-radius: 17px;
+  }
+
+  .kpiGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .metricCard {
+    min-height: 136px;
+    border-radius: 26px;
+    padding: 18px;
+  }
+
+  .metricIcon {
+    margin-bottom: 14px;
+  }
+
+  .metricValue {
+    font-size: 31px;
+  }
+
+  .section {
+    margin-top: 26px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 14px;
+  }
+
+  .sectionTitle h2 {
+    font-size: 30px;
+  }
+
+  .platformGrid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .platformCard {
+    min-height: 150px;
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  }
+
+  .platformCard:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--good) 24%, var(--line));
+    box-shadow: var(--shadow);
+  }
+
+  .desktopTableCard {
+    border-radius: 30px;
+  }
+
+  .desktopTableCard table {
+    table-layout: fixed;
+  }
+
+  .desktopTableCard th:first-child,
+  .desktopTableCard td:first-child {
+    width: 34%;
+  }
+
+  .desktopTableCard th:nth-child(2),
+  .desktopTableCard td:nth-child(2) {
+    width: 13%;
+  }
+
+  .desktopTableCard th:last-child,
+  .desktopTableCard td:last-child {
+    width: 13%;
+  }
+
+  .desktopTableCard th {
+    position: sticky;
+    top: 82px;
+    z-index: 8;
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--bg) 88%, transparent), color-mix(in srgb, var(--bg) 76%, transparent));
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+  }
+
+  .desktopTableCard td {
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+
+  .desktopTableCard tbody tr {
+    transition: background 160ms ease;
+  }
+
+  .desktopTableCard tbody tr:hover {
+    background: var(--surface3);
+  }
+
+  .desktopTableCard .statusCell {
+    min-height: 34px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .desktopTableCard th:not(:first-child):not(:nth-child(2)),
+  .desktopTableCard td:not(:first-child):not(:nth-child(2)) {
+    text-align: center;
+  }
+
+  .desktopTableCard .productName {
+    font-size: 14.5px;
+  }
+
+  .desktopTableCard .sku {
+    font-size: 11.5px;
+  }
+
+  .tinyDanger {
+    min-height: 22px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 7px;
+    border-radius: 999px;
+    background: rgba(224, 86, 79, 0.13);
+  }
+
+  .priceRiskCell {
+    box-shadow: inset 0 0 0 999px rgba(224, 86, 79, 0.03);
+  }
+
+  .badgeStack {
+    justify-content: flex-start;
+  }
+
+  .panel {
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  }
+
+  .panel:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    border-color: color-mix(in srgb, var(--ink) 14%, var(--line));
+  }
+
+  .cleanListItem {
+    transition: transform 160ms ease, background 160ms ease;
+  }
+
+  .cleanListItem:hover {
+    transform: translateX(2px);
+    background: color-mix(in srgb, var(--surface2) 72%, var(--ink) 5%);
+  }
+
+  .controls {
+    grid-template-columns: minmax(320px, 1.45fr) minmax(190px, 0.7fr) minmax(210px, 0.7fr);
+  }
+
+  .searchWrap,
+  .selectWrap {
+    transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  }
+
+  .searchWrap:focus-within,
+  .selectWrap:focus-within {
+    border-color: color-mix(in srgb, var(--good) 38%, var(--line));
+    box-shadow: 0 0 0 4px rgba(31, 157, 107, 0.1), var(--shadow2);
+  }
+
+  .primaryButton {
+    transition: transform 160ms ease, opacity 160ms ease;
+  }
+
+  .primaryButton:hover {
+    transform: translateY(-1px);
+    opacity: 0.92;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page {
+    width: min(1320px, calc(100% - 56px));
+  }
+
+  .desktopTableCard th,
+  .desktopTableCard td {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 768px) {
+  .desktopCommandCenter {
+    grid-template-columns: 1fr;
+  }
+
+  .commandMiniGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .commandMini {
+    min-height: 96px;
+    grid-template-columns: 1fr;
+  }
+
+  .commandMini strong {
+    grid-row: auto;
+    margin-top: 10px;
+  }
+
+  .platformGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .desktopCommandCenter {
+    display: none;
+  }
+
+  .tableIntelligenceBar {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-radius: 18px;
+    margin-bottom: 9px;
+  }
+
+  .tableIntelligenceBar > div {
+    padding: 10px 9px;
+  }
+
+  .tableIntelligenceBar span {
+    font-size: 8.5px;
+    letter-spacing: 0.08em;
+  }
+
+  .tableIntelligenceBar strong {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+
+  .tableIntelligenceBar small {
+    display: block;
+    margin: 4px 0 0;
+    font-size: 10px;
+  }
+}

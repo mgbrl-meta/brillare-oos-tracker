@@ -271,6 +271,8 @@ export default function Dashboard() {
 
     const inStock = cells.filter((x) => isInStock(x.rec?.status)).length;
     const oos = cells.filter((x) => isOOS(x.rec?.status)).length;
+    const noLink = cells.filter((x) => x.rec?.status === "no_link").length;
+
     const failures = cells.filter((x) => {
       const s = x.rec?.status;
       return !s || s === "unknown" || s.startsWith("error");
@@ -314,6 +316,7 @@ export default function Dashboard() {
       totalCells: cells.length,
       inStock,
       oos,
+      noLink,
       failures,
       availability,
       platformBreakdown,
@@ -395,6 +398,40 @@ export default function Dashboard() {
         <div>
           <span>Discount leak</span>
           <strong className={stats.discountAlerts.length > 0 ? "badText" : "goodText"}>{stats.discountAlerts.length} alerts</strong>
+        </div>
+      </section>
+
+      <section className="desktopCommandCenter">
+        <div className="commandPrimary">
+          <div>
+            <span className="commandLabel">CEO snapshot</span>
+            <h2>{stats.availability}% marketplace availability</h2>
+            <p>{stats.inStock} live listings from {stats.totalCells} checks. {stats.oos > 0 ? `${stats.oos} OOS listings need review.` : "All visible listings are healthy."}</p>
+          </div>
+
+          <div className={stats.availability >= 85 ? "commandScore good" : stats.availability >= 65 ? "commandScore warn" : "commandScore bad"}>
+            {stats.availability}%
+          </div>
+        </div>
+
+        <div className="commandMiniGrid">
+          <div className="commandMini">
+            <span>OOS exposure</span>
+            <strong className={stats.oos > 0 ? "badText" : "goodText"}>{stats.oos}</strong>
+            <small>{stats.critical.length} product{stats.critical.length === 1 ? "" : "s"} impacted</small>
+          </div>
+
+          <div className="commandMini">
+            <span>Discount leakage</span>
+            <strong className={stats.discountAlerts.length > 0 ? "badText" : "goodText"}>{stats.discountAlerts.length}</strong>
+            <small>above {DISCOUNT_ALERT}% threshold</small>
+          </div>
+
+          <div className="commandMini">
+            <span>No link / failures</span>
+            <strong>{stats.noLink + stats.failures}</strong>
+            <small>data quality checks</small>
+          </div>
         </div>
       </section>
 
