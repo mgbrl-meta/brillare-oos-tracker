@@ -1,6 +1,6 @@
 {
   "month": "2026-05",
-  "generated": "2026-05-20T07:27:02+00:00",
+  "generated": "2026-05-20T11:43:13+00:00",
   "rows": [
     {
       "sku": "ABFP30",
@@ -162,7 +162,7 @@
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 100.0,
-      "avg_discount": 91.0
+      "avg_discount": 80.5
     },
     {
       "sku": "ARO100",
@@ -1332,7 +1332,7 @@
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 100.0,
-      "avg_discount": 74.4
+      "avg_discount": 67.9
     },
     {
       "sku": "MFGK",
@@ -1890,7 +1890,7 @@
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 100.0,
-      "avg_discount": 90.6
+      "avg_discount": 79.5
     },
     {
       "sku": "ONO100",
@@ -2412,7 +2412,7 @@
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 100.0,
-      "avg_discount": 82.1
+      "avg_discount": 77.6
     },
     {
       "sku": "RPFW30",
@@ -2663,8 +2663,8 @@
       "days_tracked": 2,
       "days_oos": 2,
       "longest_oos_streak": 2,
-      "max_discount": 69.2,
-      "avg_discount": 69.2
+      "max_discount": 69.9,
+      "avg_discount": 69.6
     },
     {
       "sku": "SCBW200",
@@ -3087,7 +3087,7 @@
       "days_oos": 0,
       "longest_oos_streak": 0,
       "max_discount": 99.9,
-      "avg_discount": 84.5
+      "avg_discount": 75.6
     },
     {
       "sku": "TTO100",
