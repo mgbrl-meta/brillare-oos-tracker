@@ -3,17 +3,13 @@
 import { useEffect, useMemo, useState } from "react";
 import {
   Archive,
-  BarChart3,
+  CheckCircle2,
   Download,
-  Globe,
-  Package,
+  Moon,
   Search,
-  ShoppingBag,
-  Sparkles,
-  Store,
-  Tags,
-  TrendingDown,
-  AlertTriangle
+  Sun,
+  TriangleAlert,
+  XCircle
 } from "lucide-react";
 
 type PlatformRecord = {
@@ -41,15 +37,13 @@ type HistoryRow = {
   sku?: string;
   platform?: string;
   status?: string;
-  mrp?: number | null;
-  selling?: number | null;
   discount_pct?: number | null;
 };
 
 const DISCOUNT_ALERT = 10;
 
 const platformLabels: Record<string, string> = {
-  shopify: "Own site",
+  shopify: "Own",
   amazon: "Amazon",
   flipkart: "Flipkart",
   nykaa: "Nykaa",
@@ -71,23 +65,12 @@ function formatDate(value?: string) {
   }
 }
 
-function money(value?: number | null) {
-  if (!value) return "—";
-  return `₹${Math.round(value).toLocaleString("en-IN")}`;
-}
-
 function isInStock(status?: string) {
   return status === "in_stock";
 }
 
 function isOOS(status?: string) {
   return status === "out_of_stock";
-}
-
-function statusColor(status?: string) {
-  if (status === "in_stock") return "green";
-  if (status === "out_of_stock") return "red";
-  return "gray";
 }
 
 function statusLabel(status?: string) {
@@ -99,6 +82,12 @@ function statusLabel(status?: string) {
   return status;
 }
 
+function dotClass(status?: string) {
+  if (status === "in_stock") return "good";
+  if (status === "out_of_stock") return "bad";
+  return "muted";
+}
+
 function productOosCount(product: Product, platforms: string[]) {
   return platforms.filter((pl) => isOOS(product.platforms?.[pl]?.status)).length;
 }
@@ -108,82 +97,16 @@ function productInStockCount(product: Product, platforms: string[]) {
 }
 
 function productMaxDiscount(product: Product, platforms: string[]) {
-  const discounts = platforms.map((pl) => Number(product.platforms?.[pl]?.discount_pct || 0));
-  return discounts.length ? Math.max(...discounts) : 0;
+  return Math.max(0, ...platforms.map((pl) => Number(product.platforms?.[pl]?.discount_pct || 0)));
 }
 
-function bestPriceForProduct(product: Product, platforms: string[]) {
-  const validPrices = platforms
-    .map((pl) => ({
-      platform: pl,
-      selling: Number(product.platforms?.[pl]?.selling || 0),
-      discount: Number(product.platforms?.[pl]?.discount_pct || 0)
-    }))
-    .filter((x) => x.selling > 0);
-
-  const bestPrice = validPrices.length
-    ? validPrices.reduce((a, b) => (b.selling < a.selling ? b : a))
-    : null;
-
-  const bestDiscount = validPrices.length
-    ? validPrices.reduce((a, b) => (b.discount > a.discount ? b : a))
-    : null;
-
-  return { bestPrice, bestDiscount };
-}
-
-function downloadCSV(products: Product[], platforms: string[]) {
-  const rows = [
-    [
-      "SKU",
-      "Product",
-      "Category",
-      ...platforms.flatMap((p) => [
-        `${platformLabels[p] || p} Status`,
-        `${platformLabels[p] || p} MRP`,
-        `${platformLabels[p] || p} Selling`,
-        `${platformLabels[p] || p} Discount`
-      ]),
-      "OOS Count",
-      "Best Price",
-      "Highest Discount"
-    ]
-  ];
-
-  products.forEach((product) => {
-    const cells = platforms.flatMap((pl) => {
-      const rec = product.platforms?.[pl] || {};
-      return [
-        String(rec.status || "unknown"),
-        rec.mrp ? String(rec.mrp) : "",
-        rec.selling ? String(rec.selling) : "",
-        rec.discount_pct ? String(rec.discount_pct) : ""
-      ];
-    });
-
-    const oosCount = productOosCount(product, platforms);
-    const prices = platforms.map((pl) => Number(product.platforms?.[pl]?.selling || 0)).filter(Boolean);
-    const discounts = platforms.map((pl) => Number(product.platforms?.[pl]?.discount_pct || 0));
-
-    rows.push([
-      product.sku,
-      product.name,
-      product.type || "",
-      ...cells,
-      String(oosCount),
-      prices.length ? String(Math.min(...prices)) : "",
-      discounts.length ? String(Math.max(...discounts)) : ""
-    ]);
+function productWorstDiscountPlatform(product: Product, platforms: string[]) {
+  let result = { platform: "", discount: 0 };
+  platforms.forEach((pl) => {
+    const d = Number(product.platforms?.[pl]?.discount_pct || 0);
+    if (d > result.discount) result = { platform: pl, discount: d };
   });
-
-  const csv = rows.map((r) => r.map((c) => `"${String(c).replace(/"/g, '""')}"`).join(",")).join("\n");
-  const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "brillare-oos-price-dashboard.csv";
-  a.click();
-  URL.revokeObjectURL(url);
+  return result;
 }
 
 function parseHistoryText(text: string): HistoryRow[] {
@@ -201,18 +124,64 @@ function parseHistoryText(text: string): HistoryRow[] {
     .filter(Boolean);
 }
 
+function downloadCSV(products: Product[], platforms: string[]) {
+  const rows = [
+    [
+      "SKU",
+      "Product",
+      "Category",
+      ...platforms.map((p) => `${platformLabels[p] || p} Status`),
+      "In Stock Count",
+      "OOS Count",
+      "Highest Discount"
+    ]
+  ];
+
+  products.forEach((p) => {
+    rows.push([
+      p.sku,
+      p.name,
+      p.type || "",
+      ...platforms.map((pl) => statusLabel(p.platforms?.[pl]?.status)),
+      String(productInStockCount(p, platforms)),
+      String(productOosCount(p, platforms)),
+      productMaxDiscount(p, platforms) ? `${productMaxDiscount(p, platforms)}%` : ""
+    ]);
+  });
+
+  const csv = rows.map((r) => r.map((c) => `"${String(c).replace(/"/g, '""')}"`).join(",")).join("\n");
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "brillare-oos-dashboard.csv";
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 export default function Dashboard() {
-  const [activeTab, setActiveTab] = useState<"summary" | "prices" | "history">("summary");
+  const [tab, setTab] = useState<"dashboard" | "history">("dashboard");
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [data, setData] = useState<LatestData>({ products: [] });
   const [history, setHistory] = useState<HistoryRow[]>([]);
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
-  const [statusFilter, setStatusFilter] = useState("all");
+  const [risk, setRisk] = useState("all");
 
   useEffect(() => {
+    const saved = localStorage.getItem("brillare-theme");
+    const initial = saved === "light" || saved === "dark"
+      ? saved
+      : window.matchMedia?.("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+
+    setTheme(initial);
+    document.documentElement.dataset.theme = initial;
+
     fetch("/data/latest.json", { cache: "no-store" })
       .then((r) => r.json())
-      .then((json) => setData(json))
+      .then(setData)
       .catch(() => setData({ products: [] }));
 
     fetch("/data/history.jsonl", { cache: "no-store" })
@@ -220,6 +189,13 @@ export default function Dashboard() {
       .then((txt) => setHistory(parseHistoryText(txt)))
       .catch(() => setHistory([]));
   }, []);
+
+  function toggleTheme() {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    localStorage.setItem("brillare-theme", next);
+    document.documentElement.dataset.theme = next;
+  }
 
   const products = data.products || [];
 
@@ -235,98 +211,85 @@ export default function Dashboard() {
     return Array.from(new Set(products.map((p) => p.type).filter(Boolean))).sort();
   }, [products]);
 
-  const filtered = useMemo(() => {
-    return products.filter((p) => {
-      const q = query.trim().toLowerCase();
-      const matchesQuery =
-        !q ||
-        p.sku?.toLowerCase().includes(q) ||
-        p.name?.toLowerCase().includes(q);
-
-      const matchesCategory = category === "all" || p.type === category;
-
-      const oosCount = productOosCount(p, platforms);
-      const inStockCount = productInStockCount(p, platforms);
-      const maxDiscount = productMaxDiscount(p, platforms);
-
-      const matchesStatus =
-        statusFilter === "all" ||
-        (statusFilter === "oos" && oosCount > 0) ||
-        (statusFilter === "critical" && oosCount >= 2) ||
-        (statusFilter === "healthy" && oosCount === 0 && inStockCount > 0) ||
-        (statusFilter === "discount" && maxDiscount > DISCOUNT_ALERT);
-
-      return matchesQuery && matchesCategory && matchesStatus;
-    });
-  }, [products, query, category, statusFilter, platforms]);
-
   const stats = useMemo(() => {
-    const cells = products.flatMap((p) =>
-      platforms.map((pl) => ({
-        product: p,
-        platform: pl,
-        rec: p.platforms?.[pl]
-      }))
-    );
-
-    const inStock = cells.filter((x) => isInStock(x.rec?.status)).length;
-    const oos = cells.filter((x) => isOOS(x.rec?.status)).length;
-    const noLink = cells.filter((x) => x.rec?.status === "no_link").length;
-
-    const failures = cells.filter((x) => {
-      const s = x.rec?.status;
-      return !s || s === "unknown" || s.startsWith("error");
-    }).length;
-
+    const cells = products.flatMap((p) => platforms.map((pl) => p.platforms?.[pl]));
+    const inStock = cells.filter((r) => isInStock(r?.status)).length;
+    const oos = cells.filter((r) => isOOS(r?.status)).length;
+    const unknown = cells.filter((r) => !r?.status || r.status === "no_link" || r.status === "unknown" || r.status.startsWith("error")).length;
     const availability = cells.length ? Math.round((inStock / cells.length) * 1000) / 10 : 0;
+
+    const criticalProducts = products
+      .map((p) => ({
+        ...p,
+        oosCount: productOosCount(p, platforms),
+        inStockCount: productInStockCount(p, platforms),
+        maxDiscount: productMaxDiscount(p, platforms),
+        discountInfo: productWorstDiscountPlatform(p, platforms)
+      }))
+      .sort((a, b) => {
+        if (b.oosCount !== a.oosCount) return b.oosCount - a.oosCount;
+        return b.maxDiscount - a.maxDiscount;
+      });
+
+    const oosProducts = criticalProducts.filter((p) => p.oosCount > 0);
+    const discountProducts = criticalProducts.filter((p) => p.maxDiscount > DISCOUNT_ALERT);
 
     const platformBreakdown = platforms.map((pl) => {
       const records = products.map((p) => p.platforms?.[pl]);
       const ok = records.filter((r) => isInStock(r?.status)).length;
-      const oosCount = records.filter((r) => isOOS(r?.status)).length;
+      const bad = records.filter((r) => isOOS(r?.status)).length;
+      const total = records.length;
       return {
         key: pl,
         label: platformLabels[pl] || pl,
         ok,
-        oos: oosCount,
-        total: records.length,
-        pct: records.length ? Math.round((ok / records.length) * 100) : 0
+        bad,
+        total,
+        pct: total ? Math.round((ok / total) * 100) : 0
       };
     });
-
-    const critical = products
-      .map((p) => ({
-        ...p,
-        oosCount: productOosCount(p, platforms)
-      }))
-      .filter((p) => p.oosCount > 0)
-      .sort((a, b) => b.oosCount - a.oosCount);
-
-    const priceRows = products.map((p) => {
-      const { bestPrice, bestDiscount } = bestPriceForProduct(p, platforms);
-      return { ...p, bestPrice, bestDiscount };
-    });
-
-    const discountAlerts = priceRows
-      .filter((p) => p.bestDiscount && Number(p.bestDiscount.discount || 0) > DISCOUNT_ALERT)
-      .sort((a, b) => Number(b.bestDiscount?.discount || 0) - Number(a.bestDiscount?.discount || 0));
 
     return {
       totalProducts: products.length,
       totalCells: cells.length,
       inStock,
       oos,
-      noLink,
-      failures,
+      unknown,
       availability,
-      platformBreakdown,
-      critical,
-      priceRows,
-      discountAlerts
+      criticalProducts,
+      oosProducts,
+      discountProducts,
+      platformBreakdown
     };
   }, [products, platforms]);
 
-  const historicalSummary = useMemo(() => {
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+
+    return products.filter((p) => {
+      const oosCount = productOosCount(p, platforms);
+      const inStockCount = productInStockCount(p, platforms);
+      const maxDiscount = productMaxDiscount(p, platforms);
+
+      const matchesQuery =
+        !q ||
+        p.name?.toLowerCase().includes(q) ||
+        p.sku?.toLowerCase().includes(q);
+
+      const matchesCategory = category === "all" || p.type === category;
+
+      const matchesRisk =
+        risk === "all" ||
+        (risk === "oos" && oosCount > 0) ||
+        (risk === "critical" && oosCount >= 2) ||
+        (risk === "discount" && maxDiscount > DISCOUNT_ALERT) ||
+        (risk === "healthy" && oosCount === 0 && inStockCount > 0);
+
+      return matchesQuery && matchesCategory && matchesRisk;
+    });
+  }, [products, query, category, risk, platforms]);
+
+  const historyDays = useMemo(() => {
     const byDay = new Map<string, HistoryRow[]>();
 
     history.forEach((row) => {
@@ -339,682 +302,254 @@ export default function Dashboard() {
       .map(([day, rows]) => {
         const inStock = rows.filter((r) => isInStock(r.status)).length;
         const oos = rows.filter((r) => isOOS(r.status)).length;
-        const failures = rows.filter((r) => !r.status || r.status === "unknown" || r.status.startsWith("error")).length;
-        const discounts = rows.map((r) => Number(r.discount_pct || 0)).filter(Boolean);
-
-        return {
-          day,
-          rows,
-          total: rows.length,
-          inStock,
-          oos,
-          failures,
-          maxDiscount: discounts.length ? Math.max(...discounts) : 0
-        };
+        const maxDiscount = Math.max(0, ...rows.map((r) => Number(r.discount_pct || 0)));
+        return { day, total: rows.length, inStock, oos, maxDiscount };
       })
       .sort((a, b) => b.day.localeCompare(a.day));
   }, [history]);
 
+  const filteredOos = filtered.filter((p) => productOosCount(p, platforms) > 0).length;
+  const filteredDiscount = filtered.filter((p) => productMaxDiscount(p, platforms) > DISCOUNT_ALERT).length;
+
   return (
     <main className="page">
-      <section className="hero">
+      <header className="topbar">
         <div>
-          <div className="eyebrow">Brillare multi-platform inventory intelligence</div>
-          <h1>OOS Tracker Dashboard</h1>
+          <div className="eyebrow">Brillare Inventory Intelligence</div>
+          <h1>OOS Tracker</h1>
           <p className="subtitle">
-            A Notion-clean, Apple-style command center for stock visibility, price movement, discount risk, and historical scraper data across marketplaces.
+            Minimal executive view for stock availability, OOS exposure, channel health, and discount leakage.
           </p>
         </div>
 
-        <div className="lastUpdated">
-          <div className="lastUpdatedLabel">Last successful scrape</div>
-          <div className="lastUpdatedValue">{formatDate(data.checked_at)}</div>
-        </div>
-      </section>
-
-      <section className="tabShell">
-        <div className="tabs">
-          <button className={`tab ${activeTab === "summary" ? "active" : ""}`} onClick={() => setActiveTab("summary")}>
-            <AlertTriangle size={16} /> OOS Summary
+        <div className="topActions">
+          <button className="themeButton" onClick={toggleTheme}>
+            {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+            {theme === "dark" ? "Light" : "Dark"}
           </button>
-          <button className={`tab ${activeTab === "prices" ? "active" : ""}`} onClick={() => setActiveTab("prices")}>
-            <Tags size={16} /> Price Comparison
-          </button>
-          <button className={`tab ${activeTab === "history" ? "active" : ""}`} onClick={() => setActiveTab("history")}>
-            <Archive size={16} /> Historical Data
-          </button>
-        </div>
-      </section>
-
-      <section className="executiveStrip">
-        <div>
-          <span>Decision view</span>
-          <strong>{stats.availability}% availability</strong>
-        </div>
-        <div>
-          <span>Risk</span>
-          <strong className={stats.oos > 0 ? "badText" : "goodText"}>{stats.oos} OOS</strong>
-        </div>
-        <div>
-          <span>Discount leak</span>
-          <strong className={stats.discountAlerts.length > 0 ? "badText" : "goodText"}>{stats.discountAlerts.length} alerts</strong>
-        </div>
-      </section>
-
-      <section className="desktopCommandCenter">
-        <div className="commandPrimary">
-          <div>
-            <span className="commandLabel">CEO snapshot</span>
-            <h2>{stats.availability}% marketplace availability</h2>
-            <p>{stats.inStock} live listings from {stats.totalCells} checks. {stats.oos > 0 ? `${stats.oos} OOS listings need review.` : "All visible listings are healthy."}</p>
-          </div>
-
-          <div className={stats.availability >= 85 ? "commandScore good" : stats.availability >= 65 ? "commandScore warn" : "commandScore bad"}>
-            {stats.availability}%
+          <div className="updatedBox">
+            <span>Last scrape</span>
+            <strong>{formatDate(data.checked_at)}</strong>
           </div>
         </div>
+      </header>
 
-        <div className="commandMiniGrid">
-          <div className="commandMini">
-            <span>OOS exposure</span>
-            <strong className={stats.oos > 0 ? "badText" : "goodText"}>{stats.oos}</strong>
-            <small>{stats.critical.length} product{stats.critical.length === 1 ? "" : "s"} impacted</small>
-          </div>
+      <nav className="tabs">
+        <button className={tab === "dashboard" ? "active" : ""} onClick={() => setTab("dashboard")}>
+          Dashboard
+        </button>
+        <button className={tab === "history" ? "active" : ""} onClick={() => setTab("history")}>
+          History
+        </button>
+      </nav>
 
-          <div className="commandMini">
-            <span>Discount leakage</span>
-            <strong className={stats.discountAlerts.length > 0 ? "badText" : "goodText"}>{stats.discountAlerts.length}</strong>
-            <small>above {DISCOUNT_ALERT}% threshold</small>
-          </div>
-
-          <div className="commandMini">
-            <span>No link / failures</span>
-            <strong>{stats.noLink + stats.failures}</strong>
-            <small>data quality checks</small>
-          </div>
-        </div>
-      </section>
-
-      <section className="kpiGrid">
-        <div className="card">
-          <div className="kpiLabel">Products tracked</div>
-          <div className="kpiValue">{stats.totalProducts}</div>
-          <div className="kpiSub">across {platforms.length} active platforms</div>
-        </div>
-        <div className="card">
-          <div className="kpiLabel">In stock</div>
-          <div className="kpiValue green">{stats.inStock} / {stats.totalCells}</div>
-          <div className="kpiSub">{stats.availability}% marketplace availability</div>
-        </div>
-        <div className="card">
-          <div className="kpiLabel">Out of stock</div>
-          <div className="kpiValue red">{stats.oos}</div>
-          <div className="kpiSub">{stats.critical.length} products need attention</div>
-        </div>
-        <div className="card">
-          <div className="kpiLabel">Discount alerts</div>
-          <div className="kpiValue red">{stats.discountAlerts.length}</div>
-          <div className="kpiSub">products above {DISCOUNT_ALERT}% discount</div>
-        </div>
-      </section>
-
-      {activeTab === "summary" && (
+      {tab === "dashboard" && (
         <>
-          <section className="section">
-            <div className="sectionTitle">
-              <div>
-                <h2>Platform availability</h2>
-                <p>Live in-stock health by sales channel.</p>
-              </div>
+          <section className="ceoGrid">
+            <div className="scoreCard">
+              <span>Marketplace availability</span>
+              <strong>{stats.availability}%</strong>
+              <p>{stats.inStock} live listings from {stats.totalCells} checks</p>
             </div>
 
-            <div className="platformGrid">
-              {stats.platformBreakdown.map((p, i) => {
-                const Icon = i === 0 ? Globe : i === 1 ? Store : i === 2 ? ShoppingBag : i === 3 ? Sparkles : Package;
-                return (
-                  <div className="platformCard" key={p.key}>
-                    <div className="platformName"><Icon size={14} /> {p.label}</div>
-                    <div className="platformNum">{p.ok} <span>/ {p.total}</span></div>
-                    <div className="kpiSub">{p.oos} OOS listings</div>
-                    <div className="bar">
-                      <div className="barFill" style={{ width: `${p.pct}%` }} />
-                    </div>
-                  </div>
-                );
-              })}
+            <div className="miniCard">
+              <CheckCircle2 size={18} />
+              <span>Products</span>
+              <strong>{stats.totalProducts}</strong>
+            </div>
+
+            <div className="miniCard danger">
+              <XCircle size={18} />
+              <span>OOS</span>
+              <strong>{stats.oos}</strong>
+            </div>
+
+            <div className="miniCard danger">
+              <TriangleAlert size={18} />
+              <span>Discount alerts</span>
+              <strong>{stats.discountProducts.length}</strong>
             </div>
           </section>
 
-          <section className="section">
-            <div className="sectionTitle">
-              <div>
-                <h2>Product status</h2>
-                <p>Search, filter, and identify products with stock gaps or discount risk.</p>
+          <section className="platformStrip">
+            {stats.platformBreakdown.map((p) => (
+              <div className="platformPill" key={p.key}>
+                <span>{p.label}</span>
+                <strong>{p.pct}%</strong>
+                <small>{p.bad} OOS</small>
+              </div>
+            ))}
+          </section>
+
+          <section className="decisionGrid">
+            <div className="decisionPanel">
+              <div className="panelHead">
+                <div>
+                  <h2>Priority OOS</h2>
+                  <p>Fix these first.</p>
+                </div>
+                <span className="countBadge danger">{stats.oosProducts.length}</span>
+              </div>
+
+              <div className="compactList">
+                {stats.oosProducts.slice(0, 6).map((p) => (
+                  <div key={p.sku}>
+                    <strong>{p.name}</strong>
+                    <span>{p.sku}</span>
+                    <b>{p.oosCount} OOS</b>
+                  </div>
+                ))}
+                {!stats.oosProducts.length && <p className="empty">No OOS products.</p>}
               </div>
             </div>
 
-            <div className="controls">
-              <input className="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search by SKU or product name..." />
-              <select className="select" value={category} onChange={(e) => setCategory(e.target.value)}>
+            <div className="decisionPanel">
+              <div className="panelHead">
+                <div>
+                  <h2>Discount leakage</h2>
+                  <p>Above {DISCOUNT_ALERT}% threshold.</p>
+                </div>
+                <span className="countBadge danger">{stats.discountProducts.length}</span>
+              </div>
+
+              <div className="compactList">
+                {stats.discountProducts.slice(0, 6).map((p) => (
+                  <div key={p.sku}>
+                    <strong>{p.name}</strong>
+                    <span>{platformLabels[p.discountInfo.platform] || p.discountInfo.platform}</span>
+                    <b>{p.discountInfo.discount}%</b>
+                  </div>
+                ))}
+                {!stats.discountProducts.length && <p className="empty">No discount leakage.</p>}
+              </div>
+            </div>
+          </section>
+
+          <section className="tableSection">
+            <div className="sectionHead">
+              <div>
+                <h2>Product command table</h2>
+                <p>Compact SKU-level operating view. No prices, only decisions.</p>
+              </div>
+              <button className="exportButton" onClick={() => downloadCSV(filtered, platforms)}>
+                <Download size={15} /> Export
+              </button>
+            </div>
+
+            <div className="filters">
+              <label className="searchBox">
+                <Search size={15} />
+                <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search SKU or product" />
+              </label>
+
+              <select value={category} onChange={(e) => setCategory(e.target.value)}>
                 <option value="all">All categories</option>
                 {categories.map((c) => <option key={c} value={c}>{c}</option>)}
               </select>
-              <select className="select" value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
-                <option value="all">All statuses</option>
+
+              <select value={risk} onChange={(e) => setRisk(e.target.value)}>
+                <option value="all">All risks</option>
                 <option value="oos">Has OOS</option>
-                <option value="critical">Critical: 2+ OOS</option>
-                <option value="healthy">Healthy</option>
+                <option value="critical">2+ OOS</option>
                 <option value="discount">Discount &gt; {DISCOUNT_ALERT}%</option>
+                <option value="healthy">Healthy</option>
               </select>
-              <button className="btn" onClick={() => downloadCSV(filtered, platforms)}><Download size={15} /> Export</button>
             </div>
 
-            <div className="tableCard">
-              <div className="tableWrap">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Product</th>
-                      <th>Category</th>
-                      {platforms.map((pl) => <th key={pl}>{platformLabels[pl] || pl}</th>)}
-                      <th>Alert</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {filtered.map((p) => {
-                      const oosCount = productOosCount(p, platforms);
-                      const maxDiscount = productMaxDiscount(p, platforms);
-
-                      return (
-                        <tr key={p.sku}>
-                          <td>
-                            <div className="productName">{p.name || "Unnamed product"}</div>
-                            <div className="sku">{p.sku}</div>
-                          </td>
-                          <td>{p.type || "—"}</td>
-                          {platforms.map((pl) => {
-                            const rec = p.platforms?.[pl];
-                            const discount = Number(rec?.discount_pct || 0);
-                            return (
-                              <td key={pl} title={`${platformLabels[pl] || pl}: ${statusLabel(rec?.status)}`} className={discount > DISCOUNT_ALERT ? "priceRiskCell" : ""}>
-                                <span className={`dot ${statusColor(rec?.status)}`} />
-                                {discount > DISCOUNT_ALERT ? <div className="discountRed">{discount}% off</div> : null}
-                              </td>
-                            );
-                          })}
-                          <td>
-                            <div className="alertStack">
-                              {oosCount > 0 ? <span className="badge red">{oosCount} OOS</span> : <span className="badge green">OK</span>}
-                              {maxDiscount > DISCOUNT_ALERT ? <span className="badge red">{maxDiscount}% off</span> : null}
-                            </div>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-                {!filtered.length && <div className="empty">No matching products found.</div>}
-              </div>
+            <div className="tableSummary">
+              <div><span>Showing</span><strong>{filtered.length}</strong></div>
+              <div><span>OOS products</span><strong className={filteredOos ? "dangerText" : ""}>{filteredOos}</strong></div>
+              <div><span>Discount risks</span><strong className={filteredDiscount ? "dangerText" : ""}>{filteredDiscount}</strong></div>
             </div>
 
-            <div className="mobileProductList">
-              {filtered.map((p) => {
-                const oosCount = productOosCount(p, platforms);
-                const inStockCount = productInStockCount(p, platforms);
-                const maxDiscount = productMaxDiscount(p, platforms);
+            <div className="tableWrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Health</th>
+                    {platforms.map((pl) => <th key={pl}>{platformLabels[pl] || pl}</th>)}
+                    <th>Risk</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {filtered.map((p) => {
+                    const oos = productOosCount(p, platforms);
+                    const stock = productInStockCount(p, platforms);
+                    const discount = productMaxDiscount(p, platforms);
 
-                return (
-                  <article className="mobileProductCard" key={p.sku}>
-                    <div className="mobileProductTop">
-                      <div className="mobileProductInfo">
-                        <div className="mobileProductName">{p.name || "Unnamed product"}</div>
-                        <div className="mobileProductMeta">
+                    return (
+                      <tr key={p.sku}>
+                        <td className="productCell">
+                          <strong>{p.name || "Unnamed product"}</strong>
                           <span>{p.sku}</span>
-                          <span>{p.type || "Uncategorised"}</span>
-                        </div>
-                      </div>
-
-                      {maxDiscount > DISCOUNT_ALERT ? (
-                        <span className="mobileStatusPill critical">{maxDiscount}% off</span>
-                      ) : oosCount > 0 ? (
-                        <span className={`mobileStatusPill ${oosCount >= 2 ? "critical" : "warning"}`}>{oosCount} OOS</span>
-                      ) : (
-                        <span className="mobileStatusPill healthy">OK</span>
-                      )}
-                    </div>
-
-                    <div className="mobileHealthRow">
-                      <div>
-                        <span className="mobileHealthValue green">{inStockCount}</span>
-                        <span className="mobileHealthLabel"> In stock</span>
-                      </div>
-                      <div>
-                        <span className="mobileHealthValue red">{oosCount}</span>
-                        <span className="mobileHealthLabel"> OOS</span>
-                      </div>
-                    </div>
-
-                    <div className="mobilePlatformGrid">
-                      {platforms.map((pl) => {
-                        const rec = p.platforms?.[pl];
-                        const discount = Number(rec?.discount_pct || 0);
-
-                        return (
-                          <div className={discount > DISCOUNT_ALERT ? "mobilePlatformCell discountRisk" : "mobilePlatformCell"} key={pl}>
-                            <div className="mobilePlatformLabel">
-                              <span className={`dot ${statusColor(rec?.status)}`} />
-                              {platformLabels[pl] || pl}
-                            </div>
-                            <div className="mobilePlatformStatus">
-                              {discount > DISCOUNT_ALERT ? <strong>{discount}% off</strong> : statusLabel(rec?.status)}
-                            </div>
+                        </td>
+                        <td className="categoryCell">{p.type || "—"}</td>
+                        <td>
+                          <span className={oos ? "health danger" : "health good"}>
+                            {stock}/{platforms.length}
+                          </span>
+                        </td>
+                        {platforms.map((pl) => {
+                          const rec = p.platforms?.[pl];
+                          const d = Number(rec?.discount_pct || 0);
+                          return (
+                            <td key={pl} className={d > DISCOUNT_ALERT ? "discountCell" : ""}>
+                              <span title={`${platformLabels[pl] || pl}: ${statusLabel(rec?.status)}`} className={`dot ${dotClass(rec?.status)}`} />
+                              {d > DISCOUNT_ALERT ? <em>{d}%</em> : null}
+                            </td>
+                          );
+                        })}
+                        <td>
+                          <div className="riskStack">
+                            {oos ? <span className="chip danger">{oos} OOS</span> : <span className="chip good">OK</span>}
+                            {discount > DISCOUNT_ALERT ? <span className="chip danger">{discount}%</span> : null}
                           </div>
-                        );
-                      })}
-                    </div>
-                  </article>
-                );
-              })}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
 
               {!filtered.length && <div className="empty">No matching products found.</div>}
             </div>
 
             <div className="legend">
-              <span><span className="dot green" /> In stock</span>
-              <span><span className="dot red" /> Out of stock</span>
-              <span><span className="dot gray" /> Failed / unknown / no link</span>
-              <span><span className="badge red">10%+ off</span> Discount alert</span>
-            </div>
-          </section>
-
-          <section className="insightGrid">
-            <div className="card">
-              <div className="cardHeader">
-                <div>
-                  <div className="cardTitle">Priority OOS list</div>
-                  <div className="cardHint">Products with the most unavailable platforms.</div>
-                </div>
-                <AlertTriangle size={18} className="red" />
-              </div>
-              {stats.critical.length ? (
-                <ol className="insightList">
-                  {stats.critical.slice(0, 8).map((p) => (
-                    <li key={p.sku}>
-                      <strong>{p.name}</strong> — {p.oosCount} OOS platform{p.oosCount > 1 ? "s" : ""}
-                    </li>
-                  ))}
-                </ol>
-              ) : (
-                <div className="empty">No OOS alerts right now.</div>
-              )}
-            </div>
-
-            <div className="card">
-              <div className="cardHeader">
-                <div>
-                  <div className="cardTitle">Discount risk summary</div>
-                  <div className="cardHint">Products discounted more than {DISCOUNT_ALERT}%.</div>
-                </div>
-                <TrendingDown size={18} className="red" />
-              </div>
-              {stats.discountAlerts.length ? (
-                <ol className="insightList">
-                  {stats.discountAlerts.slice(0, 10).map((p) => (
-                    <li key={p.sku}>
-                      <strong>{p.name}</strong> — <span className="red">{p.bestDiscount?.discount}% off</span> on {platformLabels[p.bestDiscount?.platform || ""] || p.bestDiscount?.platform}
-                    </li>
-                  ))}
-                </ol>
-              ) : (
-                <div className="empty">No discount alerts above {DISCOUNT_ALERT}%.</div>
-              )}
+              <span><i className="dot good" /> In stock</span>
+              <span><i className="dot bad" /> OOS</span>
+              <span><i className="dot muted" /> No link / unknown</span>
+              <span><b className="chip danger">10%+</b> Discount alert</span>
             </div>
           </section>
         </>
       )}
 
-      {activeTab === "prices" && (
-        <>
-          <section className="section">
-            <div className="sectionTitle">
-              <div>
-                <h2>Price comparison across platforms</h2>
-                <p>Compare MRP, selling price, best price, and discount pressure by product.</p>
+      {tab === "history" && (
+        <section className="tableSection">
+          <div className="sectionHead">
+            <div>
+              <h2>History</h2>
+              <p>Daily scraper summary.</p>
+            </div>
+            <span className="chip">{history.length} rows</span>
+          </div>
+
+          <div className="historyGrid">
+            {historyDays.slice(0, 40).map((day) => (
+              <div className="historyRow" key={day.day}>
+                <strong>{day.day}</strong>
+                <span>{day.total} checks</span>
+                <span className="successText">{day.inStock} in stock</span>
+                <span className={day.oos ? "dangerText" : ""}>{day.oos} OOS</span>
+                {day.maxDiscount > DISCOUNT_ALERT ? <span className="dangerText">{day.maxDiscount}% max discount</span> : <span>—</span>}
               </div>
-              <button className="btn" onClick={() => downloadCSV(filtered, platforms)}><Download size={15} /> Export</button>
-            </div>
-
-            <div className="controls">
-              <input className="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search product or SKU..." />
-              <select className="select" value={category} onChange={(e) => setCategory(e.target.value)}>
-                <option value="all">All categories</option>
-                {categories.map((c) => <option key={c} value={c}>{c}</option>)}
-              </select>
-              <select className="select" value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
-                <option value="all">All products</option>
-                <option value="oos">Has OOS</option>
-                <option value="critical">Critical OOS</option>
-                <option value="healthy">Healthy</option>
-                <option value="discount">Discount &gt; {DISCOUNT_ALERT}%</option>
-              </select>
-              <button className="btn"><Search size={15} /> Filter</button>
-            </div>
-
-            <div className="tableCard">
-              <div className="tableWrap">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Product</th>
-                      <th>Best price</th>
-                      <th>Highest discount</th>
-                      {platforms.map((pl) => <th key={pl}>{platformLabels[pl] || pl}</th>)}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {filtered.map((p) => {
-                      const { bestPrice, bestDiscount } = bestPriceForProduct(p, platforms);
-
-                      return (
-                        <tr key={p.sku}>
-                          <td>
-                            <div className="productName">{p.name || "Unnamed product"}</div>
-                            <div className="sku">{p.sku}</div>
-                          </td>
-                          <td>
-                            {bestPrice ? (
-                              <>
-                                <div className="price">{money(bestPrice.selling)}</div>
-                                <div className="sku">{platformLabels[bestPrice.platform] || bestPrice.platform}</div>
-                              </>
-                            ) : "—"}
-                          </td>
-                          <td>
-                            {bestDiscount && bestDiscount.discount > 0 ? (
-                              <span className={`badge ${bestDiscount.discount > DISCOUNT_ALERT ? "red" : "amber"}`}>
-                                {bestDiscount.discount}% off
-                              </span>
-                            ) : "—"}
-                          </td>
-                          {platforms.map((pl) => {
-                            const rec = p.platforms?.[pl];
-                            const discount = Number(rec?.discount_pct || 0);
-
-                            return (
-                              <td key={pl} className={discount > DISCOUNT_ALERT ? "priceRiskCell" : ""}>
-                                {rec?.selling ? (
-                                  <>
-                                    <div className="price">{money(rec.selling)}</div>
-                                    {rec.mrp && rec.mrp !== rec.selling ? <div className="mrp">{money(rec.mrp)}</div> : null}
-                                    {rec.discount_pct ? <div className={discount > DISCOUNT_ALERT ? "discount discountRed" : "discount"}>{rec.discount_pct}% off</div> : null}
-                                  </>
-                                ) : (
-                                  <span className={`badge ${statusColor(rec?.status)}`}>{statusLabel(rec?.status)}</span>
-                                )}
-                              </td>
-                            );
-                          })}
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-                {!filtered.length && <div className="empty">No price rows available.</div>}
-              </div>
-            </div>
-
-            <div className="mobileProductList">
-              {filtered.map((p) => {
-                const { bestPrice, bestDiscount } = bestPriceForProduct(p, platforms);
-
-                return (
-                  <article className="mobileProductCard" key={p.sku}>
-                    <div className="mobileProductTop">
-                      <div className="mobileProductInfo">
-                        <div className="mobileProductName">{p.name || "Unnamed product"}</div>
-                        <div className="mobileProductMeta">
-                          <span>{p.sku}</span>
-                          <span>{p.type || "Uncategorised"}</span>
-                        </div>
-                      </div>
-
-                      {bestDiscount && bestDiscount.discount > 0 ? (
-                        <span className={`mobileStatusPill ${bestDiscount.discount > DISCOUNT_ALERT ? "critical" : "warning"}`}>
-                          {bestDiscount.discount}% off
-                        </span>
-                      ) : (
-                        <span className="mobileStatusPill neutral">No deal</span>
-                      )}
-                    </div>
-
-                    <div className="mobilePriceHero">
-                      <div>
-                        <div className="mobilePriceLabel">Best price</div>
-                        <div className="mobilePriceValue">{bestPrice ? money(bestPrice.selling) : "—"}</div>
-                        <div className="mobilePriceSource">
-                          {bestPrice ? platformLabels[bestPrice.platform] || bestPrice.platform : "No live price"}
-                        </div>
-                      </div>
-
-                      <div className={bestDiscount && bestDiscount.discount > DISCOUNT_ALERT ? "mobilePriceRisk" : ""}>
-                        <div className="mobilePriceLabel">Highest discount</div>
-                        <div className="mobilePriceValue">
-                          {bestDiscount && bestDiscount.discount > 0 ? `${bestDiscount.discount}%` : "—"}
-                        </div>
-                        <div className="mobilePriceSource">
-                          {bestDiscount && bestDiscount.discount > 0
-                            ? platformLabels[bestDiscount.platform] || bestDiscount.platform
-                            : "No discount"}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="mobilePlatformGrid price">
-                      {platforms.map((pl) => {
-                        const rec = p.platforms?.[pl];
-                        const discount = Number(rec?.discount_pct || 0);
-
-                        return (
-                          <div className={discount > DISCOUNT_ALERT ? "mobilePlatformCell discountRisk" : "mobilePlatformCell"} key={pl}>
-                            <div className="mobilePlatformLabel">
-                              <span className={`dot ${statusColor(rec?.status)}`} />
-                              {platformLabels[pl] || pl}
-                            </div>
-
-                            {rec?.selling ? (
-                              <div>
-                                <div className="mobilePlatformPrice">{money(rec.selling)}</div>
-                                {rec.mrp && rec.mrp !== rec.selling ? <div className="mobilePlatformMrp">{money(rec.mrp)}</div> : null}
-                                {rec.discount_pct ? <div className={discount > DISCOUNT_ALERT ? "mobilePlatformDiscount discountRed" : "mobilePlatformDiscount"}>{rec.discount_pct}% off</div> : null}
-                              </div>
-                            ) : (
-                              <div className="mobilePlatformStatus">{statusLabel(rec?.status)}</div>
-                            )}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </article>
-                );
-              })}
-
-              {!filtered.length && <div className="empty">No price rows available.</div>}
-            </div>
-          </section>
-
-          <section className="insightGrid">
-            <div className="card">
-              <div className="cardHeader">
-                <div>
-                  <div className="cardTitle">Discount alert watchlist</div>
-                  <div className="cardHint">Products discounted more than {DISCOUNT_ALERT}% on any platform.</div>
-                </div>
-                <TrendingDown size={18} className="red" />
-              </div>
-              {stats.discountAlerts.length ? (
-                <ol className="insightList">
-                  {stats.discountAlerts.slice(0, 10).map((p) => (
-                    <li key={p.sku}>
-                      <strong>{p.name}</strong> — <span className="red">{p.bestDiscount?.discount}% off</span> on {platformLabels[p.bestDiscount?.platform || ""] || p.bestDiscount?.platform}
-                    </li>
-                  ))}
-                </ol>
-              ) : (
-                <div className="empty">No discount alerts above {DISCOUNT_ALERT}%.</div>
-              )}
-            </div>
-
-            <div className="card">
-              <div className="cardHeader">
-                <div>
-                  <div className="cardTitle">Pricing UX notes</div>
-                  <div className="cardHint">How to interpret this view.</div>
-                </div>
-                <Tags size={18} className="green" />
-              </div>
-              <ul className="insightList">
-                <li>Best price shows the lowest currently scraped selling price.</li>
-                <li>Discounts above {DISCOUNT_ALERT}% are treated as red risk alerts.</li>
-                <li>Unavailable prices are shown as status badges instead of blank cells.</li>
-              </ul>
-            </div>
-          </section>
-        </>
+            ))}
+            {!historyDays.length && <div className="empty">No history found yet.</div>}
+          </div>
+        </section>
       )}
-
-      {activeTab === "history" && (
-        <>
-          <section className="section">
-            <div className="sectionTitle">
-              <div>
-                <h2>Historical scraper data</h2>
-                <p>Review older OOS, price, and scrape status snapshots from history.jsonl.</p>
-              </div>
-              <div className="badge gray">{history.length} history rows</div>
-            </div>
-
-            <div className="tableCard">
-              <div className="timeline">
-                {historicalSummary.slice(0, 30).map((day) => (
-                  <div className="timelineItem" key={day.day}>
-                    <div>
-                      <div className="timelineDate">{day.day}</div>
-                      <div className="timelineMeta">{day.total} checks</div>
-                    </div>
-                    <div className="timelineMeta">
-                      In stock: <strong className="green">{day.inStock}</strong> · OOS: <strong className="red">{day.oos}</strong> · Failures: <strong className="amber">{day.failures}</strong>
-                    </div>
-                    <div>
-                      {day.maxDiscount > DISCOUNT_ALERT ? <span className="badge red">Max {day.maxDiscount}% off</span> : day.maxDiscount ? <span className="badge amber">Max {day.maxDiscount}% off</span> : <span className="badge gray">No discount</span>}
-                    </div>
-                  </div>
-                ))}
-                {!historicalSummary.length && (
-                  <div className="empty">
-                    No history found yet. Make sure GitHub Actions copies <code>scraper/data/history.jsonl</code> into <code>dashboard/public/data/history.jsonl</code>.
-                  </div>
-                )}
-              </div>
-            </div>
-          </section>
-
-          <section className="section">
-            <div className="sectionTitle">
-              <div>
-                <h2>Recent history rows</h2>
-                <p>Latest raw platform checks for audit and debugging.</p>
-              </div>
-            </div>
-
-            <div className="tableCard">
-              <div className="tableWrap">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Date</th>
-                      <th>SKU</th>
-                      <th>Platform</th>
-                      <th>Status</th>
-                      <th>MRP</th>
-                      <th>Selling</th>
-                      <th>Discount</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {history.slice(-120).reverse().map((row, index) => {
-                      const discount = Number(row.discount_pct || 0);
-                      return (
-                        <tr key={`${row.ts}-${row.sku}-${row.platform}-${index}`}>
-                          <td>
-                            <div className="productName">{row.day || row.ts?.slice(0, 10) || "—"}</div>
-                            <div className="sku">{row.ts ? formatDate(row.ts) : ""}</div>
-                          </td>
-                          <td>{row.sku || "—"}</td>
-                          <td>{platformLabels[row.platform || ""] || row.platform || "—"}</td>
-                          <td><span className={`badge ${statusColor(row.status)}`}>{statusLabel(row.status)}</span></td>
-                          <td>{money(row.mrp)}</td>
-                          <td>{money(row.selling)}</td>
-                          <td>{discount ? <span className={discount > DISCOUNT_ALERT ? "discountRed" : ""}>{discount}%</span> : "—"}</td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-                {!history.length && <div className="empty">No historical rows available.</div>}
-              </div>
-            </div>
-
-            <div className="mobileProductList">
-              {history.slice(-80).reverse().map((row, index) => {
-                const discount = Number(row.discount_pct || 0);
-
-                return (
-                  <article className="mobileHistoryCard" key={`${row.ts}-${row.sku}-${row.platform}-${index}`}>
-                    <div className="mobileProductTop">
-                      <div>
-                        <div className="mobileProductName">{row.sku || "Unknown SKU"}</div>
-                        <div className="mobileProductMeta">
-                          <span>{row.day || row.ts?.slice(0, 10) || "—"}</span>
-                          <span>{platformLabels[row.platform || ""] || row.platform || "—"}</span>
-                        </div>
-                      </div>
-
-                      <span className={`mobileStatusPill ${discount > DISCOUNT_ALERT ? "critical" : statusColor(row.status)}`}>
-                        {discount > DISCOUNT_ALERT ? `${discount}% off` : statusLabel(row.status)}
-                      </span>
-                    </div>
-
-                    <div className="mobilePriceHero three">
-                      <div>
-                        <div className="mobilePriceLabel">Selling</div>
-                        <div className="mobilePriceValue">{money(row.selling)}</div>
-                      </div>
-
-                      <div>
-                        <div className="mobilePriceLabel">MRP</div>
-                        <div className="mobilePriceValue">{money(row.mrp)}</div>
-                      </div>
-
-                      <div className={discount > DISCOUNT_ALERT ? "mobilePriceRisk" : ""}>
-                        <div className="mobilePriceLabel">Discount</div>
-                        <div className="mobilePriceValue">{discount ? `${discount}%` : "—"}</div>
-                      </div>
-                    </div>
-
-                    {row.ts ? <div className="mobileTimestamp">{formatDate(row.ts)}</div> : null}
-                  </article>
-                );
-              })}
-
-              {!history.length && <div className="empty">No historical rows available.</div>}
-            </div>
-          </section>
-        </>
-      )}
-
-      <div className="footer">
-        Data sources: <code>/data/latest.json</code> and <code>/data/history.jsonl</code>. Updated automatically by GitHub Actions.
-      </div>
     </main>
   );
 }
