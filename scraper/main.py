@@ -92,6 +92,21 @@ async def scrape_one(ctx, url, platform):
                 el = await page.query_selector(sel)
                 return parse_price(await el.inner_text()) if el else None
             except Exception: return None
+        if platform == "smytten":
+            try:
+                pr = await page.evaluate("""() => {
+                    const els = [...document.querySelectorAll('*')].filter(e =>
+                        /^\\s*₹\\s*[\\d,]+\\s*$/.test((e.innerText||'').trim()) && e.children.length===0);
+                    const d = els.map(e => ({s:parseInt(getComputedStyle(e).fontSize), t:e.innerText.trim(), strike:getComputedStyle(e).textDecorationLine.includes('line-through')}));
+                    const sell = d.filter(x=>!x.strike).sort((a,b)=>b.s-a.s)[0];
+                    const mrp = d.find(x=>x.strike);
+                    return {sell:sell?sell.t:null, mrp:mrp?mrp.t:null};
+                }""")
+                if pr.get("sell"): rec["selling"] = parse_price(pr["sell"])
+                if pr.get("mrp"): rec["mrp"] = parse_price(pr["mrp"])
+                if rec["mrp"] and rec["selling"] and rec["mrp"]>rec["selling"]:
+                    rec["discount_pct"] = round((rec["mrp"]-rec["selling"])/rec["mrp"]*100,1)
+            except Exception: pass
         if platform == "flipkart":
             try:
                 fk = await page.evaluate("""() => {
