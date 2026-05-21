@@ -160,7 +160,7 @@ function downloadCSV(products: Product[], platforms: string[]) {
 }
 
 export default function Dashboard() {
-  const [tab, setTab] = useState<"dashboard" | "history">("dashboard");
+  const [tab, setTab] = useState<"oos" | "price" | "history">("oos");
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [data, setData] = useState<LatestData>({ products: [] });
   const [history, setHistory] = useState<HistoryRow[]>([]);
@@ -334,8 +334,8 @@ export default function Dashboard() {
         </div>
       </header>
 
-      <nav className="tabs">
-        <button className={tab === "dashboard" ? "active" : ""} onClick={() => setTab("dashboard")}>
+      <nav className="tabs tabs3">
+        <button className={tab === "oos" ? "active" : ""} onClick={() => setTab("oos")}>
           Dashboard
         </button>
         <button className={tab === "history" ? "active" : ""} onClick={() => setTab("history")}>
@@ -343,7 +343,7 @@ export default function Dashboard() {
         </button>
       </nav>
 
-      {tab === "dashboard" && (
+      {tab === "oos" && (
         <>
           <section className="ceoGrid">
             <div className="scoreCard">
