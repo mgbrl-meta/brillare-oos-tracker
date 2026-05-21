@@ -921,3 +921,9 @@ td em {
     font-size: 12px;
   }
 }
+
+/* Force 3 tabs in one row, override everything */
+nav.tabs { grid-template-columns: 1fr 1fr 1fr !important; }
+@media (max-width: 767px) {
+  nav.tabs { grid-template-columns: 1fr 1fr 1fr !important; }
+}
