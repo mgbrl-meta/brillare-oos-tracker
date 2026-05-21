@@ -526,6 +526,55 @@ export default function Dashboard() {
         </>
       )}
 
+      {tab === "price" && (
+        <section className="tableSection">
+          <div className="sectionHead">
+            <div>
+              <h2>Price table</h2>
+              <p>Live selling price + discount per platform.</p>
+            </div>
+            <span className="chip">{products.length} SKUs</span>
+          </div>
+          <div className="tableWrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  {platforms.map((pl) => <th key={pl}>{platformLabels[pl] || pl}</th>)}
+                </tr>
+              </thead>
+              <tbody>
+                {products.map((p) => (
+                  <tr key={p.sku}>
+                    <td className="productCell">
+                      <strong>{p.name}</strong>
+                      <span>{p.sku}</span>
+                    </td>
+                    {platforms.map((pl) => {
+                      const rec = p.platforms?.[pl];
+                      const d = Number(rec?.discount_pct || 0);
+                      return (
+                        <td key={pl} className={d > DISCOUNT_ALERT ? "discountCell" : ""}>
+                          {rec?.selling != null ? (
+                            <>
+                              <strong style={{fontSize:13}}>₹{rec.selling}</strong>
+                              {rec.mrp != null && rec.mrp !== rec.selling && (
+                                <div style={{color:"var(--soft)",textDecoration:"line-through",fontSize:11,marginTop:2}}>₹{rec.mrp}</div>
+                              )}
+                              {d > 0 && <em>{d}%</em>}
+                            </>
+                          ) : <span style={{color:"var(--soft)",fontSize:11}}>—</span>}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
       {tab === "history" && (
         <section className="tableSection">
           <div className="sectionHead">
