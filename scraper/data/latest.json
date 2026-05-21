@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-05-21T05:42:45+00:00",
+  "checked_at": "2026-05-21T05:53:22+00:00",
   "products": [
     {
       "sku": "HSC70",
@@ -46,17 +46,17 @@
         "smytten": {
           "status": "no_link"
         },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "nykaa": {
           "status": "in_stock",
           "mrp": 575.0,
           "selling": 575.0,
           "discount_pct": 0.0
+        },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         },
         "myntra": {
           "status": "in_stock",
@@ -83,12 +83,6 @@
       "name": "Brillare Hair Fall Control Shampoo To Reduce Seasonal Hair Fall",
       "type": "Professional",
       "platforms": {
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "amazon": {
           "status": "in_stock",
           "mrp": 191.67,
@@ -107,14 +101,20 @@
           "selling": 373.0,
           "discount_pct": 35.1
         },
+        "smytten": {
+          "status": "in_stock",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
+        },
         "shopify": {
           "status": "in_stock",
           "mrp": 575.0,
           "selling": 575.0,
           "discount_pct": 0.0
         },
-        "smytten": {
-          "status": "in_stock",
+        "flipkart": {
+          "status": "unknown",
           "mrp": null,
           "selling": null,
           "discount_pct": null
@@ -150,17 +150,17 @@
           "selling": 575.0,
           "discount_pct": 0.0
         },
-        "shopify": {
-          "status": "in_stock",
-          "mrp": 575.0,
-          "selling": 575.0,
-          "discount_pct": 0.0
-        },
         "smytten": {
           "status": "in_stock",
           "mrp": null,
           "selling": null,
           "discount_pct": null
+        },
+        "shopify": {
+          "status": "in_stock",
+          "mrp": 575.0,
+          "selling": 575.0,
+          "discount_pct": 0.0
         }
       }
     },
@@ -175,19 +175,13 @@
           "selling": 395.0,
           "discount_pct": null
         },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "myntra": {
+        "nykaa": {
           "status": "in_stock",
           "mrp": 445.0,
           "selling": 445.0,
           "discount_pct": 0.0
         },
-        "nykaa": {
+        "myntra": {
           "status": "in_stock",
           "mrp": 445.0,
           "selling": 445.0,
@@ -204,6 +198,12 @@
           "mrp": 445.0,
           "selling": 445.0,
           "discount_pct": 0.0
+        },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -218,11 +218,11 @@
           "selling": null,
           "discount_pct": null
         },
-        "nykaa": {
+        "amazon": {
           "status": "in_stock",
-          "mrp": 445.0,
-          "selling": 445.0,
-          "discount_pct": 0.0
+          "mrp": 316.0,
+          "selling": 395.0,
+          "discount_pct": null
         },
         "myntra": {
           "status": "in_stock",
@@ -230,13 +230,7 @@
           "selling": 445.0,
           "discount_pct": 0.0
         },
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 316.0,
-          "selling": 395.0,
-          "discount_pct": null
-        },
-        "shopify": {
+        "nykaa": {
           "status": "in_stock",
           "mrp": 445.0,
           "selling": 445.0,
@@ -247,6 +241,12 @@
           "mrp": null,
           "selling": null,
           "discount_pct": null
+        },
+        "shopify": {
+          "status": "in_stock",
+          "mrp": 445.0,
+          "selling": 445.0,
+          "discount_pct": 0.0
         }
       }
     },
@@ -255,16 +255,16 @@
       "name": "Brillare Dandruff Control Mask For Itchy, Flaky Scalp",
       "type": "Professional",
       "platforms": {
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 316.0,
-          "selling": 395.0,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
           "mrp": null,
           "selling": null,
+          "discount_pct": null
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 316.0,
+          "selling": 395.0,
           "discount_pct": null
         },
         "myntra": {
@@ -279,17 +279,17 @@
           "selling": 445.0,
           "discount_pct": 0.0
         },
-        "shopify": {
-          "status": "in_stock",
-          "mrp": 445.0,
-          "selling": 445.0,
-          "discount_pct": 0.0
-        },
         "smytten": {
           "status": "in_stock",
           "mrp": null,
           "selling": null,
           "discount_pct": null
+        },
+        "shopify": {
+          "status": "in_stock",
+          "mrp": 445.0,
+          "selling": 445.0,
+          "discount_pct": 0.0
         }
       }
     },
@@ -298,22 +298,16 @@
       "name": "Brillare Skin Brightening Face Wash For Reducing Pigmentation",
       "type": "Professional",
       "platforms": {
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 395.0,
-          "selling": 395.0,
-          "discount_pct": 0.0
-        },
         "flipkart": {
           "status": "unknown",
           "mrp": null,
           "selling": null,
           "discount_pct": null
         },
-        "myntra": {
+        "amazon": {
           "status": "in_stock",
-          "mrp": 495.0,
-          "selling": 495.0,
+          "mrp": 395.0,
+          "selling": 395.0,
           "discount_pct": 0.0
         },
         "nykaa": {
@@ -322,7 +316,7 @@
           "selling": 495.0,
           "discount_pct": 0.0
         },
-        "shopify": {
+        "myntra": {
           "status": "in_stock",
           "mrp": 495.0,
           "selling": 495.0,
@@ -333,6 +327,12 @@
           "mrp": null,
           "selling": null,
           "discount_pct": null
+        },
+        "shopify": {
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 495.0,
+          "discount_pct": 0.0
         }
       }
     },
@@ -341,17 +341,17 @@
       "name": "Brillare Oil Away Face Wash For Oily, Acne Prone Skin",
       "type": "Professional",
       "platforms": {
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 323.0,
-          "selling": 323.0,
-          "discount_pct": 0.0
-        },
         "flipkart": {
           "status": "unknown",
           "mrp": null,
           "selling": null,
           "discount_pct": null
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 323.0,
+          "selling": 323.0,
+          "discount_pct": 0.0
         },
         "nykaa": {
           "status": "in_stock",
@@ -384,29 +384,29 @@
       "name": "Brillare Age Revival Face Wash For Ageing Skin",
       "type": "Professional",
       "platforms": {
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 476.0,
-          "selling": 476.0,
-          "discount_pct": 0.0
-        },
         "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "nykaa": {
           "status": "in_stock",
-          "mrp": 595.0,
-          "selling": 595.0,
-          "discount_pct": 0.0
+          "mrp": null,
+          "selling": 805.0,
+          "discount_pct": null
         },
         "myntra": {
           "status": "in_stock",
           "mrp": 595.0,
           "selling": 476.0,
           "discount_pct": 20.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 476.0,
+          "selling": 476.0,
+          "discount_pct": 0.0
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 595.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
@@ -430,19 +430,13 @@
         "flipkart": {
           "status": "no_link"
         },
-        "nykaa": {
+        "myntra": {
           "status": "in_stock",
           "mrp": 695.0,
           "selling": 695.0,
           "discount_pct": 0.0
         },
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 634.0,
-          "selling": 634.0,
-          "discount_pct": 0.0
-        },
-        "myntra": {
+        "nykaa": {
           "status": "in_stock",
           "mrp": 695.0,
           "selling": 695.0,
@@ -452,6 +446,12 @@
           "status": "in_stock",
           "mrp": 695.0,
           "selling": 695.0,
+          "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 595.0,
+          "selling": 595.0,
           "discount_pct": 0.0
         },
         "smytten": {
@@ -590,12 +590,6 @@
       "name": "Brillare Pure Castor Oil",
       "type": "Natural",
       "platforms": {
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "amazon": {
           "status": "in_stock",
           "mrp": 156.0,
@@ -625,6 +619,12 @@
           "mrp": 495.0,
           "selling": 495.0,
           "discount_pct": 0.0
+        },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -633,16 +633,16 @@
       "name": "Brillare Pure Coconut Oil",
       "type": "Natural",
       "platforms": {
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "amazon": {
           "status": "in_stock",
           "mrp": 465.0,
           "selling": 465.0,
+          "discount_pct": 0.0
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 395.0,
           "discount_pct": 0.0
         },
         "myntra": {
@@ -663,7 +663,7 @@
           "selling": 395.0,
           "discount_pct": 0.0
         },
-        "nykaa": {
+        "flipkart": {
           "status": "unknown",
           "mrp": null,
           "selling": null,
@@ -725,6 +725,12 @@
           "selling": 995.0,
           "discount_pct": 20.0
         },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
+        },
         "myntra": {
           "status": "in_stock",
           "mrp": 995.0,
@@ -736,12 +742,6 @@
           "mrp": 995.0,
           "selling": 995.0,
           "discount_pct": 0.0
-        },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
         },
         "nykaa": {
           "status": "unknown",
@@ -805,6 +805,12 @@
           "selling": 213.0,
           "discount_pct": 38.3
         },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
+        },
         "nykaa": {
           "status": "in_stock",
           "mrp": 595.0,
@@ -828,12 +834,6 @@
           "mrp": 345.0,
           "selling": 345.0,
           "discount_pct": 0.0
-        },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
         }
       }
     },
@@ -848,11 +848,11 @@
           "selling": 224.0,
           "discount_pct": 35.1
         },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 345.0,
+          "selling": 282.0,
+          "discount_pct": 18.3
         },
         "nykaa": {
           "status": "in_stock",
@@ -860,11 +860,11 @@
           "selling": 345.0,
           "discount_pct": 0.0
         },
-        "myntra": {
+        "shopify": {
           "status": "in_stock",
           "mrp": 345.0,
-          "selling": 282.0,
-          "discount_pct": 18.3
+          "selling": 345.0,
+          "discount_pct": 0.0
         },
         "smytten": {
           "status": "in_stock",
@@ -872,11 +872,11 @@
           "selling": null,
           "discount_pct": null
         },
-        "shopify": {
-          "status": "in_stock",
-          "mrp": 345.0,
-          "selling": 345.0,
-          "discount_pct": 0.0
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -897,17 +897,17 @@
           "selling": 213.0,
           "discount_pct": 38.3
         },
-        "nykaa": {
-          "status": "in_stock",
-          "mrp": 345.0,
-          "selling": 345.0,
-          "discount_pct": 0.0
-        },
         "myntra": {
           "status": "in_stock",
           "mrp": 345.0,
           "selling": 213.0,
           "discount_pct": 38.3
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 345.0,
+          "selling": 345.0,
+          "discount_pct": 0.0
         },
         "smytten": {
           "status": "in_stock",
@@ -928,12 +928,6 @@
       "name": "Brillare Argan & Phytolipid Oil Shots For Dry, Frizzy Hair",
       "type": "Natural",
       "platforms": {
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "amazon": {
           "status": "in_stock",
           "mrp": 1489.58,
@@ -952,14 +946,20 @@
           "selling": 715.0,
           "discount_pct": 10.1
         },
+        "smytten": {
+          "status": "in_stock",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
+        },
         "shopify": {
           "status": "in_stock",
           "mrp": 795.0,
           "selling": 795.0,
           "discount_pct": 0.0
         },
-        "smytten": {
-          "status": "in_stock",
+        "flipkart": {
+          "status": "unknown",
           "mrp": null,
           "selling": null,
           "discount_pct": null
@@ -971,17 +971,23 @@
       "name": "Brillare Onion & Bakuchiol Oil Shots For Hair Fall Reduction",
       "type": "Natural",
       "platforms": {
-        "nykaa": {
+        "amazon": {
           "status": "in_stock",
-          "mrp": 795.0,
-          "selling": 795.0,
-          "discount_pct": 0.0
+          "mrp": 1158.33,
+          "selling": 556.0,
+          "discount_pct": 52.0
         },
         "flipkart": {
           "status": "unknown",
           "mrp": null,
           "selling": null,
           "discount_pct": null
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 795.0,
+          "discount_pct": 0.0
         },
         "myntra": {
           "status": "in_stock",
@@ -994,12 +1000,6 @@
           "mrp": null,
           "selling": null,
           "discount_pct": null
-        },
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 1158.33,
-          "selling": 556.0,
-          "discount_pct": 52.0
         },
         "shopify": {
           "status": "in_stock",
@@ -1017,17 +1017,23 @@
         "flipkart": {
           "status": "no_link"
         },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 795.0,
+          "discount_pct": 0.0
+        },
         "myntra": {
           "status": "in_stock",
           "mrp": 795.0,
           "selling": 715.0,
           "discount_pct": 10.1
         },
-        "nykaa": {
+        "amazon": {
           "status": "in_stock",
-          "mrp": 795.0,
-          "selling": 795.0,
-          "discount_pct": 0.0
+          "mrp": 1489.58,
+          "selling": 715.0,
+          "discount_pct": 52.0
         },
         "smytten": {
           "status": "in_stock",
@@ -1040,12 +1046,6 @@
           "mrp": 795.0,
           "selling": 795.0,
           "discount_pct": 0.0
-        },
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 1489.58,
-          "selling": 715.0,
-          "discount_pct": 52.0
         }
       }
     },
@@ -1057,17 +1057,23 @@
         "flipkart": {
           "status": "no_link"
         },
-        "myntra": {
-          "status": "in_stock",
-          "mrp": 895.0,
-          "selling": 402.0,
-          "discount_pct": 55.1
-        },
         "nykaa": {
           "status": "in_stock",
           "mrp": 895.0,
           "selling": 895.0,
           "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 2386.67,
+          "selling": 716.0,
+          "discount_pct": 70.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 895.0,
+          "selling": 402.0,
+          "discount_pct": 55.1
         },
         "shopify": {
           "status": "in_stock",
@@ -1080,12 +1086,6 @@
           "mrp": null,
           "selling": null,
           "discount_pct": null
-        },
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 2386.67,
-          "selling": 716.0,
-          "discount_pct": 70.0
         }
       }
     },
@@ -1094,29 +1094,23 @@
       "name": "Brillare Hyaluronic Acid Face Serum For Dry, Ageing Skin",
       "type": "Natural",
       "platforms": {
-        "nykaa": {
-          "status": "in_stock",
-          "mrp": 795.0,
-          "selling": 795.0,
-          "discount_pct": 0.0
-        },
         "flipkart": {
           "status": "unknown",
           "mrp": null,
           "selling": null,
           "discount_pct": null
         },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 795.0,
+          "discount_pct": 0.0
+        },
         "myntra": {
           "status": "in_stock",
           "mrp": 795.0,
           "selling": 357.0,
           "discount_pct": 55.1
-        },
-        "smytten": {
-          "status": "in_stock",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
         },
         "amazon": {
           "status": "in_stock",
@@ -1129,6 +1123,12 @@
           "mrp": 795.0,
           "selling": 795.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "in_stock",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1149,17 +1149,17 @@
           "selling": 795.0,
           "discount_pct": 0.0
         },
-        "myntra": {
-          "status": "in_stock",
-          "mrp": 795.0,
-          "selling": 318.0,
-          "discount_pct": 60.0
-        },
         "amazon": {
           "status": "in_stock",
           "mrp": 19.87,
           "selling": 596.0,
           "discount_pct": null
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 318.0,
+          "discount_pct": 60.0
         },
         "shopify": {
           "status": "in_stock",
@@ -1195,17 +1195,17 @@
           "selling": 222.0,
           "discount_pct": 55.2
         },
-        "smytten": {
-          "status": "in_stock",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "amazon": {
           "status": "in_stock",
           "mrp": 1073.33,
           "selling": 322.0,
           "discount_pct": 70.0
+        },
+        "smytten": {
+          "status": "in_stock",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         },
         "shopify": {
           "status": "in_stock",
@@ -1244,17 +1244,17 @@
           "selling": 222.0,
           "discount_pct": 55.2
         },
-        "smytten": {
-          "status": "in_stock",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "shopify": {
           "status": "in_stock",
           "mrp": 495.0,
           "selling": 495.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "in_stock",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1300,12 +1300,6 @@
       "name": "Brillare Aha Bha Face Peel",
       "type": "Natural",
       "platforms": {
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 19.87,
-          "selling": 596.0,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
           "mrp": null,
@@ -1317,6 +1311,12 @@
           "mrp": 795.0,
           "selling": 795.0,
           "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 19.87,
+          "selling": 596.0,
+          "discount_pct": null
         },
         "myntra": {
           "status": "in_stock",
@@ -1343,26 +1343,14 @@
       "name": "Brillare Salicylic & Lactic Acid Face Wash For Clear, Purified, Acne Prone Skin",
       "type": "Natural",
       "platforms": {
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 309.0,
-          "selling": 309.0,
-          "discount_pct": 0.0
-        },
         "nykaa": {
           "status": "in_stock",
           "mrp": 595.0,
           "selling": 595.0,
           "discount_pct": 0.0
         },
-        "smytten": {
-          "status": "in_stock",
+        "flipkart": {
+          "status": "unknown",
           "mrp": null,
           "selling": null,
           "discount_pct": null
@@ -1372,6 +1360,18 @@
           "mrp": 595.0,
           "selling": 374.0,
           "discount_pct": 37.1
+        },
+        "smytten": {
+          "status": "in_stock",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 309.0,
+          "selling": 309.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
@@ -1404,17 +1404,17 @@
           "selling": 595.0,
           "discount_pct": 0.0
         },
-        "amazon": {
-          "status": "out_of_stock",
-          "mrp": 104.0,
-          "selling": 415.0,
-          "discount_pct": null
-        },
         "shopify": {
           "status": "in_stock",
           "mrp": 595.0,
           "selling": 595.0,
           "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "out_of_stock",
+          "mrp": 66.0,
+          "selling": 415.0,
+          "discount_pct": null
         }
       }
     },
@@ -1423,29 +1423,23 @@
       "name": "Brillare Rosemary Oil 100 Ml",
       "type": "Natural",
       "platforms": {
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "nykaa": {
           "status": "in_stock",
           "mrp": 345.0,
           "selling": 345.0,
           "discount_pct": 0.0
         },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
+        },
         "amazon": {
           "status": "in_stock",
           "mrp": 282.0,
           "selling": 282.0,
           "discount_pct": 0.0
-        },
-        "smytten": {
-          "status": "in_stock",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
         },
         "myntra": {
           "status": "in_stock",
@@ -1458,6 +1452,12 @@
           "mrp": 345.0,
           "selling": 345.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "in_stock",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1466,23 +1466,17 @@
       "name": "Brillare Pure Rosemary Essential Oil For Hair Growth 15 Ml",
       "type": "Natural",
       "platforms": {
-        "nykaa": {
-          "status": "in_stock",
-          "mrp": 445.0,
-          "selling": 445.0,
-          "discount_pct": 0.0
-        },
         "flipkart": {
           "status": "unknown",
           "mrp": null,
           "selling": null,
           "discount_pct": null
         },
-        "amazon": {
+        "nykaa": {
           "status": "in_stock",
-          "mrp": 1240.0,
-          "selling": 186.0,
-          "discount_pct": 85.0
+          "mrp": 445.0,
+          "selling": 445.0,
+          "discount_pct": 0.0
         },
         "myntra": {
           "status": "in_stock",
@@ -1495,6 +1489,12 @@
           "mrp": null,
           "selling": null,
           "discount_pct": null
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 1240.0,
+          "selling": 186.0,
+          "discount_pct": 85.0
         },
         "shopify": {
           "status": "in_stock",
@@ -1509,17 +1509,17 @@
       "name": "Brillare Pure Almond Oil 100 Ml",
       "type": "Natural",
       "platforms": {
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 795.0,
+          "discount_pct": 0.0
+        },
         "flipkart": {
           "status": "unknown",
           "mrp": null,
           "selling": null,
           "discount_pct": null
-        },
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 465.0,
-          "selling": 465.0,
-          "discount_pct": 0.0
         },
         "myntra": {
           "status": "in_stock",
@@ -1527,16 +1527,10 @@
           "selling": 465.0,
           "discount_pct": 33.1
         },
-        "nykaa": {
+        "amazon": {
           "status": "in_stock",
-          "mrp": 795.0,
-          "selling": 795.0,
-          "discount_pct": 0.0
-        },
-        "shopify": {
-          "status": "in_stock",
-          "mrp": 695.0,
-          "selling": 695.0,
+          "mrp": 465.0,
+          "selling": 465.0,
           "discount_pct": 0.0
         },
         "smytten": {
@@ -1544,6 +1538,12 @@
           "mrp": null,
           "selling": null,
           "discount_pct": null
+        },
+        "shopify": {
+          "status": "in_stock",
+          "mrp": 695.0,
+          "selling": 695.0,
+          "discount_pct": 0.0
         }
       }
     },
@@ -1552,6 +1552,12 @@
       "name": "Brillare 10% Niacinamide Serum For Smooth, Glowing Skin 30 Ml",
       "type": "Natural",
       "platforms": {
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 695.0,
+          "selling": 695.0,
+          "discount_pct": 0.0
+        },
         "flipkart": {
           "status": "unknown",
           "mrp": null,
@@ -1560,15 +1566,9 @@
         },
         "amazon": {
           "status": "in_stock",
-          "mrp": 13.9,
-          "selling": 417.0,
+          "mrp": 17.37,
+          "selling": 521.0,
           "discount_pct": null
-        },
-        "nykaa": {
-          "status": "in_stock",
-          "mrp": 695.0,
-          "selling": 695.0,
-          "discount_pct": 0.0
         },
         "myntra": {
           "status": "in_stock",
@@ -1610,17 +1610,17 @@
           "selling": 1795.0,
           "discount_pct": 0.0
         },
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 897.5,
-          "selling": 1795.0,
-          "discount_pct": null
-        },
         "shopify": {
           "status": "in_stock",
           "mrp": 1595.0,
           "selling": 1595.0,
           "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 897.5,
+          "selling": 1795.0,
+          "discount_pct": null
         }
       }
     },
@@ -1644,16 +1644,16 @@
           "selling": 895.0,
           "discount_pct": 0.0
         },
-        "smytten": {
-          "status": "in_stock",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "amazon": {
           "status": "in_stock",
           "mrp": 586.4,
           "selling": 733.0,
+          "discount_pct": null
+        },
+        "smytten": {
+          "status": "in_stock",
+          "mrp": null,
+          "selling": null,
           "discount_pct": null
         },
         "shopify": {
@@ -1669,28 +1669,16 @@
       "name": "Brillare Caffiene Shampoo 200 Ml",
       "type": "Natural",
       "platforms": {
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "nykaa": {
           "status": "in_stock",
           "mrp": 495.0,
           "selling": 495.0,
           "discount_pct": 0.0
         },
-        "myntra": {
-          "status": "in_stock",
-          "mrp": 495.0,
-          "selling": 346.0,
-          "discount_pct": 30.1
-        },
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 173.0,
-          "selling": 346.0,
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
           "discount_pct": null
         },
         "smytten": {
@@ -1698,6 +1686,18 @@
           "mrp": null,
           "selling": null,
           "discount_pct": null
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 173.0,
+          "selling": 346.0,
+          "discount_pct": null
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 346.0,
+          "discount_pct": 30.1
         },
         "shopify": {
           "status": "in_stock",
@@ -1712,11 +1712,11 @@
       "name": "Brillare  Lactylate Shampoo 200 Ml",
       "type": "Natural",
       "platforms": {
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 495.0,
+          "selling": 495.0,
+          "discount_pct": 0.0
         },
         "amazon": {
           "status": "in_stock",
@@ -1730,7 +1730,7 @@
           "selling": 595.0,
           "discount_pct": 0.0
         },
-        "nykaa": {
+        "shopify": {
           "status": "in_stock",
           "mrp": 495.0,
           "selling": 495.0,
@@ -1742,11 +1742,11 @@
           "selling": null,
           "discount_pct": null
         },
-        "shopify": {
-          "status": "in_stock",
-          "mrp": 495.0,
-          "selling": 495.0,
-          "discount_pct": 0.0
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1759,12 +1759,6 @@
           "status": "in_stock",
           "mrp": 268.0,
           "selling": 536.0,
-          "discount_pct": null
-        },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
           "discount_pct": null
         },
         "nykaa": {
@@ -1790,6 +1784,12 @@
           "mrp": 595.0,
           "selling": 595.0,
           "discount_pct": 0.0
+        },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -1798,17 +1798,17 @@
       "name": "Brillare Lactylate Scalp Serum",
       "type": "Natural",
       "platforms": {
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "amazon": {
           "status": "in_stock",
           "mrp": 990.0,
           "selling": 297.0,
           "discount_pct": 70.0
+        },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         },
         "nykaa": {
           "status": "in_stock",
@@ -1841,22 +1841,16 @@
       "name": "Brillare Aloe Vera Gel",
       "type": "Natural",
       "platforms": {
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "nykaa": {
-          "status": "in_stock",
-          "mrp": 295.0,
-          "selling": 295.0,
-          "discount_pct": 0.0
-        },
         "amazon": {
           "status": "in_stock",
           "mrp": 100.0,
           "selling": 200.0,
+          "discount_pct": null
+        },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
           "discount_pct": null
         },
         "myntra": {
@@ -1864,6 +1858,12 @@
           "mrp": 295.0,
           "selling": 200.0,
           "discount_pct": 32.2
+        },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 295.0,
+          "selling": 295.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
@@ -1884,12 +1884,6 @@
       "name": "Brillare Terabond Mask",
       "type": "Natural",
       "platforms": {
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 395.2,
-          "selling": 494.0,
-          "discount_pct": null
-        },
         "nykaa": {
           "status": "in_stock",
           "mrp": 595.0,
@@ -1914,6 +1908,12 @@
           "selling": 595.0,
           "discount_pct": 0.0
         },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 395.2,
+          "selling": 494.0,
+          "discount_pct": null
+        },
         "smytten": {
           "status": "in_stock",
           "mrp": null,
@@ -1936,17 +1936,17 @@
           "selling": 1495.0,
           "discount_pct": 0.0
         },
-        "amazon": {
-          "status": "out_of_stock",
-          "mrp": 272.0,
-          "selling": 971.0,
-          "discount_pct": null
-        },
         "myntra": {
           "status": "in_stock",
           "mrp": 1495.0,
           "selling": 1270.0,
           "discount_pct": 15.1
+        },
+        "amazon": {
+          "status": "out_of_stock",
+          "mrp": 272.0,
+          "selling": 971.0,
+          "discount_pct": null
         },
         "smytten": {
           "status": "in_stock",
@@ -1979,17 +1979,17 @@
           "selling": 1495.0,
           "discount_pct": 0.0
         },
-        "myntra": {
-          "status": "in_stock",
-          "mrp": 1495.0,
-          "selling": 1270.0,
-          "discount_pct": 15.1
-        },
         "nykaa": {
           "status": "in_stock",
           "mrp": 1495.0,
           "selling": 1495.0,
           "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 1495.0,
+          "selling": 1270.0,
+          "discount_pct": 15.1
         },
         "smytten": {
           "status": "in_stock",
@@ -2074,17 +2074,17 @@
           "selling": 755.0,
           "discount_pct": 5.0
         },
-        "smytten": {
-          "status": "in_stock",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "shopify": {
           "status": "in_stock",
           "mrp": 795.0,
           "selling": 795.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "in_stock",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2105,16 +2105,22 @@
           "selling": 971.0,
           "discount_pct": 0.0
         },
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 1495.0,
+          "selling": 1495.0,
+          "discount_pct": 0.0
+        },
         "myntra": {
           "status": "in_stock",
           "mrp": 1495.0,
           "selling": 971.0,
           "discount_pct": 35.1
         },
-        "nykaa": {
+        "shopify": {
           "status": "in_stock",
-          "mrp": 1495.0,
-          "selling": 1495.0,
+          "mrp": 1295.0,
+          "selling": 1295.0,
           "discount_pct": 0.0
         },
         "smytten": {
@@ -2122,12 +2128,6 @@
           "mrp": null,
           "selling": null,
           "discount_pct": null
-        },
-        "shopify": {
-          "status": "in_stock",
-          "mrp": 1295.0,
-          "selling": 1295.0,
-          "discount_pct": 0.0
         }
       }
     },
@@ -2139,23 +2139,17 @@
         "nykaa": {
           "status": "no_link"
         },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 1495.0,
+          "selling": 971.0,
+          "discount_pct": 35.1
         },
         "amazon": {
           "status": "in_stock",
           "mrp": 1271.0,
           "selling": 1271.0,
           "discount_pct": 0.0
-        },
-        "myntra": {
-          "status": "in_stock",
-          "mrp": 1495.0,
-          "selling": 971.0,
-          "discount_pct": 35.1
         },
         "smytten": {
           "status": "in_stock",
@@ -2168,6 +2162,12 @@
           "mrp": 1495.0,
           "selling": 1495.0,
           "discount_pct": 0.0
+        },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2191,17 +2191,17 @@
           "selling": 247.0,
           "discount_pct": 50.1
         },
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 203.0,
-          "selling": 406.0,
-          "discount_pct": null
-        },
         "shopify": {
           "status": "in_stock",
           "mrp": 495.0,
           "selling": 495.0,
           "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 203.0,
+          "selling": 406.0,
+          "discount_pct": null
         }
       }
     },
@@ -2213,11 +2213,11 @@
         "nykaa": {
           "status": "no_link"
         },
-        "myntra": {
-          "status": "in_stock",
-          "mrp": 395.0,
-          "selling": 244.0,
-          "discount_pct": 38.2
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         },
         "amazon": {
           "status": "in_stock",
@@ -2225,11 +2225,11 @@
           "selling": 244.0,
           "discount_pct": null
         },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 244.0,
+          "discount_pct": 38.2
         },
         "shopify": {
           "status": "in_stock",
@@ -2351,17 +2351,17 @@
           "selling": 796.0,
           "discount_pct": 20.0
         },
-        "smytten": {
-          "status": "in_stock",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "shopify": {
           "status": "in_stock",
           "mrp": 995.0,
           "selling": 995.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "in_stock",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2388,17 +2388,17 @@
           "selling": 895.0,
           "discount_pct": 50.0
         },
-        "shopify": {
-          "status": "in_stock",
-          "mrp": 895.0,
-          "selling": 895.0,
-          "discount_pct": 0.0
-        },
         "smytten": {
           "status": "in_stock",
           "mrp": null,
           "selling": null,
           "discount_pct": null
+        },
+        "shopify": {
+          "status": "in_stock",
+          "mrp": 895.0,
+          "selling": 895.0,
+          "discount_pct": 0.0
         }
       }
     },
@@ -2419,17 +2419,17 @@
           "selling": 715.0,
           "discount_pct": 52.0
         },
-        "myntra": {
-          "status": "in_stock",
-          "mrp": 795.0,
-          "selling": 715.0,
-          "discount_pct": 10.1
-        },
         "nykaa": {
           "status": "in_stock",
           "mrp": 795.0,
           "selling": 795.0,
           "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 795.0,
+          "selling": 715.0,
+          "discount_pct": 10.1
         },
         "smytten": {
           "status": "in_stock",
@@ -2450,23 +2450,17 @@
       "name": "Brillare  Rose & Coconut Body Lotion - 200Ml",
       "type": "Natural",
       "platforms": {
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 122.0,
-          "selling": 244.0,
-          "discount_pct": null
-        },
         "flipkart": {
           "status": "unknown",
           "mrp": null,
           "selling": null,
           "discount_pct": null
         },
-        "nykaa": {
+        "amazon": {
           "status": "in_stock",
-          "mrp": 395.0,
-          "selling": 395.0,
-          "discount_pct": 0.0
+          "mrp": 122.0,
+          "selling": 244.0,
+          "discount_pct": null
         },
         "myntra": {
           "status": "in_stock",
@@ -2474,17 +2468,23 @@
           "selling": 244.0,
           "discount_pct": 38.2
         },
-        "smytten": {
+        "nykaa": {
           "status": "in_stock",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
+          "mrp": 395.0,
+          "selling": 395.0,
+          "discount_pct": 0.0
         },
         "shopify": {
           "status": "in_stock",
           "mrp": 395.0,
           "selling": 395.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "in_stock",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2499,12 +2499,6 @@
         "nykaa": {
           "status": "no_link"
         },
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 122.0,
-          "selling": 244.0,
-          "discount_pct": null
-        },
         "myntra": {
           "status": "in_stock",
           "mrp": 395.0,
@@ -2522,6 +2516,12 @@
           "mrp": 395.0,
           "selling": 395.0,
           "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 122.0,
+          "selling": 244.0,
+          "discount_pct": null
         }
       }
     },
@@ -2539,22 +2539,16 @@
           "selling": 323.0,
           "discount_pct": 18.2
         },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "smytten": {
           "status": "in_stock",
           "mrp": null,
           "selling": null,
           "discount_pct": null
         },
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 161.5,
-          "selling": 323.0,
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
           "discount_pct": null
         },
         "shopify": {
@@ -2562,6 +2556,12 @@
           "mrp": 395.0,
           "selling": 395.0,
           "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 161.5,
+          "selling": 323.0,
+          "discount_pct": null
         }
       }
     },
@@ -2570,13 +2570,31 @@
       "name": "Brillare  Mint & Coconut Body Wash - 200Ml",
       "type": "Natural",
       "platforms": {
+        "nykaa": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 395.0,
+          "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 122.0,
+          "selling": 244.0,
+          "discount_pct": null
+        },
         "flipkart": {
-          "status": "unknown",
+          "status": "in_stock",
+          "mrp": null,
+          "selling": 337.0,
+          "discount_pct": null
+        },
+        "smytten": {
+          "status": "in_stock",
           "mrp": null,
           "selling": null,
           "discount_pct": null
         },
-        "nykaa": {
+        "shopify": {
           "status": "in_stock",
           "mrp": 395.0,
           "selling": 395.0,
@@ -2587,24 +2605,6 @@
           "mrp": 395.0,
           "selling": 244.0,
           "discount_pct": 38.2
-        },
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 122.0,
-          "selling": 244.0,
-          "discount_pct": null
-        },
-        "smytten": {
-          "status": "in_stock",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
-        "shopify": {
-          "status": "in_stock",
-          "mrp": 395.0,
-          "selling": 395.0,
-          "discount_pct": 0.0
         }
       }
     },
@@ -2615,12 +2615,6 @@
       "platforms": {
         "flipkart": {
           "status": "no_link"
-        },
-        "myntra": {
-          "status": "in_stock",
-          "mrp": 395.0,
-          "selling": 244.0,
-          "discount_pct": 38.2
         },
         "nykaa": {
           "status": "in_stock",
@@ -2645,6 +2639,12 @@
           "mrp": 395.0,
           "selling": 395.0,
           "discount_pct": 0.0
+        },
+        "myntra": {
+          "status": "in_stock",
+          "mrp": 395.0,
+          "selling": 244.0,
+          "discount_pct": 38.2
         }
       }
     },
@@ -2659,12 +2659,6 @@
           "selling": 323.0,
           "discount_pct": null
         },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "nykaa": {
           "status": "in_stock",
           "mrp": 395.0,
@@ -2677,8 +2671,8 @@
           "selling": 323.0,
           "discount_pct": 18.2
         },
-        "smytten": {
-          "status": "in_stock",
+        "flipkart": {
+          "status": "unknown",
           "mrp": null,
           "selling": null,
           "discount_pct": null
@@ -2688,6 +2682,12 @@
           "mrp": 395.0,
           "selling": 395.0,
           "discount_pct": 0.0
+        },
+        "smytten": {
+          "status": "in_stock",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         }
       }
     },
@@ -2702,22 +2702,10 @@
           "selling": 395.0,
           "discount_pct": 0.0
         },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "amazon": {
           "status": "in_stock",
           "mrp": 161.5,
           "selling": 323.0,
-          "discount_pct": null
-        },
-        "smytten": {
-          "status": "in_stock",
-          "mrp": null,
-          "selling": null,
           "discount_pct": null
         },
         "myntra": {
@@ -2725,6 +2713,18 @@
           "mrp": 395.0,
           "selling": 323.0,
           "discount_pct": 18.2
+        },
+        "flipkart": {
+          "status": "unknown",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
+        },
+        "smytten": {
+          "status": "in_stock",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
         },
         "shopify": {
           "status": "in_stock",
@@ -2745,12 +2745,6 @@
           "selling": 595.0,
           "discount_pct": 0.0
         },
-        "flipkart": {
-          "status": "unknown",
-          "mrp": null,
-          "selling": null,
-          "discount_pct": null
-        },
         "myntra": {
           "status": "in_stock",
           "mrp": 595.0,
@@ -2765,6 +2759,12 @@
         },
         "smytten": {
           "status": "in_stock",
+          "mrp": null,
+          "selling": null,
+          "discount_pct": null
+        },
+        "flipkart": {
+          "status": "unknown",
           "mrp": null,
           "selling": null,
           "discount_pct": null
@@ -2803,17 +2803,17 @@
           "selling": null,
           "discount_pct": null
         },
-        "amazon": {
-          "status": "in_stock",
-          "mrp": 422.5,
-          "selling": 845.0,
-          "discount_pct": null
-        },
         "shopify": {
           "status": "in_stock",
           "mrp": 995.0,
           "selling": 995.0,
           "discount_pct": 0.0
+        },
+        "amazon": {
+          "status": "in_stock",
+          "mrp": 422.5,
+          "selling": 845.0,
+          "discount_pct": null
         }
       }
     }
