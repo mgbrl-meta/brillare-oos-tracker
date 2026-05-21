@@ -338,6 +338,7 @@ export default function Dashboard() {
         <button className={tab === "oos" ? "active" : ""} onClick={() => setTab("oos")}>
           Dashboard
         </button>
+        <button className={tab === "price" ? "active" : ""} onClick={() => setTab("price")}>Price</button>
         <button className={tab === "history" ? "active" : ""} onClick={() => setTab("history")}>
           History
         </button>
